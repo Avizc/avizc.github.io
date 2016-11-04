@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Queercon 13 Contests: Stego"
+title: "Queercon 13 Contests: Soundcheck"
 date: 2016-11-03
 ---
 
