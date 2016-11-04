@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Queercon 13 Contests: Stego"
-date: 2014-04-30
+date: 2016-11-03
 ---
 
   <h2>Preface</h2>
