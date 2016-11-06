@@ -1,0 +1,140 @@
+---
+layout: post
+title: "O'Reilly Security Conference Experience"
+date: 2016-11-05
+---
+
+<img src="/images/oreillyscholarship2016.jpg">
+
+I had the honour of being accepted into [O'Reilly's Diversity & Inclusion Scholarship Program](http://www.oreilly.com/conferences/diversity-application.csp) for the inaugural [O'Reilly Security Conference](http://conferences.oreilly.com/security/network-data-security-ny) this year from 31/10-02/11. I am thankful for the opportunity from O’Reilly and [Etsy](https://www.etsy.com/) (who sponsored 3 other folks for a total of 13 scholars). It was an instant sheer awe at the range of experiences and diversity; folks actively working on bachelors to doctorates; those working in various industries already. Engaging conversations throughout the conference, a mutual understanding and solidarity in many of the hurdles facing us, and overall support across the group for each other. I am so excited to see where everyone goes from here on further.
+
+It makes things quite a bit more exciting as I view it as a challenge. I want to show that nontraditional individuals—such as myself without any college education or degree—do belong here, too. Not only that I want to challenge the de facto way the industry views hackers and routes to getting into the industry.
+
+# Diversity
+
+Side tracking for a while I want to talk about my experience in an intersectional way.
+
+While it was absolutely phenomenal seeing so many folks of multiple underrepresented groups present we were still significantly outnumbered by the de facto norm in this field: white cisgender men. Speaker wise it was phenomenal seeing a much more proportionate amount of variance but with actual attendees it was definitely clear when looking into a room. Connecting with several folks of colour was a relief to be able to relate in certain experiences.
+
+Regardless this was by far the most diverse conference I have ever gone to. The fact that O’Reilly consistently showcased and shared their love for diversity is beyond anything I have ever come across. This will be the de facto set everywhere and O’Reilly is one of the pioneers setting our course forward.
+
+There were various looks of confusion from folks when they saw me. Granted I didn’t help the case with my blue hair nor my Transtocat, Defcon pride, and Queercon shirts considering this is a much more business and corporate-y conference. Due to the infancy of the conference I’m sure eventually they’ll have a more solid identity in the type of folks they attract. This time it was quite a range of folks. It was a mix of t-shirts, hoodies, button downs, suits and ties.
+
+Being trans, nonbinary, and queer: I express myself fairly across a good part of the gender expression spectrum. Thank you to those who asked me for my pronouns when unsure (it’s just Avi, they/them/theirs, or he/him/his). While I did run into a few queer folks if there was someone else who is also trans and/or nonbinary from the conference please reach out, I’d love to chat to see how our experiences were similar or varied!
+
+Bathroom wise I had the occasional terrified middle age white guy in the bathroom freak out upon seeing me, leave without washing their hands (ew). That said I am also thankful that O'Reilly had the [Code of Conduct](http://www.oreilly.com/conferences/code-of-conduct.html) prominently all over the conference. I’ve never seen anyone proactively feature it to that degree until now, major props and kudos to O’Reilly. I hope this becomes a thing everywhere.
+
+Really though to have had a taste of the future in terms of inclusivity and a genuine warmth and kindness from the diverse community at the conference I know I’ll be craving this from now on. They have set the bar for every conference I’ll be attending when it comes to diversity and inclusion.
+
+# Day 1
+
+Cats, Zyrtec, morning. I got to the venue fairly early where I got to meet the lovely Suzanne Axtell (@SuzAxtell) of O'Reilly Marketing Operations and Diversity Outreach. I met another scholarship recipient at the same time while checking in. Immediately became enchanted by the O’Reilly polar bear and I ran around the venue for another day to get all the O’Reilly animals.
+
+<img src="/images/oreillypolarbear.jpg">
+
+The first workshop I attended was [Writing secure Node code](http://conferences.oreilly.com/security/network-data-security-ny/public/schedule/detail/52837). Initially while I [tweeted favourably](https://twitter.com/_llzes/status/793103499504615424) towards the workshop it could have easily been an article online with the points made. This was not an interactive workshop more so than a talk. That and with the “casual” show of their company’s product for the last 20-30 minutes it was off putting as I do not like that it was vendor biased.
+
+I met the vast majority of the scholarship recipients during lunch. Sitting next to a PhD candidate on my right and someone working at Apple with a college degree on my left (they’re both really lovely), it was one of those, “Oh golly did this actually just happen to me,” moments. It felt rather stark to introduce myself as being nontraditional and having no college education whatsoever next to them. Even with that it was a relief to relate with so many folks and also see the differences in paths taken.
+
+My favourite workshop was [Using Python to automate forensics](http://conferences.oreilly.com/security/network-data-security-ny/public/schedule/detail/52810). Interactive, engaging, and actually having the instructor walk around the room was phenomenal. Philip Polstra (@ppolstra) teaches at a university which clearly showed throughout the three or so hours. Unfortunately my new Chromebook with Kali did not stand up to the test due to not having enough storage (ouch) and I didn’t have time to set up a VM (this was a really engaging and fast workshop). I did follow along best as I could and will be re-doing it once I figure out if my old Macbook Pro is recoverable or if I need to go an alternative route.
+
+What I really appreciated about Polstra’s workshop was that it showed the gaps of knowledge I had. I recognised quite a lot of the material from self studying and messing around with Arch (which I swear is not the bane of my existence, it’s adorable). Yet there were procedures and material I hadn’t come across yet or hadn’t thought of before to look into. It is in times like this that the difference of nontraditional versus traditional education is stark: there is no guided route to take and focus on. Bridging the random bouts of information together and hearing about something I knew in a different way was darling.
+
+The Ignite Security event was a series of lightning talks with powerpoint slides. One rant in particular was especially engaging even if I didn’t agree with the speaker’s proposal how to fix it. The assortment of corporate folks was a contrast to my last lightning talk experience during [Bathroom Bathtub](https://twitter.com/_llzes/status/761461719847710720) con...
+
+I do want to say so much love to [Github](github.com) for sponsoring the event. After going to O’Reilly it made me realise I should begin putting up my work online. Not sure how long it’ll take me but eventually I’ll get some code out there to share with folks. Once I change it all from Java that is. That said the most darling part of all this was seeing someone else with a Pridetocat shirt so we matched! Hello Transtocat and Pridetocat. Jamesha (@jamfish728) and I had met briefly at [Queercon](https://www.queercon.org/) this past year so seeing someone I recognised was lovely.
+
+<img src="/images/githubignite.jpg">
+<img src="/images/transandpridetocat.jpg">
+
+# Day 2
+
+This day had the most profound impact in terms of solidifying things I have been struggling with. I went about the conference after the morning keynotes from Heather Adkins, Richard Thieme (@neuralcowboy), and Becky Bace with a weight lifted off of me. Going about the sponsor pavilion and the conference after I couldn’t help but feel like I had already gone through the looking glass. It was a moment of recognising I had been past it, just didn't know where I was yet. There were many who gave me advice during the day saying that I should hold myself in, let myself be a part of a [bureaucratic] system even if it was soul sucking, to gain work experience. This is advice I have gotten outside of the conference also.
+
+Cold air in my lungs is exhilarating when I sing walking home at night. Counting all the screws and panels by type on trains because they’re cute. My dream of getting an English degree back in high school was crushed by a teacher who took me aside and told me in my analysis of literature I found meaning in smaller details no one else found significant and expanded on them. Interesting but it was implied not seeing the main theme as the most fascinating was wrong somehow.
+
+My determination to go about this in my own way has already received some criticism. I am trying to break into a world that is oddly traditional in an area that is not traditional but being tackled as if it were so. 
+
+That’s okay.
+
+I am challenging those who proclaim we must find new ways to truly look for those new ways because many of the talks throughout the conference focused on this but most gave traditional polarised solutions.
+
+<img src="/images/hacktheplanetoreilly.jpg">
+
+By the way whoever wrote that on the board is awesomesauce, I had to follow up with my rabbit doodle. Even if I haven’t actually seen the movie yet and my entire experience with it was through the Queercon badge contest.
+
+Throughout the day I got to hug Becky Bace, Jessy Irwin (@jessysaurusrex), and a few other lovely folks. I learned about [Docker] containers from Jessica Frazelle (@jessfraz) during the first part of lunch briefly as she prepared for [her talk](http://conferences.oreilly.com/security/network-data-security-ny/public/schedule/detail/54615) (which was fantastic). [Educating the steel pipeline](http://conferences.oreilly.com/security/network-data-security-ny/public/schedule/detail/53111) was a wonderful panel on hearing a diverse range of experiences. Maybe I was born 5 years too early for nontraditional paths to be more commonplace but nonetheless it was a relief knowing this is being talked about. The discussions afterword was wonderful relating and sharing. The [OSINT tips for malware investigations](http://conferences.oreilly.com/security/network-data-security-ny/public/schedule/detail/53108) talk was another one I liked going to. The rest of the time I spent socialising (yeah I actually did!) and having great debates and conversations with folks.
+
+I should mention I learned how to do networking for the first time at this event. The speed networking event in the morning was an eye opening experience for me. It confirmed I do not know how to network. I struggled quite a bit with talking about myself, getting business cards that I still need to respond to. I also really abhor the idea of having to “play the game” as some told me to get opportunities. That isn’t me. I’m going to have to try to push my projects fast I can so I have something physical to show my skills.
+
+Richard Thieme’s keynote even now is something that won’t leave my head. Hearing truths and several controversial opinions I hold be spoken with such passion openly was refreshing, piercing, and everything I have struggled, worked on, and thought of for years. During lunch I ended up accidentally sitting next to him. Explaining my dilemma moving forward with life job searching wise I asked him a few questions. While he did say he knows at some point of my life I will end up compromising it was reassuring to know I am doing more alright than I thought I was.
+
+> "Live in the grey world somehow."
+
+That line really summed up my life and how I view the world. Hopefully I can maintain, as he said in his keynote, my conscience, integrity, authenticity, ethical wholeness, and freedom to express my life as I choose it to be. This is something I already was standing inside the edge of the looking glass with but something I now fully followed the rabbit into.
+
+It might be fairly clear I definitely was at several opposing crossroads with a great majority of folks at the conference because of this. Not good at all for networking to find jobs at all is it.
+
+<img src="/images/mobiusoreilly.jpg">
+
+I really love Möbius strips. I need to find my Möbius triangle necklace soon.
+
+# Day 3
+
+Likewise this day also began with keynotes. I have to admit I couldn’t help but cringe at all the times ‘cyber’ was mentione. Simply because a word is being used so much now does not give it legitimacy. It is a buzzword that is hollow of meaning. Can we please let the word die now? I refuse to use it in a way that gives it legitimacy.
+
+Mike Walker of DARPA’s keynote about AI and the CGC was fascinating. It felt a bit chilling at times hearing several of his points, many of which were inspirations for my short story this past year. I’m not quite sure on my opinion of AI right now.
+
+About two weeks prior I saw Jack Daniel (@jack_daniel) at BSidesDC (@BsidesDC) while volunteering and running around everywhere. Watching him receive the O’Reilly Defender Award for Shoulders of InfoSec was sweet to see. I really wish I knew how long his beard was but that would be too invasive to ask I think. I’m not sure actually, maybe I should ask.
+
+Then of course the final keynote happened with Cory Doctorow (@doctorow). The first time I read his book was 7 years ago when I was sitting at the Governor’s mansion in my home state relaxing flipping through it. I had been a part of the state’s youth literacy committee for years helping choose books with a few other select students and teachers for the next year’s worth of books to read and feature. Growing up not owning a lot of things this was a treat to get so many free books each year (Mrs. Doyle was and is still one of the most wonderful human beings out there I’m sure).
+
+That copy of “Little Brother” has been with me through everything since that summer before I began high school. I hate to idolise the book or Doctorow but it gave me a glimmer of hope (more on that in a minute) in the years to follow where I did not know or think I could ever make it into adulthood.
+
+That said his keynote really tied and helped close the cover to the last 7 years of my life. In a very personal way to me one of his strongest points repeated my dead name over and over and over. I was 5 years of age, long before fully recognising I am trans, when I decided I was going to change it because it didn’t fit. I refused to believe it was possible to believe in my birth name when it seemingly felt that there was no such thing. The future did not exist which landed into an culminating, “What now?” when I did make it to 18 years.
+
+The world can be so beautiful, darling, and exciting, and I'm grateful to know this now. I will never return to my birth name. It still isn’t me. I’m finally at peace though.
+
+Thanks, Doctorow.
+
+<img src="/images/doctoroworeilly.jpg">
+
+For a few hours I wasn’t quite sure what to do. I went to [Building effective security alerting](http://conferences.oreilly.com/security/network-data-security-ny/public/schedule/detail/53077), had lovely conversations and engaging talks with folks across the conference. By saying [‘porcupine’](https://twitter.com/_llzes/status/793879195785003008) I even got a free book!
+
+<img src="/images/privacyarchitecture.jpg">
+
+The two talks I waited to go see were Alex Rice’s [Hacker quantiified security](http://conferences.oreilly.com/security/network-data-security-ny/public/schedule/detail/53296) and Dan Kaminsky’s (@dakami) [A technical dive into defensive trickery](http://conferences.oreilly.com/security/network-data-security-ny/public/schedule/detail/56203).
+
+I wear a few HackerOne t-shirts as they have sponsored Queercon for the last few years. Going from hearing about HackerOne from a hacker perspective at Defcon and Queercon to hearing the more business end of things at the conference was a nice way to fully understand it. It also reminded me that this is a more corporate conference again.
+
+Kaminsky was everything I always thought he’d be and more. He was really darling when he accepted my (odd? I’ve been told it’s really odd and to stop before I actually look like I’m older than a middle school kid) request to stand next to him to see how tall he was and give him a hug. He was taller than I thought he’d be. I missed the last 10 or so minutes of his talk but to end the conference on such a fiery happy note was a great way to sum up how much I’ve accepted the future that awaits me.
+
+<img src="/images/dakamioreilly.jpg">
+
+> "DEATH TO NIHILISM!"
+
+With that here I am now 21 years and 1 month of age. Happy 5th of November!
+
+> "If you won't give me one,
+>
+>I'll take two,
+>
+>The better for me,
+>
+>And the worse for you."
+
+# Summary
+
+The conference really showed a lot of my weak points that I need to work on. Networking I knew from the start I'd struggle with but hopefully folks I talked with will remain in my life as mentors or friends. Working on bridging gaps in my brain on certain topics is another area I'll be targeting alongside with working on pushing my projects out into the open.
+
+A lot of the advice given to me was meant to be helpful I realise. On the other hand to tell me to not speak publicly on being trans, nonbinary, queer, or other social and political opinions is something I cannot stop. These are all things intersectional to me and impact every aspect of my life. To not say something in these times is to be part of the larger collective issue. You cannot complain about a system if you refuse to challenge it.
+
+For an industry that talks quite a bit on looking 'outside of the box' (another phrase I really don't like) people are surprisingly very traditional. There were a lot more folks who work in the government than I expected. A lot of folks kept saying that the only way I could work in security was through the government. Which with how I am going about life now is not likely unless I am less 'out' of myself.
+
+I am more than happy to intern or work for a smaller team or company. I am not in love with the things I am for the monetary value of it. I'm in love because it matters to me and impacts my life in some shape or another.
+
+My eventual goal is someday be on a red team. How I am going to showcase these skills is going to be a challenge. It seems like going for various contests will be the best way (and also as a way to actually see how I do with other folks).
+
+I know the next few months are going to be rough without knowing where I'm going yet or what I'll be doing work wise. Once my work and projects are out there and accessible I simply can only keep doing more things while I wait and see if taking a chance was worth it. If it wasn't for someone else I'll find my own path regardless.
+
+This ended up being a lot longer than I thought it'd be, thank you for reading it to the end if you did!
