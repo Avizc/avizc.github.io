@@ -24,7 +24,7 @@ Being trans, nonbinary, and queer: I express myself fairly across a good part of
 
 Bathroom wise I had the occasional terrified middle age white guy in the bathroom freak out upon seeing me, leave without washing their hands (ew). That said I am also thankful that O'Reilly had the [Code of Conduct](http://www.oreilly.com/conferences/code-of-conduct.html) prominently all over the conference. I’ve never seen anyone proactively feature it to that degree until now, major props and kudos to O’Reilly. I hope this becomes a thing everywhere.
 
-Really though to have had a taste of the future in terms of inclusivity and a genuine warmth and kindness from the diverse community at the conference I know I’ll be craving this from now on. They have set the bar for every conference I’ll be attending when it comes to diversity and inclusion.
+Really though to have had a taste of the future in terms of inclusivity, genuine warmth, and kindness from the diverse community at the conference I know I’ll be craving this from now on. They have set the bar for every conference I’ll be attending when it comes to diversity and inclusion.
 
 # Day 1
 
@@ -32,7 +32,7 @@ Cats, Zyrtec, morning. I got to the venue fairly early where I got to meet the l
 
 <img src="/images/oreillypolarbear.jpg">
 
-The first workshop I attended was [Writing secure Node code](http://conferences.oreilly.com/security/network-data-security-ny/public/schedule/detail/52837). Initially while I [tweeted favourably](https://twitter.com/_llzes/status/793103499504615424) towards the workshop it could have easily been an article online with the points made. This was not an interactive workshop more so than a talk. That and with the “casual” show of their company’s product for the last 20-30 minutes it was off putting as I do not like that it was vendor biased.
+The first workshop I attended was [Writing secure Node code](http://conferences.oreilly.com/security/network-data-security-ny/public/schedule/detail/52837). Initially while I [tweeted favourably](https://twitter.com/_llzes/status/793103499504615424) towards the workshop it could have easily been an article online with the points made. This was not an interactive workshop more so than a talk. That and with the “casual” show of their company’s product for the last 20-30 minutes it was off putting as I do not like that it was vendor biased without being warned in advance of it.
 
 I met the vast majority of the scholarship recipients during lunch. Sitting next to a PhD candidate on my right and someone working at Apple with a college degree on my left (they’re both really lovely), it was one of those, “Oh golly did this actually just happen to me,” moments. It felt rather stark to introduce myself as being nontraditional and having no college education whatsoever next to them. Even with that it was a relief to relate with so many folks and also see the differences in paths taken.
 
@@ -87,7 +87,7 @@ Mike Walker of DARPA’s keynote about AI and the CGC was fascinating. It felt a
 
 About two weeks prior I saw Jack Daniel (@jack_daniel) at BSidesDC (@BsidesDC) while volunteering and running around everywhere. Watching him receive the O’Reilly Defender Award for Shoulders of InfoSec was sweet to see. I really wish I knew how long his beard was but that would be too invasive to ask I think. I’m not sure actually, maybe I should ask.
 
-Then of course the final keynote happened with Cory Doctorow (@doctorow). The first time I read his book was 7 years ago when I was sitting at the Governor’s mansion in my home state relaxing flipping through it. I had been a part of the state’s youth literacy committee for years helping choose books with a few other select students and teachers for the next year’s worth of books to read and feature. Growing up not owning a lot of things this was a treat to get so many free books each year (Mrs. Doyle was and is still one of the most wonderful human beings out there I’m sure).
+Then of course the final keynote happened with Cory Doctorow (@doctorow). The first time I read his book was 7 years ago when I was sitting at the Governor’s mansion in my former 'home' state relaxing flipping through it. I had been a part of the state’s youth literacy committee for years helping choose books with a few other select students and teachers for the next year’s worth of books to read and feature. Growing up not owning a lot of things this was a treat to get so many free books each year (Mrs. Doyle was and is still one of the most wonderful human beings out there I’m sure).
 
 That copy of “Little Brother” has been with me through everything since that summer before I began high school. I hate to idolise the book or Doctorow but it gave me a glimmer of hope (more on that in a minute) in the years to follow where I did not know or think I could ever make it into adulthood.
 
@@ -103,7 +103,7 @@ For a few hours I wasn’t quite sure what to do. I went to [Building effective 
 
 <img src="/images/privacyarchitecture.jpg">
 
-The two talks I waited to go see were Alex Rice’s [Hacker quantiified security](http://conferences.oreilly.com/security/network-data-security-ny/public/schedule/detail/53296) and Dan Kaminsky’s (@dakami) [A technical dive into defensive trickery](http://conferences.oreilly.com/security/network-data-security-ny/public/schedule/detail/56203).
+The two talks I waited to go see were Alex Rice’s [Hacker quantified security](http://conferences.oreilly.com/security/network-data-security-ny/public/schedule/detail/53296) and Dan Kaminsky’s (@dakami) [A technical dive into defensive trickery](http://conferences.oreilly.com/security/network-data-security-ny/public/schedule/detail/56203).
 
 I wear a few HackerOne t-shirts as they have sponsored Queercon for the last few years. Going from hearing about HackerOne from a hacker perspective at Defcon and Queercon to hearing the more business end of things at the conference was a nice way to fully understand it. It also reminded me that this is a more corporate conference again.
 
