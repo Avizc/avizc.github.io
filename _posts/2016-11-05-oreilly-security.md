@@ -83,7 +83,7 @@ I really love Möbius strips. I need to find my Möbius triangle necklace soon.
 
 # Day 3
 
-Likewise this day also began with keynotes. I have to admit I couldn’t help but cringe at all the times ‘cyber’ was mentione. Simply because a word is being used so much now does not give it legitimacy. It is a buzzword that is hollow of meaning. Can we please let the word die now? I refuse to use it in a way that gives it legitimacy.
+Likewise this day also began with keynotes. I have to admit I couldn’t help but cringe at all the times ‘cyber’ was mentioned. Simply because a word is being used so much now does not give it legitimacy. It is a buzzword that is hollow of meaning. Can we please let the word die now? I refuse to use it in a way that gives it legitimacy.
 
 Mike Walker of DARPA’s keynote about AI and the CGC was fascinating. It felt a bit chilling at times hearing several of his points, many of which were inspirations for my short story this past year. I’m not quite sure on my opinion of AI right now.
 
