@@ -1,0 +1,38 @@
+*{
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0;
+  text-align: center;
+}
+main{
+  width: 800px;
+  padding: 37px;
+}
+.border{
+  border: 1px solid #000000;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.top1{
+  height: 200px;
+  width: 50%;
+}
+.topleft{
+  background-color: #d30000; 
+}
+.topright{
+  background-color: #00d1ff;
+}
+.bottom1{
+  height: 300px;
+  width: 33.33%;
+}
+.bottomleft{
+  background-color: #d3d3d3;
+}
+.bottomcenter{
+  background-color: #000000;
+}
+.bottomright{
+  background-color: #fcff00;
+}
