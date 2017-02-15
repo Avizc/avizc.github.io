@@ -45,24 +45,23 @@ nav li::after{
   border: 10px dotted #73ac64;
   z-index: 1;
 }
-img[src*=spacedog]{
+img[src*=spacedog], img[src*=spacecat]{
   width: 200px;
   height: 200px;
   position: absolute;
-  top: 95%;
-  left: 70%;
   z-index: 1;
-  margin-top: -200px;
-  margin-left: -200px;
+}
+img[src*=spacedog]{
+  bottom: 19%;
+  right: 25%;
+  margin-bottom: -100px;
+  margin-right: -100px;
 }
 img[src*=spacecat]{
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  z-index: -1;
-  top: 20%;
-  left: 10%;
-  z-index: 1;
+  top: 36%;
+  left: 25%;
+  margin-top: -100px;
+  margin-left: -100px;
 }
 /* ## BACKGROUND ## */
 img[src*=outerspace]{
