@@ -52,16 +52,12 @@ img[src*=spacedog], img[src*=spacecat]{
   z-index: 1;
 }
 img[src*=spacedog]{
-  bottom: 19%;
-  right: 25%;
-  margin-bottom: -100px;
-  margin-right: -100px;
+  bottom: -40%;
+  right: -10%;
 }
 img[src*=spacecat]{
-  top: 36%;
-  left: 25%;
-  margin-top: -100px;
-  margin-left: -100px;
+  top: -30%;
+  left: -15%;
 }
 /* ## BACKGROUND ## */
 img[src*=outerspace]{
