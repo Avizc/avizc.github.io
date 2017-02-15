@@ -22,6 +22,7 @@ nav img{
   margin-bottom: 5px;
 }
 nav ul{
+  vertical-align: 120%;
   list-style: none;
   display: inline-block;
 }
