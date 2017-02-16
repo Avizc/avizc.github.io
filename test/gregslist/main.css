@@ -1,0 +1,17 @@
+header{
+  position: fixed;
+  vertical-align: center;
+  background: #d3d3d3;
+  height: 40px;
+  width: 100%;
+}
+nav ul, nav li{
+  display: inline-block;
+}
+nav ul{
+  list-style: none;
+  float: right;
+}
+nav li{
+  
+}
