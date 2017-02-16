@@ -11,12 +11,19 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
-/*********/
-/*New CSS*/
-/*********/
+/***********/
+/* New CSS */
+/***********/
+img[src*=nebula1], img[src*=nebula2]{
+  width: 300px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 img[src*=nebula1]{
   float: left;
+  margin-right: 15px;
 }
 img[src*=nebula2]{
   float: right;
+  margin-left: 15px;
 }
