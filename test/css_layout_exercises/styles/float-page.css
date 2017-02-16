@@ -1,0 +1,22 @@
+/* Existing CSS */
+body {
+  background-color: black;
+  color: white;
+}
+
+main {
+  padding-left: 90px;
+  padding-right: 90px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*********/
+/*New CSS*/
+/*********/
+img[src*=nebula1]{
+  float: left;
+}
+img[src*=nebula2]{
+  float: right;
+}
