@@ -1,9 +1,15 @@
-header{
+*{
+  margin: 0;
+}
+body{
+  font-family: "Helvetica", sans-serif;
+  font-size: 1.2em;
+}
+nav{
   position: fixed;
-  vertical-align: center;
   background: #d3d3d3;
-  height: 40px;
   width: 100%;
+  
 }
 nav ul, nav li{
   display: inline-block;
@@ -13,5 +19,5 @@ nav ul{
   float: right;
 }
 nav li{
-  
+  vertical-align: middle;
 }
