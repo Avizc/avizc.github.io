@@ -5,19 +5,26 @@ body{
   font-family: "Helvetica", sans-serif;
   font-size: 1.2em;
 }
-nav{
-  position: fixed;
-  background: #d3d3d3;
+header{
   width: 100%;
-  
+  background: #d3d3d3;
+  position: fixed;
+}
+nav{
+  padding-right: 30px;
+  padding-left: 30px;
+}
+nav p{
+  margin-top: 10px;
 }
 nav ul, nav li{
   display: inline-block;
+  list-style: none;
+  position: absolute;
+  top: 5px;
+  right: 10px;
 }
 nav ul{
-  list-style: none;
-  float: right;
 }
 nav li{
-  vertical-align: middle;
 }
