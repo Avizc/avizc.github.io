@@ -5,6 +5,9 @@ body{
   font-family: "Helvetica", sans-serif;
   font-size: 1.2em;
 }
+a{
+  text-decoration: none;
+}
 header{
   width: 100%;
   background: #e0e0e0;
@@ -30,6 +33,56 @@ nav ul{
 }
 nav li{
 }
+a:hover{
+  text-decoration: underline;
+}
 main{
   padding: 100px;
+}
+searchbar{
+  display: inline-block;
+}
+.typesearch{
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid #d4d4d4;
+}
+.searchicon{
+  border-radius: 5px;
+  border: 1px solid #d4d4d4;
+  height: 27px;
+}
+.pages{
+  border: 1px solid #d4d4d4;
+  padding: 5px;
+  width: 300px;
+  border-radius: 5px;
+}
+.prevpage, .nextpage{
+  display: inline-block;
+  padding: 5px
+}
+.prevpage{
+}
+.currentpage{
+  border: 1px solid #d4d4d4;
+  padding: 10.5px 15px
+}
+.nextpage{
+}
+.jobs ul, .jobs li{
+  list-style: none;
+}
+.postdate{
+  color: #808080;
+}
+.jobtitle{
+  color: #0000ff;
+  font-weight: bold;
+}
+.location{
+  color: #808080;
+}
+.pages{
+  display: inline-block;
 }
