@@ -53,6 +53,7 @@ searchbar{
   height: 27px;
 }
 .pages{
+  margin-top: 20px;
   border: 1px solid #d4d4d4;
   padding: 5px;
   width: 300px;
@@ -71,7 +72,9 @@ searchbar{
 .nextpage{
 }
 .jobs ul, .jobs li{
+  padding-top: 15px;
   list-style: none;
+  padding-left: 0;
 }
 .postdate{
   color: #808080;
