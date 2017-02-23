@@ -28,8 +28,10 @@ nav ul, nav li{
   position: absolute;
   top: 5px;
   right: 10px;
+  
 }
 nav ul{
+  
 }
 nav li{
 }
@@ -41,16 +43,20 @@ main{
 }
 searchbar{
   display: inline-block;
+  height: 27px;
 }
 .typesearch{
   font-size: 20px;
   border-radius: 5px;
   border: 1px solid #d4d4d4;
+  width: 471px;
 }
 .searchicon{
   border-radius: 5px;
   border: 1px solid #d4d4d4;
-  height: 27px;
+  height: 19px;
+  padding: 4px 10px;
+  margin-bottom: -7px;
 }
 .pages{
   margin-top: 20px;
