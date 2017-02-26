@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- SEO and Accessibility friendly: include title, description in head of doc, using labels with their 'for' attribute set on the form -->
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+  <header>
+    <img src="/images/logo.png" alt="AnalogSea Logo">
+  </header>
+  <main>
+    <form class="signup-box" action="/signup/" method="post">
+      <h1>Sign up</h1>
+      <!-- EMAIL -->
+      <label for="user-email">Email</label>
+      <input type="email" name="user-email" id="user-email" placeholder="foo@bar.com" required/>
+      <!-- PASSWORD -->
+      <label for="user-password">Password</label>
+      <input type="password" name="user-password" id="user-password" placeholder="1234passw0rd" required/>
+      <!-- SIGN UP BUTTON -->
+      <button type="submit" formaction="/signup/">Sign up</button>
+      <!-- FORGOT PASSWORD -->
+      <a href="/forgot-password/new">Forgot password?</a>
+    </form>
+    <!-- EXISTING ACCOUNT -->
+    <section class="existing-account">
+      <span class="log-in-redirect">Already have an account? <a href="/login">Log in</a></span>
+    </section>
+  </main>
+</body>
+</html>
