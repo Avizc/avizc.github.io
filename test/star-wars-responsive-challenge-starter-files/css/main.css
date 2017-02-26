@@ -35,3 +35,6 @@ header h1{
 .card-description{
   display: block;
 }
+.card-name, .card-description{
+  padding: 20px;
+}
