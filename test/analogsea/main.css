@@ -33,26 +33,47 @@ h1{
   font-weight: normal;
   text-align: center;
   margin-bottom: 40px;
+  color: #6b6d70;
 }
 /** EMAIL/PASSWORD TEXT **/
 .signup-box label{
-  
+  display: block;
+}
+/** INPUTS/BUTTON **/
+.signup-box input, .signup-box button{
+  width: 320px;
+  height: 55px;
+  padding: 15px 15px;
+  box-sizing: border-box;
 }
 /** EMAIL/PASSWORD INPUT **/
 .signup-box input{
-  border: 1px solid #d5dae2;
+  border: 2px solid #d5dae2;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.1em;
 }
 /** SIGN UP BUTTON **/
 .signup-box button{
   background-color: #37bf5d;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #ffffff;
   border: none;
+  margin-bottom: 10px;
 }
 .signup-box button:hover{
   background-color: #267c39;
 }
 /** FORGOT PASSWORD **/
+.signup-box a{
+  text-align: center;
+  color: #8f9091;
+  font-size: .9em;
+}
 /** EXISTING ACCOUNT **/
 .log-in-redirect, .log-in-redirect a{
   color: #ffffff;
   font-weight: bold;
+  text-align: center;
 }
