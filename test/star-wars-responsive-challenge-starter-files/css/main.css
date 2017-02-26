@@ -13,10 +13,15 @@ header h1{
 .header-description{
   display: block;
 }
+/** GRID **/
+.training-cards-grid{
+  margin-top: 100px;
+}
 /** CARDS **/
 .card{
   border: 1px solid #d5d9e0;
   display: block;
+  margin-top: 20px;
 }
 /** PHOTOS **/
 .card img{
