@@ -18,11 +18,15 @@ header h1{
   border: 1px solid #d5d9e0;
   display: block;
 }
+/** PHOTOS **/
+.card img{
+  width: 100%;
+}
 /** CARD NAMES **/
 .card-name{
   font-weight: bold;
 }
 /** CARD DESCRIPTIONS **/
 .card-description{
-  
+  display: block;
 }
