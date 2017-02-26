@@ -25,7 +25,7 @@ header img{
   background-color: #ffffff;
 }
 /** FIX BACKGROUND COLOUR FOR ALL ITEMS IN SIGNUP-BOX **/
-h1, label, input, .signup-box a{
+h1, label, input, .forgotpassword a{
     background-color: #ffffff;
 }
 /** SIGN UP **/
@@ -66,14 +66,18 @@ h1{
   background-color: #267c39;
 }
 /** FORGOT PASSWORD **/
-.signup-box a{
+.forgotpassword a{
   text-align: center;
   color: #8f9091;
-  font-size: .9em;
+  display: block;
 }
 /** EXISTING ACCOUNT **/
 .log-in-redirect, .log-in-redirect a{
   color: #ffffff;
   font-weight: bold;
+}
+.log-in-redirect{
+  display: block;
   text-align: center;
+  padding: 15px;
 }
