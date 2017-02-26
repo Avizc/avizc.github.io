@@ -3,6 +3,11 @@
   margin: 0;
 }
 /** HEADER **/
+header{
+  width: 100%;
+  background: #e5cb59;
+  position: fixed;
+}
 header h1{
 }
 .header-description{
