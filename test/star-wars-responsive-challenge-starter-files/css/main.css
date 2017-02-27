@@ -9,13 +9,16 @@ header{
   position: fixed;
 }
 header h1{
+  margin-bottom: 0;
+  margin-top: 10px;
 }
 .header-description{
   display: block;
+  margin-bottom: 15px;
 }
 /** GRID **/
 .training-cards-grid{
-  margin-top: 100px;
+  padding-top: 100px;
 }
 /** CARDS **/
 .card{
@@ -26,15 +29,17 @@ header h1{
 /** PHOTOS **/
 .card img{
   width: 100%;
+  margin-bottom: 20px;
 }
 /** CARD NAMES **/
 .card-name{
   font-weight: bold;
+  margin-left: 20px;
 }
 /** CARD DESCRIPTIONS **/
 .card-description{
   display: block;
-}
-.card-name, .card-description{
-  padding: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
