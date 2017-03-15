@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+}
+/** HEADER **/
+header{
+  text-align: center;
+}
+header img{
+  height: 53px;
+}
+/** NAV **/
+nav ul, nav li{
+  display: inline-block;
+  list-style: none;
+}
+/** BODY **/
+body{
+  font-family: Helvetica, sans-serif;
+  background-color: #434343;
+  color: #f7f7f7;
+}
+/**  All font sizing has gone to grid.css!  **/
