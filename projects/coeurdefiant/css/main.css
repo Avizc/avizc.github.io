@@ -76,6 +76,16 @@ p{
   font-size: 1.35em;
   line-height: 1.5em;
 }
+/* Hyperlinks */
+a{
+  color: #afc2e1;
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover{
+  background-color: #3967b4;
+  color: #f7f7f7;
+}
 /** CONTACT PAGE SPECIFICS **/
 .contact-links li{
   font-size: 1.35em;
