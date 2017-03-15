@@ -4,7 +4,7 @@ title: "Why I am going on a walk"
 date: 2016-12-26
 ---
 
-*Note: This was posted on my new walking journal which can be [found here](http://llzes.github.io/2016/12/26/going-on-a-walk.html). The other site will serve as purely a personal experience dump and this one will be maintained for more security and project related posts.*
+*Note: This was posted on my new walking journal which can be [found here](http://llzes.github.io/2016/12/26/going-on-a-walk.html). The other site is as purely a personal experience dump. The final day post with closing thoughts can be found [here](http://llzes.github.io/2017/01/24/day-4.html).*
 
 On the 21st I wrote a rather [long post](http://llzes.github.io/resources/21-12-2016-fb.md) to my friends. For myself it has been a long time coming. I think it was towards the [end of October](https://avizc.github.io/2016/10/31/new-beginnings.html) a few people could get a sense of what was going to come. Except for myself this goes back further. This goes back farther than my frustrations of not being taken seriously or dismissed when disclosing vulnerabilities and security flaws I found at the airlines and other transportation systems; farther than my days of looking at privileged BrownU kids get wasted in preppy suits on the weekends; farther than zoning out in my classes in high school wondering if I would ever survive and leave the Midwest. 
 
