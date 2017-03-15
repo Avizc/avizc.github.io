@@ -22,7 +22,6 @@
 /* Screens>640px */
 .col-3, .col-4, .col-6, .col-12{
   width: 100%;
-  font-size: 12px; /* 75% of baseline */
 }
 /* 640px<1000px */
 @media only screen and (min-width: 640px){
@@ -38,11 +37,9 @@
   .col-12{
     width: 100%;
   }
-  font-size: 16px;
 }
 @media only screen and (min-width: 1000px){
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 16px;
 }
