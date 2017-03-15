@@ -15,6 +15,42 @@ nav ul, nav li{
   font-weight: bold;
   font-size: 1.35em;
 }
+nav ul {
+  background-color: #3b3b3b;
+  overflow: hidden;
+}
+li a, .menu-drop-button{
+  display: inline-block;
+  color: #f7f7f7;
+  text-align: center;
+  text-decoration: none;
+}
+li a:hover, .menudrop:hover .menu-drop-button{
+  background-color: #3967b4;
+}
+li.menudrop{
+  display: inline-block;
+}
+.menu-drop-links{
+  display: none;
+  position: absolute;
+  background-color: #555555;
+  min-width: 150px;
+  z-index: 1;
+}
+.menu-drop-links a{ 
+  color: #f7f7f7;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.menu-drop-links a:hover{
+  background-color: #767676;
+}
+.menudrop:hover .menu-drop-links{
+  display: block;
+}
 /** BODY **/
 body{
   font-family: Helvetica, Arial, sans-serif; 
