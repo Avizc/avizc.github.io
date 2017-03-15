@@ -6,7 +6,7 @@ header{
   text-align: center;
 }
 header img{
-  height: 53px;
+  height: 127px; 
 }
 /** NAV **/
 nav ul, nav li{
@@ -35,7 +35,3 @@ p{
   font-size: 1.35em;
   line-height: 1.1em;
 }
-
-
-
-
