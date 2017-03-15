@@ -74,5 +74,9 @@ h3{
 }
 p{
   font-size: 1.35em;
-  line-height: 1.1em;
+  line-height: 1.5em;
+}
+/** CONTACT PAGE SPECIFICS **/
+.contact-links li{
+  font-size: 1.35em;
 }
