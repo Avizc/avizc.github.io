@@ -9,5 +9,8 @@ These are things I intend to implement:
 * Local LGBTQ and transgender friendly organisations
 * An expanded help edition in case an individual is receiving pushback/denied
 * Who to contact if not being adequetely assisted with
+## Goals Completed
+These are things I have implemented:
+
 ## Contact
 If you have any problems, questions, suggestions, ideas, please contact me on Twitter ([@_llzes](https://twitter.com/_llzes)).
