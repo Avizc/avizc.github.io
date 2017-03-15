@@ -7,8 +7,13 @@ header{
 }
 header img{
   height: 127px; 
+  margin-top: 29px;
 }
 /** NAV **/
+nav{
+  text-align: center;
+  margin-bottom: 47px;
+}
 nav ul, nav li{
   display: inline;
   list-style: none;
@@ -16,7 +21,6 @@ nav ul, nav li{
   font-size: 1.35em;
 }
 nav ul {
-  background-color: #3b3b3b;
   overflow: hidden;
 }
 li a, .menu-drop-button{
@@ -24,6 +28,7 @@ li a, .menu-drop-button{
   color: #f7f7f7;
   text-align: center;
   text-decoration: none;
+  padding: 10px;
 }
 li a:hover, .menudrop:hover .menu-drop-button{
   background-color: #3967b4;
@@ -43,7 +48,7 @@ li.menudrop{
   padding: 10px;
   text-decoration: none;
   display: block;
-  text-align: left;
+  text-align: center;
 }
 .menu-drop-links a:hover{
   background-color: #767676;
