@@ -19,18 +19,30 @@ Someone looked like me.
 
 In my head I always viewed her as a grandmother I aspired to be like.
 
-To see a woman, nonetheless Asian, blazing through the security world and setting it in beuatiful flames (I guess in this case the more accurate version is also setting up a lot of fire alarms, fire retardants, emergency safety and business continuity plans but...) was inspiring to say the very least. Especially considering at the time the only hackers or security folks I knew were all white.
+To see a woman, nonetheless Asian, blazing through the security world and setting it in beautiful flames (I guess in this case the more accurate version is also setting up a lot of fire alarms, fire retardants, emergency safety and business continuity plans but...) was inspiring to say the very least. Especially considering at the time the only hackers or security folks I knew were all white.
 
-She looked like me. 
+She looked like me.
 
 Yes, we're more than how we look but all of her brilliance, her skin colour, her gender, intersectionally, that is what made her so unique. She had survived decades and decades in the south, in an industry dominated by what I know now is mostly mediocre white masculinity.
 
+"They needed a token woman in the engineering school."
+
+She was one main influence and push to myself for graduating high school, sitting through the most isolating AP Computer Science experience. Sure I founded the cyber security club but getting picked on the most while being quiet in my corner doing my own work alone while other classmates were plagiarising off of each other, cheating, being loud, was discouraging.
+
+"I am here to tell you you can be genetically cursed, a combination of deep south and Japanese---I had no hope."
+
 When I saw her in that hallway after the morning keynotes in which she spoke I had to run up to her. Overly excited I told her how much she meant to me as an inspiration growing up being Asian and her being a woman in an industry of whiteness and masculinity (I am trans and nonbinary but am more femme/prefer androgyny). I wish so dearly I remembered every single thing she said word-for-word in the short conversation but it was more than everything I could have imagined. 
+
+"That didn't go as planned."
+
+It's so rare to find someone who looks like you, understands you because of that, understands what you've gone through, and in this case, what I'll go through.
 
 Her jolly fearless personality and laughter permeated the entire time with her southern accent. Her brown eyes---with the I've spent decades kicking mediocrity to the ground I don't take people's sh*t at all clearness---looked back into my brown eyes. While I'm fairly certain she perceived my gender to be, err, she really encouraged me to keep going. Before walking away I asked her for a hug, she gave me a wink, and the hug was absolutely darling.
 
 In my head she was now my Asian infosec grandmother.
 
 I didn't get to know her on a personal level beyond that short and brief conversation. To find out yesterday she had passed the day prior crushed me. I couldn't stop crying even if I hadn't truly gotten to know her more personally outside of that moment. I wish I wasn't so terrible at networking and had asked to keep in touch. At the same time that wasn't me (still really isn't) and it was an absolute honour to meet her. I'm grateful for all the things she upheld, the work she has done, and the wonderful Asian brilliance and fire that she was.
+
+She has had a significant influence in my life. She taught me to be fearlessly Asian, accept my intersections of race and gender with being a hacker, and to be unapologetic in the face of toxic mediocre white men shutting doors to anyone who don't look or talk like them.
 
 So much love and condolences to those who knew her. Rest well, Becky.
