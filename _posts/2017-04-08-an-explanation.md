@@ -14,7 +14,7 @@ Trigger Warnings: This is really heavy and talks into detail about rape, abuse, 
 
 *Sweat drenched, quick breaths, panic*
 
-*Vomit* - 23:14/The Onward March ([Full Version](avizc.github.io/files/2314.md)), January 2014
+*Vomit* - 23:14/The Onward March ([Full Version](avizc.github.io/files/2314)), January 2014
 
 I never imagined I’d someday go fully public on this. After yesterday’s incident on the bus I tweeted quite a few things, some of it nearly most folks who know me now did not know. There are truly just a handful of folks who know the entirety of it in depth but even then there were a lot of things I did not tell them, either. Except for my lovely doctor team who know everything for medical reasons.
 
@@ -50,7 +50,7 @@ Growing up I quickly learned that my family situation was abnormal.
 
 *“First grade, Miss Schwan–we all called her Miss Swan–educated us about the word “abuse.” My insides twisted and turned, my body numbing as she listed off symptoms of abuse, hoping no one recognized the bruises that covered me.*
 
-*If only [birth] mother never hit me, if only [birth] mother never screamed at me to kill myself, if only [birth] mother loved me like my friends mothers, then I might live without fear. It hit me then, my [birth] mother abuses me whereas other mothers love their children.”* - A Taste of Freedom ([Full Version](https://avizc.github.io/files/a-taste-of-freedom.md)), Fall 2013
+*If only [birth] mother never hit me, if only [birth] mother never screamed at me to kill myself, if only [birth] mother loved me like my friends mothers, then I might live without fear. It hit me then, my [birth] mother abuses me whereas other mothers love their children.”* - A Taste of Freedom ([Full Version](https://avizc.github.io/files/a-taste-of-freedom)), Fall 2013
 
 Experiencing a computer from 3 years of age and access to the internet beginning at 5 I found solace in the people I met online. It was the only way to cope with my home life and I relished in a world that my birth mother could not touch. I changed handles and identities every year or two until I was 13-14 years of age if I accidentally realised I messed up (e.g. claim I was 17 years when by then I should have already turned 18 years).
 
