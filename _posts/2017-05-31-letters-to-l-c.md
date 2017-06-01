@@ -4,11 +4,11 @@ title: "13 Letters to L.C."
 date: 2017-5-31
 ---
 
-Dear L.C.,
+**Dear L.C.,**
  
 This last hour before the clock hits 00:00 marks three years. My favourite number. You knew that.
  
-Dear L.C.,
+**Dear L.C.,**
  
 This is a letter to you, the third person I told 31 May 2014 before I went public 1 June 2014. 
  
@@ -16,7 +16,7 @@ I knew the vast majority of those I care about would support me. You were the pe
  
 I lost.
  
-Dear L.C.,
+**Dear L.C.,**
  
 I didn’t want to lose you as I cherished you a lot---in a platonic way. I didn’t realise you felt more than that prior to me coming out. 
  
@@ -30,21 +30,21 @@ Maybe my coming out was the rejection. Is that why you reacted the way you did?
  
 I wish I had known all of these things then but even then it wouldn’t have changed how things fell.
  
-Dear L.C.,
+**Dear L.C.,**
  
 Well golly how odd is it that three years now that while you were in DC then I’m in DC now. How the DC city lines in the sky brighten my world each time I touch down to feel the city against my skin, breathing in the familiarity and awe each time to be alive here in this gorgeous city of various systems in place.
  
-Dear L.C.,
+**Dear L.C.,**
  
 You said that you knew the moment I changed my first name months prior when I came out as genderqueer. Remember the list of three letter names I was going through and shared to you? There were some really weird ones on that list.
 
 You’re also the first person to know my name would be the first Pythagorean triple: {3, 4, 5}.
  
-Dear L.C.,
+**Dear L.C.,**
  
 I didn’t know you’d react the way you did. To say that I was dead. That I killed [dead name], something you hadn’t called me in months. That the name I left behind was apparently all of who I was to you or at least what you knew of me. Even if I was still the same inside. I was dead. To you.
  
-Dear L.C.,
+**Dear L.C.,**
  
 You kept calling me a man. How harsh it was since ‘man’ doesn’t fit me now either. That somehow I had known I’d come out on you like this. I honestly consciously didn’t know. I’m a transguy and nonbinary, androgynous and fluid in my presentation. I’m not a ‘man’ even now. 
  
@@ -56,7 +56,7 @@ It’s okay for men to be vulnerable, too.
  
 But I’m not a man. I’m just Avi.
  
-Dear L.C.,
+**Dear L.C.,**
  
 I didn’t think you’d go so far as to try to extort from me, going so far to assume a fake persona online for the longest month of my life. It didn’t work, obviously, with all the proof it was you. Yet I was so terrified. Only you could have known. I didn’t think you’d actually do it. I didn’t think you’d actually find a way to message them. I didn’t think you would then send me the screenshots messaging that person, laughing at me because you did it. My first interactions with police for what’d be months of it soon enough. 
  
@@ -66,13 +66,13 @@ I didn’t think you’d go that far. I trusted you.
 
 I trusted you.
  
-Dear L.C.,
+**Dear L.C.,**
  
 The first six months of being out as trans with all of the events that unfolded nearly crushed me under some of the darkest waves of my life. To have to repeat some of the most horrific actions done to me over and over to police. Recount my life. Share and give over all of my messages, emails, and evidence. I didn’t think I’d make it out alive.
  
 Yet I did.
  
-Dear L.C.,
+**Dear L.C.,**
  
 You know I never thought I ever had something to hide. It was only after that that I learned that if I don’t speak out about experiences openly it can be used against me because people like you think I had something to hide. It wasn’t that I wanted to hide it, though though to say I was groomed and held hostage isn’t something I really ever wanted to talk about either openly. It was mostly because I could never say the word ‘rape’ without instantly looking for a way out of life. I couldn’t cope with my experiences.
  
@@ -82,7 +82,7 @@ Oddly I’ve completely gone public with what happened. A year ago I’d have be
  
 Are you doing okay? Last I ever heard about you apparently you were in Europe. I hope you’re okay.
  
-Dear L.C.,
+**Dear L.C.,**
  
 Did you know S. came out a month later after I did? Yeah, just as I became an older brother to S. I became an older brother of a younger brother. Skylar. I went through United’s emergency response team training joining their team when I was in the airlines. I handled Skylar’s death by suicide as if Skylar had been the one soul of an aeroplane that crashed from the sky xe belonged in.
  
@@ -90,7 +90,7 @@ Maybe it was because of that training I acted and treated his death the way I di
  
 I was prepared because of you.
  
-Dear L.C.,
+**Dear L.C.,**
  
 Up until then you were vulnerable with me, thank you for having trusted me. You were there for me in a lot of dark times as I figured out my sexuality, gender, philosophy to life. I only can hope that the things I said helped you, too.
  
@@ -108,7 +108,7 @@ Yet I don't know the answer to that, only you do.
 
 It has been a long but short three years. I can only hope your last three have been well.
  
-Dear L.C.,
+**Dear L.C.,**
  
 Thank you.
  
