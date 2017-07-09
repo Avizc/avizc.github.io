@@ -37,6 +37,8 @@ To all those who read and reviewed my CFP thank you, thank you so much. I apprec
 
 It was after I got the following final review from a wonderful peep in the DEF CON CFP review board (who would have to of course omit voting on mine had I submitted it) that I decided, with all other potential issues legally with it, to not submit.
 
+<img src="../images/cfpreview.png">
+
 So why now?
 
 Today has been a hard day to cope with. A conversation that ended up about rapists which I cannot handle. Wondering if I should cut ties with someone for my own sake. A former best and close friend of mine died by suicide just over a month ago right at the beginning of Pride Month which also happens to be the day I came out as a trans individual three years prior. She would have been 20 years of age today.
