@@ -13,7 +13,7 @@ Disclaimer: Everything here was done either in research, observance, Google-ing,
     * Hackers? Bug bounty?
     * No internal bug reporting
     * False sense of security
-* The view from inside an airline employee
+* [Airline Culture and Common Issues](https://avizc.github.io/2017/07/08/play-date-at-airlines-part-3.html)
 * Inner airline culture
 * Passenger walk through
 * Fun things observed
