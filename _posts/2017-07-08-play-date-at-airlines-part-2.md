@@ -25,7 +25,7 @@ Airlines have a goal to essentially transport as many folks possible in an aerop
 
 They really do not like hackers if that wasn’t already fairly obvious. One notable example would be sidragon, aka Christ Roberts, who was banned by United Airlines and detained by the FBI in April 2015 followed by a search warrant.
 
-Shortly after this incident United Airlines came out with a bug bounty program. Except it’s a rather flawed bug bounty program with giving out miles instead of a cash payout, the limitations on what you’re allowed to do are strict. A specific line that should be noted in their bug bounty program is:
+Shortly after this incident United Airlines came out with a [bug bounty program](https://www.united.com/web/en-US/content/Contact/bugbounty.aspx). Except it’s a rather flawed bug bounty program with giving out miles instead of a cash payout, the limitations on what you’re allowed to do are strict. A specific line that should be noted in their bug bounty program is:
 
 "The researcher submitting the bug must not be a current or former employee of United Airlines, any Star Alliance™ member airline or any other partner airline, or a family member or household member of an employee of United Airlines or any partner airline."
 
