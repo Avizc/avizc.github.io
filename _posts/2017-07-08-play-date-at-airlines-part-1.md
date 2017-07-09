@@ -37,7 +37,7 @@ To all those who read and reviewed my CFP thank you, thank you so much. I apprec
 
 It was after I got the following final review from a wonderful peep in the DEF CON CFP review board (who would have to of course omit voting on mine had I submitted it) that I decided, with all other potential issues legally with it, to not submit.
 
-<img src="../images/cfpreview.png">
+<img src="/images/cfpreview.png">
 
 So why now?
 
