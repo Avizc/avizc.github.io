@@ -100,4 +100,4 @@ It’s really hard to get a plane off the ground if you can’t figure out how t
 
 If you’ve ever come across an employee who has had to move elsewhere or change to a groundhandler due to this, more often than not you’ll hear the disdain clearly. They’ll likely openly rant about it for a while. Then move on to the next passenger behind you.
 
-Airline loyalty really is that strong.
+Airline and home station loyalty really is that strong.
