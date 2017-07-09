@@ -47,7 +47,7 @@ I need to do something today for myself to feel productive. This is something I 
 
 Actually, not completely. I can't do this alone to fix the problems. They won't listen to just one voice.
 
-So hopefully you'll speak up to.
+So hopefully you'll speak up too.
 
 Happy birthday, Eileen, I love you so much.
 
