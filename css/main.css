@@ -54,6 +54,12 @@ ul.posts li{
     list-style: none;
     font-size: 1.5em;
 }
+.post ul ul{
+    font-size: 1em;
+}
+.post ul ul ul{
+    font-size: 1em;
+}
 img {
     max-width: 100%;
     height: auto;
