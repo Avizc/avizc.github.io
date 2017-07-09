@@ -55,9 +55,11 @@ ul.posts li{
 }
 .post ul ul{
     font-size: 1em;
+    margin: 5px auto; 
 }
 .post ul ul ul{
     font-size: 1em;
+    margin: 5px auto; 
 }
 .post li li{
     font-size: 1em;
