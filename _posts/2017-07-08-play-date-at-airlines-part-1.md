@@ -45,7 +45,7 @@ Today has been a hard day to cope with. A conversation that ended up about rapis
 
 I need to do something today for myself to feel productive. This is something I am deeply in love with, something I’m motivated to do and happy to talk about nonstop even when I’m feeling really sad. So that’s it.
 
-Actually, not complete. I can't do this alone to fix the problems. They won't listen to just one voice.
+Actually, not completely. I can't do this alone to fix the problems. They won't listen to just one voice.
 
 So hopefully you'll speak up to.
 
