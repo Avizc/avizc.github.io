@@ -60,6 +60,12 @@ ul.posts li{
 .post ul ul ul{
     font-size: 1em;
 }
+.post li li{
+    font-size: 1em;
+}
+.post li li li{
+    font-size: 1em;
+}
 img {
     max-width: 100%;
     height: auto;
