@@ -41,7 +41,7 @@ It was after I got the following final review from a wonderful peep in the DEF C
 
 So why now?
 
-Today has been a hard day to cope with. A conversation that ended up about rapists which I cannot handle. Wondering if I should cut ties with someone for my own sake. A former best and close friend of mine died by suicide just over a month ago right at the beginning of Pride Month which also happens to be the day I came out as a trans individual three years prior. She would have been 20 years of age today.
+Today has been a hard day to cope with. A former best and close friend of mine died by suicide just over a month ago right at the beginning of Pride Month which also happens to be the day I came out as a trans individual three years prior. She would have been 20 years of age today.
 
 I need to do something today for myself to feel productive. This is something I am deeply in love with, something I’m motivated to do and happy to talk about nonstop even when I’m feeling really sad. So that’s it.
 
