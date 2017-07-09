@@ -27,7 +27,7 @@ They really do not like hackers if that wasn’t already fairly obvious. One not
 
 Shortly after this incident United Airlines came out with a bug bounty program. Except it’s a rather flawed bug bounty program with giving out miles instead of a cash payout, the limitations on what you’re allowed to do are strict. A specific line that should be noted in their bug bounty program is:
 
-“The researcher submitting the bug must not be a current or former employee of United Airlines, any Star Alliance™ member airline or any other “
+"The researcher submitting the bug must not be a current or former employee of United Airlines, any Star Alliance™ member airline or any other partner airline, or a family member or household member of an employee of United Airlines or any partner airline."
 
 Okay, cool. So I’ve got no intention of gaining a profit by submitting bugs, I just want to help out with internal vulnerabilities. But where can I report this to?
 
@@ -45,7 +45,7 @@ As far as I am aware currently there is no airline with an internal bug bounty p
 
 When you undergo training they state all the federal fines and prison time for doing various things to the airlines. With the overall safety and security, PII, and other things employees have access to there are scary paragraphs and paragraphs of warnings on everything they do. So most folks are naturally not going to want to poke around or aren’t bothered enough to do so.
 
-In an odd twist during training we were warned but also taught how to look up frequent flier numbers by finding information on celebrities. Sure everything I knew at least forgot how to do it since the Premier Desk can easily do that for you but what about the folks like me who didn’t?
+In an odd twist during training we were warned but also taught how to look up frequent flier numbers by finding information on celebrities. Sure everyone I knew at least forgot how to do it since the Premier Desk can easily do that for you but what about the folks like me who didn’t?
 
 Not that it really matters because there are a slew of other ways an airline employee can get access to your information if they wanted to.
 
