@@ -27,11 +27,11 @@ Disclaimer: Everything here was done either in research, observance, Google-ing,
 
 Have you ever been to the Smithsonian National Air and Space Museum in DC? I highly recommend it, they really go into depth throughout the exhibits of the commercialisation of air travel across the decades. 
 
-Why I bring this up is that air travel for commercial leisure is historically still fairly new and things are still being worked out. Outside of KLM in 1919 in the 1920s commercial airlines began springing up. The FAA was created in 1967 as a part of the DoT. Over the last decades and even in recent times with the US Airways Merger with American Airlines there have been a lot of mergers into what we know as the primary largest legacy airlines: United Airlines, Delta, American Airlines.
+Why I bring this up is that air travel for commercial leisure is historically still fairly new and things are still being worked out. Outside of KLM in 1919 in the 1920s commercial airlines began springing up. The FAA was created in 1967 as a part of the DoT. Over the last decades and even in recent times with the US Airways merger with American Airlines there have been a lot of mergers into what we know as the primary largest legacy airlines: United Airlines, Delta, American Airlines.
 
 This also means entire generations of airline families have occurred in this time. It is not uncommon for someone to work side by side with their parent, a grandparent, a great grandparent, maybe even more. Cool right? 
 
-You tend to see folks especially with seniority raving to one another fondly about the good old days in companies they worked for before they were acquired. The easiest modern day company to target would be United Airlines: employees refer to themselves by “old United” or “old Continental” rather than just “United”. This isn’t fair, however, as you’ll often hear the rundown of various companies through acquisitions such as Delta with Northwest Airlines, the latest merger of US Airways employees into American Airlines, and more.
+You tend to see folks especially with seniority raving to one another fondly about the good old days in companies they worked for before they were acquired. The easiest modern day company to target would be United Airlines: employees refer to themselves by “old United” or “old Continental” rather than just “United”. This isn’t fair, however, as you’ll often hear the rundown of various companies through other acquisitions such as Delta of Northwest Airlines, the latest merger of US Airways employees into American Airlines, and more.
 
 Everyone who is an airline peep is considered to be family moreso if they come from the same (series of) companies. I’m not sure how to describe this feeling if you’re not an airline employee or have never been a part of an airline family legacy, but there’s a very strong intimate familial bond that forms amongst folks.
 
@@ -45,7 +45,7 @@ Plus it’s really fun to talk with someone who understands you completely about
 
 ## Speaking a 'different language' with airline lingo
 
-Well golly that said here’s a quick run down again on some vocabulary pertaining much more to the gates in-depth now.
+Well golly that said here’s a quick run down again on some vocabulary pertaining much more to the gates in-depth now. This will come in handy soon.
 
 * **(Leisure) non-revs** 
     - Current employees, retirees, family members, and passholders fly on airlines for free or at a discounted rate (e.g. ZED fares).
