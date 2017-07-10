@@ -19,8 +19,8 @@ Disclaimer: Everything here was done either in research, observance, Google-ing,
     * Overwhelming training
     * Outsourcing pains
 * [Inner Airline Employee Views and Issues](https://avizc.github.io/2017/07/10/play-date-at-airlines-part-4.html)
+* [Fun things observed](https://avizc.github.io/2017/07/10/play-date-at-airlines-part-5.html)
 * Passenger walk through
-* Fun things observed
 * Conclusion
 
 ## Airline family culture
