@@ -14,7 +14,7 @@ Disclaimer: Everything here was done either in research, observance, Google-ing,
 
 * [Introduction](https://avizc.github.io/2017/07/08/play-date-at-airlines-part-1.html)
 * [Things to know about airlines](https://avizc.github.io/2017/07/08/play-date-at-airlines-part-2.html)
-* [Airline Culture and Common Issues]((https://avizc.github.io/2017/07/08/play-date-at-airlines-part-3.html))
+* [Airline Culture and Common Issues](https://avizc.github.io/2017/07/08/play-date-at-airlines-part-3.html)
 * Inner Airline Employee Views and Issues
     * Airportitus
     * Airline Employees Views
