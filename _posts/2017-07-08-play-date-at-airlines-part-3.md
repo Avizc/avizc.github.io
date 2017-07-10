@@ -18,7 +18,7 @@ Disclaimer: Everything here was done either in research, observance, Google-ing,
     * Small stations vs hubs
     * Overwhelming training
     * Outsourcing pains
-* [Inner Airline Employee Views and Issues](https://avizc.github.io/2017/07/08/play-date-at-airlines-part-4.html)
+* [Inner Airline Employee Views and Issues](https://avizc.github.io/2017/07/10/play-date-at-airlines-part-4.html)
 * Passenger walk through
 * Fun things observed
 * Conclusion
