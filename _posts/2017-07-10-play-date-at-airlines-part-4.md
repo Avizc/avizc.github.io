@@ -25,8 +25,8 @@ Disclaimer: Everything here was done either in research, observance, Google-ing,
         * Passive
         * Malicious
     * Why are we still using legacy systems?
+* [Fun things observed](https://avizc.github.io/2017/07/10/play-date-at-airlines-part-5.html)
 * Passenger walk through
-* Fun things observed
 * Conclusion
 
 ## Airportitus
