@@ -20,7 +20,7 @@ If folks actually enjoy this series I’ll do it for other areas of the airlines
 		* Key airline lingo, various agencies and departments, issues that prohibit or make it really difficult to talk about security issues or mess around in the airlines, some info on legacy systems
 * [Things to know about airlines](https://avizc.github.io/2017/07/08/play-date-at-airlines-part-2.html)
 * [Airline Culture and Common Issues](https://avizc.github.io/2017/07/08/play-date-at-airlines-part-3.html)
-* [Inner Airline Employee Views and Issues](https://avizc.github.io/2017/07/08/play-date-at-airlines-part-4.html)
+* [Inner Airline Employee Views and Issues](https://avizc.github.io/2017/07/10/play-date-at-airlines-part-4.html)
 * Passenger walk through
 * Fun things observed
 * Conclusion
