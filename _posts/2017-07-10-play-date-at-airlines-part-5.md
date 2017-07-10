@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Play Date at the Airlines - Part 5: Inner Airline Employee Views and Issues"
+title: "Play Date at the Airlines - Part 5: Fun Things Observed"
 date: 2017-7-10
 ---
 
