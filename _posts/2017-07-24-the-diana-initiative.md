@@ -4,9 +4,11 @@ title: "The Diana Initiative Leaving People Behind"
 date: 2017-7-24
 ---
 
+*Correction: The Diana Initiative is a separate entity completely from Tiaracon. I removed my reference to Tiaracon in my post. Also I want to thank all the folks from The Diana Initiative who reached out to me.*
+
 Where do I even begin.
 
-I cannot support The Diana Initiative. I wish now I had never heard of The Diana Initiative (formerly Tiaracon).
+I cannot support The Diana Initiative. I wish now I had never heard of The Diana Initiative.
 
 While I've had my fair share of folks victim blaming me in the past I definitely could not have imagined a night of being victim blamed, demeaned, an attempt of debunking my sexual assault last Monday (I'm sorry that 140 characters isn't enough for me to accurate depict what happened for five hours nor enough to define a word every time I use it), be accused of attacking the woman where the conversation began.
 
