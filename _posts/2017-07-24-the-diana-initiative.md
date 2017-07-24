@@ -67,6 +67,16 @@ And now I've got lovely tweets and more going further down this wreckage.
 
 I had no idea that The Diana Initiative would take their side to the point of liking tweets supporting victim blaming. That has been the oddest case to me. How we say and word things matter and in this case even more so.
 
+Here's the thing. A lot of folks cannot defend themselves, especially when they're being sexually assaulted or raped. What happens if you're physically disabled and cannot 'fight back' in the sense you're trying to punch them out? What happens when you freeze because not all of us are capable of suddenly attacking back. Especially in that moment.
+
+What about folks who are financially dependent on the folks whom are sexually assaulting/raping them? Or minors who don't know about it yet. Or people who were never taught or shown healthy relationships.
+
+Consent is consent. If I cannot stop someone doing something to me that doesn't mean I was complacent in the event. By saying I did not fight enough that's victim blaming. Which is the intention of my first tweet asking for clarification. I felt that it would go down a road of victim blaming to which it did.
+
+"No," should be all that needs to be said.
+
+I can't believe this is something I'm having to say.
+
 This has been a lesson to me that people like to 'support' those whom are sexually assaulted/raped until they talk about their experiences and it doesn't match their opinion or view on it. If that happens apparently the next step is to victim blame them and try to debunk their life. Which I'm not going to do a full run down of what happened to me over 5 hours in several 140 character tweets.
 
 I wish people knew that coming out with these experiences does nothing beneficial to me and opens up hate towards me.
