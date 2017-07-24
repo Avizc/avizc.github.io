@@ -62,7 +62,7 @@ I was pretty naive and apparently I still am to which I can’t argue back reall
 
 I’m rambling now. A few things to set up the following situation of how I was groomed my freshman year of high school:
 
-Health
+## Health
 
 *“Death never found me. Instead I went through three hospitalizations within four months of my eighth grade year, kept safe from popping pills, sharp blades, and from myself, as they made me gain weight until I hit 101.3 lbs.”* - Common App Essay, Fall 2013
 
@@ -84,7 +84,7 @@ Health
 
 *me”* - Effects of Medication ([Full Version](https://avizc.github.io/files/effects-of-medication)), June 2013
 
-Shelter
+## Shelter
 
 My birth mother frequently kicked me out, would always tell me to not return, I’d be sneaking back in eventually at nightfall while she was working at the hospitals or passed out in front of the TV. Eventually at some point we’d awkwardly acknowledge I was ‘back’ silently, the room tense with fear on my part to see how she’d react. Then the cycle would begin again.
 
