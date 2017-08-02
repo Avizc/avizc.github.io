@@ -20,9 +20,11 @@ Graph paper is my home.
 
 ## Puzzle 1
 
-<img src="/images/qc0.jpg">
+<img src="/images/qc0.png">
 
 The first puzzle was released via the Queercon app and on the [website](https://queercon.org/contests/2017/07/20/qc14-puzzle-1/) 20 July 2017. I started the initial work on 23 July after being told it was out and they had already begun it themselves. All I did to begin was try to convert the characters into a format easy to manage: ABC...XYZ.
+
+In hindsight I should have converted it to numbers 1,2,3...26 as it ended up confusing me for a little.
 
 I didn't touch it again until my flight Wednesday evening 26 July. This is where I began attempting to find the frequency and look for patterns. You can see that in the squares/circles/etc in bright blue pen. One key thing to note is that I immediately wrote 'SEE' to replace JTT. I didn't know for sure at the time it'd be the answer but I felt pretty steadfast on it as a placeholder until later for guesses. What I didn't realise was that the theme would be superencipherment.
 
