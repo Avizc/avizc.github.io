@@ -292,4 +292,3 @@ THEENRIC | TMENTCEN | PLAINTEXT
  And that was the entire contest. Oh golly.
 
  <img src="/images/qc12.jpg">
- <img src="/images/qc13.jpg">
