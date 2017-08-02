@@ -4,6 +4,8 @@ title: "Queercon 14 Contest Writeup"
 date: 2017-8-1
 ---
 
+ <img src="/images/qc13.jpg">
+
 Disclaimer: This post has the full final solution for this puzzle. If you want to work on this don't open it!
 
 *"Need something to do on your travels to Queercon? Look no further! Come follow us down the rabbit hole, avoid any subterfuge, and see where the path takes you! It may lead to cool swag or prizes!"*
