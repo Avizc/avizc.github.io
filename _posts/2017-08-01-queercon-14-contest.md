@@ -32,14 +32,14 @@ I didn't touch it again until my flight Wednesday evening 26 July. This is where
 
 <img src="/images/qc1.jpg">
 
-On the plane I got a bit distracted by a few conversations, didn't double check that my inital attempt at substituting the puzzle with the alphabet was incorrect. I felt instictively ABCD and ABC had to at least be ABC=THE but when I applied it everywhere things didn't work. On an aside I should have converted everything into numbers as it threw me off on the final part to solve it.
+On the plane I got a bit distracted by a few conversations, didn't double check that my inital attempt at substituting the puzzle with the alphabet was incorrect. I felt instinctively ABCD and ABC had to at least be ABC=THE but when I applied it everywhere things didn't work. On an aside I should have converted everything into numbers as it threw me off on the final part to solve it.
 
 Hence why I went all out on the tables until Thursday morning when it was an, "Oh this is incorrect," re-doing it twice, and getting the cleartext was fairly simple from there. That's when I discovered incorrectly (again) the ending was: STU/JPLV/BQ/JUU/MUW.
 
-At this point I was feeling really bad about myself after an interaction that made me think gosh I really don't know anything. Changed to a different room of the suite into a corner that wasn't really as comfy as the corner I left. I don't fully write out what I'm thinking (but write what I need for sure) because I see it in front of me but with a mental block of everything I couldn't hold it long enough. It took me re-writing it twice to show what I was visually seeing. I knew what I wanted to do but I kept translating it incorrectly which made me feel worse about myself on the first page shown below. It took the second page below to do it correctly and it worked!
-
 <img src="/images/qc2.jpg">
 <img src="/images/qc3.jpg">
+
+At this point I was feeling really bad about myself after an interaction that made me think gosh I really don't know anything. Changed to a different room of the suite into a corner that wasn't really as comfy as the corner I left. I don't fully write out what I'm thinking (but write what I need for sure) because I see it in front of me but with a mental block of everything I couldn't hold it long enough. It took me re-writing it twice to show what I was visually seeing. I knew what I wanted to do but I kept translating it incorrectly which made me feel worse about myself on the first page shown below. It took the second page (last image of this section) below to do it correctly and it worked!
 
 So for the second page this was what I originally had:
 
@@ -123,7 +123,7 @@ It was BLE.
 
 ## Puzzle 2
 
-This was the puzzle inside of the Queercon brochure for this year right when you opened it. Unfortunately I did not take a photo of it prior to drawing over 3-5 of them to talk wiwth folks over who asked me about it. This was the raw cipher block though:
+This was the puzzle inside of the Queercon brochure for this year right when you opened it. Unfortunately I did not take a photo of it prior to drawing over 3-5 of them to talk with folks over who asked me about it. This was the raw cipher block though:
 
 ```
 AZZSUAPYDD
@@ -177,6 +177,8 @@ Were you thinking I was about to finish this part of the puzzle write up now? No
 
 ## Puzzle 3
 
+<img src="/images/puzzlesticker.jpg">
+
 Right after finishing the initial part of the second puzzle we received stickers with QR codes from Subterfuge who came into the room to check in on us. I didn't have a QR code reader on my phone (I really don't use my phone much beyond reading stuff) so I had to download that. I figured I'd come back to the second puzzle later to which I did but at the time it was hard to tell when and/or where everything would fall in place.
 
 The result of the QR code was:
@@ -196,6 +198,8 @@ Nope! Lets keep going.
 This was my first year that I hadn't pre-reserved a badge since my first and second years (my third and fourth I reserved in advance). While they had locations released every such minutes on where to go to receive a Queercon badge I felt with so many folks attempting to get a badge I wouldn't have a chance. So I decided to power through the challenge so I could get a badge in the end whenever that was since I love my Queercon badges (they began from my first year onward).
 
 Jake ended up getting a badge for me so I could do the contest!
+
+<img src="/images/badge.jpg">
 
 So he came into the swag room asking why we hadn't done anything to the badges. I hadn't thought to do anything yet and figured it'd come later but he was rather adamant on how we needed to do our badges now. After confirming the first puzzle answer being 'BLE SCAN TO SEE KEY' we knew we'd have to scan it. But how?
 
