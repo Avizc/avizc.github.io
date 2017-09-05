@@ -4,6 +4,8 @@ title: "Play Date at the Airlines - Part 3: Airline Culture and Common Issues"
 date: 2017-7-8
 ---
 
+### Update: Version 1.1.0 can be found via PDF [here](https://avizc.github.io/files/PlayDateAtTheAirlines.pdf). This is Version 1.0.0 on this page currently.
+
 Originally I was going to talk about airline employee views intertwined with insider threat first. Except I realise context is important. Sorry if we haven’t gotten to the good stuff yet (at least what I consider 3cute5me), I promise it’s coming soon. Think of this as recon? Since it is. 
 
 Disclaimer: Everything here was done either in research, observance, Google-ing, there’s no SSI.

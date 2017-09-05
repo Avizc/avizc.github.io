@@ -3,6 +3,9 @@ layout: post
 title: "Play Date at the Airlines - Part 1: An Introduction"
 date: 2017-7-8
 ---
+
+### Update: Version 1.1.0 can be found via PDF [here](https://avizc.github.io/files/PlayDateAtTheAirlines.pdf). This is Version 1.0.0 on this page currently.
+
 Here are my intended contents of how I’ll set up and arrange the next few posts, hyperlinked once they’re done since it’ll take me a while. Things may change or get re-arranged later. Over time I’ll go back to add in more sources and links for folks and to also avoid legal issues. After all I’m working off of my CFP which was detailed but it wasn’t everything. Feedback, comments, suggestions, and more can go to my Twitter.
 
 This is much more in-depth than I’d have gone most likely in a talk so I’m kind of glad things happened the way they did. Do feel free to skip to the bottom of this post to begin the actual content.

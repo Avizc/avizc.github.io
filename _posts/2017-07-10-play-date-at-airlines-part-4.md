@@ -4,6 +4,8 @@ title: "Play Date at the Airlines - Part 4: Inner Airline Employee Views and Iss
 date: 2017-7-10
 ---
 
+### Update: Version 1.1.0 can be found via PDF [here](https://avizc.github.io/files/PlayDateAtTheAirlines.pdf). This is Version 1.0.0 on this page currently.
+
 Now that we’ve cleared through all of that (thank you if you’re still here) we’re beginning to get at the fun stuff. I’d like to remind folks to be safe, don’t do anything stupid, and everything I’m writing is for informative purposes.  Also if you blame me for doing something stupid I will throw the ugliest stuffed animals at you for the rest of eternity.
 
 On a recommendation I got for any example I provide I’ll also list things that airlines can prevent the issue or at least alleviate it. Also anytime I refer to any airline on this page I’m just going to do: [airline]. I’m very or pretty familiar with four airlines so feel free to guess which one.

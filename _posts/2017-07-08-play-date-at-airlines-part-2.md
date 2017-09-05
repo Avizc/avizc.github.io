@@ -4,6 +4,8 @@ title: "Play Date at the Airlines - Part 2: Things to Know About Airlines"
 date: 2017-7-8
 ---
 
+### Update: Version 1.1.0 can be found via PDF [here](https://avizc.github.io/files/PlayDateAtTheAirlines.pdf). This is Version 1.0.0 on this page currently.
+
 Disclaimer: Everything here was done either in research, observance, Google-ing, there's no SSI.
 
 ## Contents

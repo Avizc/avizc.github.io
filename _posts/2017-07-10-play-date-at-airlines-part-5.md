@@ -4,6 +4,8 @@ title: "Play Date at the Airlines - Part 5: Fun Things Observed"
 date: 2017-7-10
 ---
 
+### Update: Version 1.1.0 can be found via PDF [here](https://avizc.github.io/files/PlayDateAtTheAirlines.pdf). This is Version 1.0.0 on this page currently.
+
 Oh golly this is what I’ve been wanting to write in the last few posts, I can’t wait to share now! As with the last one I’ll provide things the airlines can/should do to alleviate/fix the issues. And remember to not do anything that’ll get you in trouble, everything I’m saying here are things I’ve observed or researched into that I found interesting.
 
 Disclaimer: Everything here was done in research, observance, Google-ing, no SSI.
