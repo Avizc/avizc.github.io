@@ -1,6 +1,8 @@
 body {
     margin: 60px auto;
     width: 70%;
+    background-size: 31px 31px;
+    background-image: linear-gradient(to right, #dbdbdb 1px, transparent 1px), linear-gradient(to bottom, #dbdbdb 1px, transparent 1px);
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
