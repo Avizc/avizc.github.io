@@ -7,6 +7,11 @@
     padding: 10px;
 }
 /* Fonts */
+p{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 h1,h2,h3,h4{
     font-family: 'Amatic SC', cursive;
     font-weight: 700;
@@ -334,8 +339,10 @@ body {
         display: none;
     }
     /* Fonts and text */
-    h1,h2,h3{
+    h1,h2,h3,p{
         text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
     a{
         color: #35393b;
@@ -642,6 +649,9 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
     }
     .contact h2{
         order: 1;
@@ -649,7 +659,10 @@ body {
     .contact p{
         order: 2;
         text-align: center;
-        margin: 23px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 23px;
+        margin-bottom: 23px;
     }
     .contact-links{
         order: 3;
@@ -754,6 +767,11 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+    .header{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
     .header-2{
         order: 1;
