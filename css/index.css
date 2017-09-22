@@ -62,7 +62,7 @@ body {
     flex-direction: column;
     justify-content: center;
 }
-/* HomeSection */
+/* Home Section */
 .home .time-date{
     order: 1;
     margin-left: auto;
@@ -83,8 +83,111 @@ body {
 .home .menu-bar{
     order: 6;
 }
-
+.page-1-image img{
+    display: block;
+    height: 20%;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Skills+Interests */
+.things-do ul,.hobbies ul,.tech-stack ul{
+    max-width: 77%;
+}
+.things-do ul li,.hobbies ul li,.tech-stack ul li{
+    padding: 5px;
+}
+/* Slide 1 of Skills+Interests */
+.skills-1{
+    height: 85%;
+}
+.header-2{
+    order: 1;
+}
+.things-do{
+    order: 2;
+}
+/* Flexbox for Slide 2&3 of Skills+Interests */
+.hobbies,.tech-stack{
+    height: 100%;
+}
+.hobbies h3,.tech-stack h3{
+    order: 1;
+}
+.hobbies ul{
+    order : 2;
+}
+/* Slide 2 Tech Stack */
+.tech-stack ul li{
+    display: inline;
+}
+.prog-advanced{
+    order: 2;
+}
+.prog-working-on{
+    order: 3;
+}
+.stack-skills{
+    order: 4;
+}
+.other-skills{
+    order: 5;
+}
 /* Project Tech Stack */
+/* Project 1 */
+.project-1 img{
+    order: 3;
+    padding: 5px;
+}
+.project-1 h2{
+    order: 1;
+    padding: 5px;
+}
+.project-1 h3{
+    order: 2;
+    padding: 5px;
+}
+.project-1 p{
+    order: 4;
+    padding: 5px;
+}
+.project-1 ul{
+    order: 5;
+    padding: 5px;
+}
+.project-1 .project-links{
+    order: 6;
+    padding: 5px;
+}
+/* Project 2-5 */
+.project-2 h3,.project-3 h3,.project-4 h3,.project-5 h3{
+    order: 2;
+    padding: 5px;
+}
+.project-1 img,.project-2 img,.project-3 img,.project-4 img,.project-5 img{
+    box-shadow: 0 0 7px #4C4C4C;
+    margin-left: auto;
+    margin-right: auto;
+}
+.project-1 img,.project-2 img,.project-3 img,.project-4 img,.project-5 img{
+    max-width: 80%;
+    max-height: 41vh;
+}
+.project-2 img,.project-3 img,.project-4 img,.project-5 img{
+    order: 3;
+    padding: 5px;
+}
+.project-2 p,.project-3 p,.project-4 p,.project-5 p{
+    order: 4;
+    padding: 5px;
+}
+.project-2 ul,.project-3 ul,.project-4 ul,.project-5 ul{
+    order: 5;
+    padding: 5px;
+}
+.project-2 .project-links,.project-3 .project-links,.project-4 .project-links,.project-5 .project-links{
+    order: 5;
+}
 /* .project-1 ul,.project-2 ul,.project-3 ul,.project-4 ul{
     width: 47%;
 } */
@@ -134,6 +237,19 @@ body {
 .about-image{
     order: 2;
 }
+.about h3{
+    order: 3;
+}
+.about p{
+    order: 4;
+}
+.about-image img{
+    display: block;
+    height: 25%;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
 /* Contact+Social Media Section */
 .contact h2{
     order: 1;
@@ -154,23 +270,6 @@ body {
         display: none;
     }
     /* Home page */
-    .page-1-image{
-        width: 15%;
-        height: 10%;
-    }
-    .page-1-image,.about-image{
-        position: relative;
-        overflow: hidden;
-        border-radius: 50%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .page-1-image img,.about-image img{
-        display: inline;
-        margin: 0 auto;
-        height: 100%;
-        width: auto; 
-    }
     .menu-bar{
         padding-top: 5px;
     }
@@ -178,127 +277,11 @@ body {
         padding: 5px;
 
     }
-    /* Skills+Interests */
-    .things-do ul,.hobbies ul,.tech-stack ul{
-        max-width: 77%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .things-do ul li,.hobbies ul li,.tech-stack ul li{
-        padding: 5px;
-        text-align: center;
-    }
-    /* Slide 1 of Skills+Interests */
-    .skills-1{
-        height: 85%;
-    }
-    .header-2{
-        order: 1;
-    }
-    .header-2 p{
-        text-align: center;
-    }
-    .things-do{
-        order: 2;
-    }
-    /* Flexbox for Slide 2&3 of Skills+Interests */
-    .hobbies,.tech-stack{
-        height: 100%;
-    }
-    .hobbies h3,.tech-stack h3{
-        order: 1;
-    }
-    .hobbies ul{
-        order : 2;
-    }
-    /* Slide 2 Tech Stack */
-    .tech-stack ul li{
-        display: inline;
-    }
-    .tech-stack ul{
-        text-align: center; 
-    }
-    .prog-advanced h4,.prog-working-on h4,.stack-skills h4,.other-skills h4{
-        text-align: center;
-    }
-    .prog-advanced{
-        order: 2;
-    }
-    .prog-working-on{
-        order: 3;
-    }
-    .stack-skills{
-        order: 4;
-    }
-    .other-skills{
-        order: 5;
-    }
-    /* Projects+Things */
-    /* Project 1 */
-    .project-1 img{
-        order: 3;
-    }
-    .project-1 h2{
-        order: 1;
-    }
-    .project-1 h3{
-        order: 2;
-    }
-    .project-1 p{
-        order: 4;
-    }
-    .project-1 ul{
-        order: 5;
-    }
-    .project-1 .project-links{
-        order: 6;
-    }
-    .project-2 h3,.project-3 h3,.project-4 h3{
-        order: 1
-    }
-    .project-2 img,.project-3 img,.project-4 img{
-        order: 2;
-    }
-    .project-2 p,.project-3 p,.project-4 p{
-        order: 3;
-    }
-    .project-2 ul,.project-3 ul,.project-4 ul{
-        order: 4;
-    }
-    .project-2 .project-links,.project-3 .project-links,.project-4 .project-links{
-        order: 5;
-    }
-    /* Temporary CSS, will put into
-       CSS images later huzzah */
-    .project-1 img,.project-2 img,.project-3 img,.project-4 img{
-        box-shadow: 0 0 7px #4C4C4C;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .project-1 img{
-        max-width: 75%;
-    }
-    .project-2 img,.project-3 img,.project-4 img{
-        max-width: 80%;
-    }
-    /* Project description */
-    .project-1 p,.project-2 p,.project-3 p,.project-4 p{
-        width: 95%;
-        text-align: center;
-    }
     /* Things section */
     .stuff{
         height: 27%;
         display: flex;
         flex-direction: column;
-    }
-    /* About section */
-    .about-image{
-        width: 229px;
-        height: 229px;
-    }
-    .about p{
-        order: 3;
     }
 }
 /* Large portrait phones and tablets */
@@ -320,23 +303,6 @@ body {
     .page-1-face{
         padding-bottom: 11px;
     }
-    .page-1-image{
-        width: 353px;
-        height: 353px;
-    }
-    .page-1-image,.about-image{
-        position: relative;
-        overflow: hidden;
-        border-radius: 50%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .page-1-image img,.about-image img{
-        display: inline;
-        margin: 0 auto;
-        height: 100%;
-        width: auto; 
-    }
     .menu-bar{
         padding-top: 47px;
     }
@@ -345,27 +311,8 @@ body {
         display: inline;
 
     }
-    /* Skills+Interests */
-    .things-do ul,.hobbies ul,.tech-stack ul{
-        max-width: 77%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .things-do ul li,.hobbies ul li,.tech-stack ul li{
-        padding: 5px;
-        text-align: center;
-    }
     /* Slide 1 of Skills+Interests */
-    .skills-1{
-        height: 85%;
-    }
-    .header-2{
-        order: 1;
-    }
-    .header-2 p{
-        text-align: center;
-    }
-    .things-do{
+    /* .things-do{
         order: 2;
         height: 43%;
         display: flex;
@@ -377,124 +324,16 @@ body {
     }
     .things-do ul{
         order: 2;
-    }
-    /* Flexbox for Slide 2&3 of Skills+Interests */
-    .hobbies,.tech-stack{
-        height: 100%;
-    }
-    .hobbies h3,.tech-stack h3{
-        order: 1;
-    }
-    .hobbies ul{
-        order : 2;
-    }
+    } */
     /* Slide 2 Tech Stack */
-    .tech-stack ul li{
-        display: inline;
-    }
-    .tech-stack ul{
-        text-align: center; 
-    }
-    .prog-advanced h4,.prog-working-on h4,.stack-skills h4,.other-skills h4{
-        text-align: center;
-    }
-    .prog-advanced{
-        order: 2;
-    }
-    .prog-working-on{
-        order: 3;
-    }
-    .stack-skills{
-        order: 4;
-    }
-    .other-skills{
-        order: 5;
-    }
     .prog-advanced,.prog-working-on,.stack-skills,.other-skills{
         padding: 11px;
-    }
-    /* Projects+Things */
-    /* Project 1 */
-    .project-1 img{
-        order: 3;
-        padding: 5px;
-    }
-    .project-1 h2{
-        order: 1;
-        padding: 5px;
-    }
-    .project-1 h3{
-        order: 2;
-        padding: 5px;
-    }
-    .project-1 p{
-        order: 4;
-        padding: 5px;
-    }
-    .project-1 ul{
-        order: 5;
-        padding: 5px;
-    }
-    .project-1 .project-links{
-        order: 6;
-        padding: 5px;
-    }
-    .project-2 h3,.project-3 h3,.project-4 h3{
-        order: 2;
-        padding: 5px;
-    }
-    .project-2 img,.project-3 img,.project-4 img{
-        order: 3;
-        max-height: 50%;
-        padding: 5px;
-    }
-    .project-2 p,.project-3 p,.project-4 p{
-        order: 4;
-        padding: 5px;
-    }
-    .project-2 ul,.project-3 ul,.project-4 ul{
-        order: 5;
-        padding: 5px;
-    }
-    .project-2 .project-links,.project-3 .project-links,.project-4 .project-links{
-        order: 5;
-    }
-    /* Temporary CSS, will put into
-       CSS images later huzzah */
-    .project-1 img,.project-2 img,.project-3 img,.project-4 img{
-        box-shadow: 0 0 7px #4C4C4C;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .project-1 img{
-        max-width: 75%;
-    }
-    .project-2 img,.project-3 img,.project-4 img{
-        max-width: 80%;
-    }
-    /* Project description */
-    .project-1 p,.project-2 p,.project-3 p,.project-4 p{
-        width: 95%;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
     }
     /* Things section */
     .stuff{
         height: 29%;
         display: flex;
         flex-direction: column;
-    }
-    /* About section */
-    .about-image{
-        width: 313px;
-        height: 313px;
-    }
-    .about h3{
-        order: 3;
-    }
-    .about p{
-        order: 4;
     }
 }
 /* Desktops */
@@ -515,23 +354,6 @@ body {
     .page-1-face{
         padding-bottom: 11px;
     }
-    .page-1-image{
-        width: 353px;
-        height: 353px;
-    }
-    .page-1-image,.about-image{
-        position: relative;
-        overflow: hidden;
-        border-radius: 50%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .page-1-image img,.about-image img{
-        display: inline;
-        margin: 0 auto;
-        height: 100%;
-        width: auto; 
-    }
     .menu-bar{
         padding-top: 47px;
     }
@@ -551,23 +373,7 @@ body {
         text-align: center;
     }
     /* Slide 1 of Skills+Interests */
-    .skills-1{
-        height: 100%;
-    }
-    .header{
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .header-2{
-        order: 1;
-    }
-    .header-2 p{
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .things-do{
+    /* .things-do{
         order: 2;
         display: flex;
         flex-direction: column;
@@ -578,136 +384,19 @@ body {
     }
     .things-do ul{
         order: 2;
-    }
-    /* Flexbox for Slide 2&3 of Skills+Interests */
-    .hobbies,.tech-stack{
-        height: 100%;
-    }
-    .hobbies h3,.tech-stack h3{
-        order: 1;
-    }
-    .hobbies ul{
-        order : 2;
-    }
+    } */
     /* Slide 2 Tech Stack */
-    .tech-stack ul li{
-        display: inline;
-    }
     .tech-stack ul{
-        text-align: center; 
         width: 31%;
-    }
-    .prog-advanced h4,.prog-working-on h4,.stack-skills h4,.other-skills h4{
-        text-align: center;
-    }
-    .prog-advanced{
-        order: 2;
-    }
-    .prog-working-on{
-        order: 3;
-    }
-    .stack-skills{
-        order: 4;
-    }
-    .other-skills{
-        order: 5;
     }
     .prog-advanced,.prog-working-on,.stack-skills,.other-skills{
         padding: 11px;
-    }
-    /* Projects+Things */
-    /* Project 1 */
-    .project-1 img{
-        order: 3;
-        padding: 5px;
-    }
-    .project-1 h2{
-        order: 1;
-        padding: 5px;
-    }
-    .project-1 h3{
-        order: 2;
-        padding: 5px;
-    }
-    .project-1 p{
-        order: 4;
-        padding: 5px;
-    }
-    .project-1 ul{
-        order: 5;
-        padding: 5px;
-    }
-    .project-1 .project-links{
-        order: 6;
-        padding: 5px;
-    }
-    .project-2 h3,.project-3 h3,.project-4 h3{
-        order: 2;
-        padding: 5px;
-    }
-    .project-1 img{
-        max-height: 47%;
-    }
-    .project-2 img,.project-3 img,.project-4 img{
-        order: 3;
-        max-height: 47%;
-        padding: 5px;
-    }
-    .project-2 p,.project-3 p,.project-4 p{
-        order: 4;
-        padding: 5px;
-    }
-    .project-2 ul,.project-3 ul,.project-4 ul{
-        order: 5;
-        padding: 5px;
-    }
-    .project-2 .project-links,.project-3 .project-links,.project-4 .project-links{
-        order: 5;
-    }
-    /* Temporary CSS, will put into
-       CSS images later huzzah */
-    .project-1 img,.project-2 img,.project-3 img,.project-4 img{
-        box-shadow: 0 0 7px #4C4C4C;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .project-1 img{
-        max-width: 75%;
-    }
-    .project-2 img,.project-3 img,.project-4 img{
-        max-width: 80%;
-    }
-    /* Project description */
-    .project-1 p,.project-2 p,.project-3 p,.project-4 p{
-        width: 50%;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    /* Project tech stack */
-    .project-1 ul,.project-2 ul,.project-3 ul,.project-4 ul{
-        width: 47%;
-    }
-    .project-1 ul li,.project-2 ul li,.project-3 ul li,.project-4 ul li{
-        display: inline;
-        padding: 5px;
     }
     /* Things section */
     .stuff{
         height: 29%;
         display: flex;
         flex-direction: column;
-    }
-    /* About section */
-    .about-image{
-        width: 353px;
-        height: 353px;
-    }
-    .about h3{
-        order: 3;
-    }
-    .about p{
-        order: 4;
     }
     /* Contact+Social Media Section */
     .contact p{
