@@ -275,7 +275,9 @@ body {
     }
     .menu-bar ul li{
         padding: 5px;
-
+    }
+    .page-1-image img{
+        margin-top: 5px;
     }
     /* Things section */
     .stuff{
@@ -283,11 +285,27 @@ body {
         display: flex;
         flex-direction: column;
     }
+    /* About Section */
+    .about img{
+        margin-top: 17px;
+        margin-bottom: 17px;
+    }
+    /* Contact+Social Media Section */
+    .contact p{
+        margin-top: 17px;
+        margin-bottom: 17px;
+        width: 90%;
+    }
 }
 /* Large portrait phones and tablets */
 @media(min-width:567px){
     .hide-when-large{
         display: none;
+    }
+    /* Fonts and text */
+    h3{
+        margin-top: 13px;
+        margin-bottom: 13px;
     }
         /* Home page */
     .greeting{
@@ -295,10 +313,9 @@ body {
         padding-bottom: 13px;
     }
     .brief-bio p{
-        width: 75%;
+        width: 80%;
         margin-top: 13px;
         margin-bottom: 13px;
-        padding-bottom: 17px;
     }
     .page-1-face{
         padding-bottom: 11px;
@@ -309,37 +326,61 @@ body {
     .menu-bar ul li{
         padding: 5px;
         display: inline;
-
     }
-    /* Slide 1 of Skills+Interests */
-    /* .things-do{
-        order: 2;
-        height: 43%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    /* Skills+Interests Section */
+    .skills-1 p{
+        margin-top: 13px;
+        margin-bottom: 13px;
     }
-    .things-do h3{
-        order: 1;
-    }
-    .things-do ul{
-        order: 2;
-    } */
     /* Slide 2 Tech Stack */
     .prog-advanced,.prog-working-on,.stack-skills,.other-skills{
         padding: 11px;
     }
+    /* Projects Section */
+    .project-1 p,.project-2 p,.project-3 p,.project-4 p,.project-5 p{
+        margin-top: 13px;
+        margin-bottom: 13px;
+    }
+    .project-links{
+        margin-top: 13px;
+    }
     /* Things section */
-    .stuff{
-        height: 29%;
-        display: flex;
-        flex-direction: column;
+    .stuff p{
+        width: 75%;
+    }
+    /* About Section */
+    .about p{
+        width: 75%;
+    }
+    /* Contact+Social Media Section */
+    .contact p{
+        margin-top: 17px;
+        margin-bottom: 17px;
     }
 }
 /* Desktops */
 @media(min-width:992px){
     .hide-when-large{
         display: none;
+    }
+    /* Fonts */
+    h1{
+        font-size: 100px;
+    }
+    h2{
+        font-size: 80px;
+    }
+    h3{
+        font-size: 60px;
+        margin-top: 17px;
+        margin-bottom: 17px;
+
+    } 
+    h4{
+        font-size: 40px;
+    }
+    p,a,ul,li{
+        font-size: 23px;
     }
     /* Home page */
     .greeting{
@@ -349,10 +390,9 @@ body {
     .brief-bio p{
         margin-top: 13px;
         margin-bottom: 13px;
-        padding-bottom: 17px;
     }
-    .page-1-face{
-        padding-bottom: 11px;
+    .page-1-face h3{
+        margin-top: 0;
     }
     .menu-bar{
         padding-top: 47px;
@@ -372,19 +412,6 @@ body {
         padding: 5px;
         text-align: center;
     }
-    /* Slide 1 of Skills+Interests */
-    /* .things-do{
-        order: 2;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .things-do h3{
-        order: 1;
-    }
-    .things-do ul{
-        order: 2;
-    } */
     /* Slide 2 Tech Stack */
     .tech-stack ul{
         width: 31%;
@@ -393,10 +420,8 @@ body {
         padding: 11px;
     }
     /* Things section */
-    .stuff{
-        height: 29%;
-        display: flex;
-        flex-direction: column;
+    .stuff p{
+        width: 50%;
     }
     /* Contact+Social Media Section */
     .contact p{
