@@ -98,9 +98,6 @@ body {
     padding: 5px;
 }
 /* Slide 1 of Skills+Interests */
-.skills-1{
-    height: 85%;
-}
 .header-2{
     order: 1;
 }
@@ -108,7 +105,7 @@ body {
     order: 2;
 }
 /* Flexbox for Slide 2&3 of Skills+Interests */
-.hobbies,.tech-stack{
+.skills-1,.hobbies,.tech-stack{
     height: 100%;
 }
 .hobbies h3,.tech-stack h3{
