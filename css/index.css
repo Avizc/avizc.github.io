@@ -62,6 +62,13 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+/* Things Section */
+.stuff h3 a{
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    line-height: 1.1;
+    font-size: 40px;
+}
 /* About Section */
 .about h2{
     order: 1;
@@ -276,12 +283,6 @@ body {
         height: 27%;
         display: flex;
         flex-direction: column;
-    }
-    .stuff h3 a{
-        font-family: 'Amatic SC', cursive;
-        font-weight: 700;
-        line-height: 1.1;
-        font-size: 40px;
     }
     /* About section */
     .about-image{
@@ -524,19 +525,6 @@ body {
         height: 29%;
         display: flex;
         flex-direction: column;
-    }
-    .stuff h3 a{
-        font-family: 'Amatic SC', cursive;
-        font-weight: 700;
-        line-height: 1.1;
-        font-size: 40px;
-    }
-    .stuff p{
-        text-align: center;
-        max-width: 89%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 11px;
     }
     /* About section */
     .about-image{
@@ -796,19 +784,6 @@ body {
         height: 29%;
         display: flex;
         flex-direction: column;
-    }
-    .stuff h3 a{
-        font-family: 'Amatic SC', cursive;
-        font-weight: 700;
-        line-height: 1.1;
-        font-size: 40px;
-    }
-    .stuff p{
-        text-align: center;
-        max-width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 11px;
     }
     /* About section */
     .about-image{
