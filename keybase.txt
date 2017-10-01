@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/av1
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://avizajac.com
+  * I am av1 (https://keybase.io/av1) on keybase.
+  * I have a public key with fingerprint ADC0 4F30 2230 9853 9EF2  F6BA A975 B74E 7C86 777E
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101b8fd37c9b29180bdbfaace7a341afee313d85f656f1b058f314c1f4f19ace54c0a",
+      "fingerprint": "adc04f30223098539ef2f6baa975b74e7c86777e",
+      "host": "keybase.io",
+      "key_id": "a975b74e7c86777e",
+      "kid": "0101b8fd37c9b29180bdbfaace7a341afee313d85f656f1b058f314c1f4f19ace54c0a",
+      "uid": "f448f983d96677d935976b71f1143f00",
+      "username": "av1"
+    },
+    "service": {
+      "hostname": "avizajac.com",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1506884690,
+  "expire_in": 157680000,
+  "prev": "2e8b8aa89e5738502f1b98546ee3b294892084c92497dc080cc4cf01a4e7eadc",
+  "seqno": 47,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.74
+Comment: https://keybase.io/crypto
+
+yMIoAnicrVJdSBVBGL3mH4qBEYJBUSypPZjN3p3dnblF6ENSFmEplaJdZndndNV2
+b/fuvV41rcQ0i4gkJfJBHyrooQTDCqQftSgS/CGIhB4qw36sMKyHwrBZqZ56bF6G
+me+cM+c73zxYHutJjrkavrX7SGttU8zoUEfYUzK5ZW+DoNlGneBrEKrp0kZrDBpy
+/NWmIfgEIAJRQ8yQVB1rXiwioBkaI0SnKpGgSBilkigZSGaKrDBRAzJikgh1kUEm
+Yg6ToQ6IkC0w06qgwUDQtBwuSwwdQCYBr1cCGMkSpszLFI0QrMqaCqmqI0VVVcqJ
+lXbIZXBzGgnRHNPmd/zgX7L3D/x/9h1ekmMQIoaRZGCFv2NgScaqoqkiE0UoMQBc
+YIgGLXKIuq4iotCYLfCLiKlTN1O3ib9Fs55UET1Htw9xWiBoO7Zu1/BKpeMEfC7R
+qQu4yFqq+X9r+DXTMniCnBChwZBpW4JP5EjdMV1RUQYKQlDBIFug0YAZpH7TRciq
+ggBf7jM0wiW9FGmIEISprEpIBl7eOs8fKjwOHhNE2AsQ1LEXYpWPCAFdhzoDIuER
+Uz40we3qsGULPqhyn6SCa4bMCos44SAVGofvl8V5YpI9CfHL3K/lSU5K/fPh5koS
+F/fd7Gttavw8OpJXsGfViYx+sqM947m1OPX14/4fV/df/BQeqF2Xgq/fOHZ55ADt
+ncjvXZxMG3g51phW2HfwbMmVNbGl4xOZC6fSZvvfKjNzx5ef3v3kc8/KI4+OrvdX
+JbybftWi7tx8Oe9L0yB7+D5rfmo6vr0nt/NZnIXP5Ze2SXPbq1M3tPR1frh2CRYV
+ZGwqnh8y38xEZ2tX312oSe8wdyXa3afHzIW0odvNmYMF851FrdtuDy36wh3ruxMX
+HOt7ZsdsV9nj8d6k8u1ZbRtTW/KLV0y/Ho8mFcw9LTzQXJ/+Yr6t7EK2vTa6dfB8
+btLJ/jP3uu7cK6/O/9Yz/DNlIBoZ/wXrfkZ9
+=k3iP
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/av1
+
+==================================================================
