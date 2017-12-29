@@ -99,9 +99,23 @@ body {
 }
 /* Skills+Interests */
 .skills-interests{
-    margin-top: 29px;
     padding-top: 29px;
     padding-bottom: 29px;
+}
+.skills-1{
+    border: 3px solid #8fe0f1;
+    padding-top: 19px;
+    padding-bottom: 19px;
+}
+.header-2 p{
+    padding-top: 7px;
+}
+.things-do h3,.hobbies h3,.tech-stack h3{
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+.prog-advanced,.prog-working-on,.stack-skills{
+    margin-bottom: 5px;
 }
 .things-do ul,.hobbies ul,.tech-stack ul{
     max-width: 77%;
@@ -275,7 +289,7 @@ body {
 
 /* Portrait phones */
 @media(max-width: 566px){
-    section{
+    .home,.skills-interests,.project-1,.project-2,.project-3,.project-4,.project-5,.stuffs,.about,.contact{
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -372,7 +386,7 @@ body {
     }
 }
 @media(min-width:768px){
-    section{
+    .home,.skills-interests,.project-1,.project-2,.project-3,.project-4,.project-5,.stuffs,.about,.contact{
         width: 750px;
     }
     .hide-when-large{
@@ -449,13 +463,13 @@ body {
 }
 /* Desktops */
 @media(min-width:992px){
-    section{
+    .home,.skills-interests,.project-1,.project-2,.project-3,.project-4,.project-5,.stuffs,.about,.contact{
         width: 970px;
     }
 }
 /* Larger screens */
 @media(min-width:1200px){
-    section{
+    .home,.skills-interests,.project-1,.project-2,.project-3,.project-4,.project-5,.stuffs,.about,.contact{
         width: 1170px;
     }
 }
