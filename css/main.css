@@ -5,7 +5,7 @@ body {
     background-image: linear-gradient(to right, #dbdbdb 1px, transparent 1px), linear-gradient(to bottom, #dbdbdb 1px, transparent 1px);
 }
 nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-family: 'Source Sans Pro', 'Helvetica', sans-serif;
     padding: 0px;
     list-style: none;
     font-weight: bold;
@@ -23,17 +23,18 @@ a:hover {
 }
 h1 {
     font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-family: 'Amatic SC', cursive;
 }
 h2 {
     font-size: 2.6em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-family: 'Amatic SC', cursive;
 }
 h3 {
     font-size: 2.5em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-family: 'Amatic SC', cursive;
 }
 p {
+    font-family: 'Source Sans Pro', 'Helvetica', sans-serif;
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
