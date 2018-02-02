@@ -123,10 +123,9 @@ body {
 .header-2 p{
     padding-top: 7px;
 }
-.things-do h3,.hobbies h3,.tech-stack h3{
+/* .things-do h3,.hobbies h3,.tech-stack h3{
     margin-top: 13px;
-    margin-bottom: 13px;
-}
+} */
 .prog-advanced,.prog-working-on,.stack-skills{
     margin-bottom: 5px;
 }
@@ -136,24 +135,34 @@ body {
 .things-do ul li,.hobbies ul li,.tech-stack ul li{
     padding: 5px;
 }
-/* Slide 1 of Skills+Interests */
+/* Skills+Interests */
 .header-2{
     order: 1;
 }
-/* Flexbox for Slide 2&3 of Skills+Interests */
-.skills-1,.hobbies,.tech-stack{
-    height: 100%;
-}
-.hobbies h3,.skills-chunk{
-    order: 1;
-}
-.
-/* Slide 2 Tech Stack */
-.stack-skills h3{
+/* Flexbox for Skills+Interests */
+.tech-1{
     order: 2;
 }
-.other-skills{
+.chunk-1{
     order: 3;
+}
+.tech-2{
+    order: 4;
+}
+.chunk-2{
+    order: 5;
+}
+.tech-3{
+    order: 6;
+}
+.chunk-3{
+    order: 7;
+}
+.tech-4{
+    order: 8;
+}
+.chunk-4{
+    order: 9;
 }
 /* Project Tech Stack */
 /* Project 1 */
@@ -249,9 +258,6 @@ body {
 .stuff{
     margin-bottom: 10px;
 }
-.playdate{
-    margin-top: 30px;
-}
 .stuff h3 a{
     font-family: 'Amatic SC', cursive;
     font-weight: 700;
@@ -298,6 +304,9 @@ body {
     .page{
         margin-bottom: 30px;
     }
+    /* .header-4{
+        margin-top: 50px;
+    } */
     .home,.skills-interests,.project-1,.project-2,.project-3,.project-4,.project-5,.stuffs,.about,.contact{
         padding-left: 15px;
         padding-right: 15px;
@@ -343,6 +352,9 @@ body {
         margin-top: 13px;
         margin-bottom: 13px;
     }
+    .all-tech{
+        margin-bottom: 0px;
+    }
         /* Home page */
     .greeting{
         padding-top: 13px;
@@ -365,7 +377,6 @@ body {
     }
     /* Skills+Interests Section */
     .skills-1 p{
-        margin-top: 13px;
         margin-bottom: 13px;
     }
     /* Slide 2 Tech Stack */
