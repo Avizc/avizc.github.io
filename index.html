@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
-<section class="home" id="home">
+<section class="page home" id="home">
     <section class="time-date">
         <p><span id="zero-hour"></span><span id="hour"></span><span id="zero-minute"></span><span id="minute"></span><span id="day"></span><span id="double-months"></span><span id="month"></span><span id="year"></span>/<span id="zero-hour-z"></span><span id="hour-z"></span><span id="zero-minute-z"></span><span id="minute-z"></span><span id="day-z"></span><span id="double-months-z"></span><span id="month-z"></span><span id="year-z"></span>Z</p>
     </section>
@@ -35,103 +35,77 @@
             <li><a href="#skills-interests">Skills+Interests</a></li>
             <li><a href="#project-1">Projects+Things</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact" class="hide-when-large">Contact</a></li>
         </ul>
     </nav>
+    <nav class="top-contact-bar hide-when-small">
+            <ul>
+                <li><a href="https://keybase.io/av1" target="_blank">Keybase</a></li>
+                <li><a href="https://github.com/llzes" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/avizajac" target="_blank">LinkedIn</a></li>
+                <li><a href="http://avizajac.com/blog/" target="_blank">Blog</a></li>
+                <li><a href="https://twitter.com/_llzes" target="_blank">Twitter</a></li>
+            </ul>
+        </nav>
     <header class="greeting">
         <h1>Oh golly hi, my name is Avi!</h1>
     </header>
-    <section class="brief-bio hide-when-small">
-        <p>I love rabbits, cheesecake, and cute things! My life is prime numbers, triangles, half diamond lockpicks, crypto, and eating chocolate. When I'm not chasing after telephone wires or riding the 7000-series trains in D.C. I make full stack web apps and other things, too.</p>
-    </section>
-    <section class="page-1-face hide-when-small">
+    <section class="page-1-face">
         <h3>This is my face</h3>
     </section>
     <section class="page-1-image">
         <img src="images/avi.png"> 
     </section>
 </section>
-<section class="skills-interests" id="skills-interests">
-    <section class="skills-1">
+<section class="page skills-interests" id="skills-interests">
+    <section class="blue-box">
         <header class="header-2">
             <h2>Skills+Interests</h2>
-            <p>Gosh I do and love a lot of things, here's a few of them!</p>
         </header>
     </section>
-    <!-- <section class="things-do">
-        <h3>Things I can do for folks</h3>
-        <ul>
-            <li>Make a full-stack web app</li>
-            <li>Digital fabrication and create microcontrollers</li>
-            <li>Instruct and teach lockpicking, JavaScript, HTML/CSS, etc</li>
-            <li>Emergency and business continuity plans</li>
-            <li>Optimise and write procedures, manuals, etc</li>
-        </ul>
-    </section> -->
     <section class="tech-stack">
-        <h3>My Tech Stack</h3>
-        <section class="prog-advanced">
-            <h4>I write</h4>
-            <ul>
-                <li>Java</li>
-                <li>JavaScript</li>
-            </ul>
+        <h3>Languages</h3>
+        <section class="skills-chunk">
+            <p class="skills-text"><span class="begin-with">I write mostly in</span>JavaScript, Python, Ruby</p>
+            <p class="skills-text"><span class="begin-with">I'm working on and/or can write in</span>Java, Go, C, x86 Assembly (AT&T, Intel), Rust</p>
         </section>
-        <section class="prog-working-on">
-            <h4>I'm working on</h4>
-            <ul>
-                <li>Python</li>
-                <li>C</li>
-                <li>Rust</li>
-                <li>x86 Assembly Intel</li>
-            </ul>
-        </section>
+        <h3>Frontend</h3>
         <section class="stack-skills">
-            <h4>Frontend+Backend</h4>
-            <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>jQuery</li>
-                <li>React</li>
-                <li>Electron</li>
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>PostgreSQL</li>
-                <li>MongoDB</li>
-                <li>REST APIs</li>
-            </ul>
+            <p class="skills-text">HTML5, CSS3, jQuery, React, Electron</p>
         </section>
-        <section class="other-skills">
-            <h4>And the other stuff</h4>
-            <ul>
-                <li>Git</li>
-                <li>Mercurial</li>
-                <li>GitHub</li>
-                <li>Splunk</li>
-                <li>TravisCI</li>
-                <li>AWS</li>
-                <li>Heroku</li>
-                <li>Mocha</li>
-                <li>Chai</li>
-                <li>Enzyme</li>
-                <li>Slack</li>
-                <li>Trello</li>
-            </ul>
+        <h3>Backend</h3>
+        <section class="stack-skills">
+            <p class="skills-text">Node.js, Express, PostgreSQL, MongoDB, REST APIs, webpack, npm</p>
         </section>
-    </section>
-    <section class="hobbies">
-        <h3>My hobbies and stuff!</h3>
-        <ul>
-            <li>Work on and solve crypto contests and challenges</li>
-            <li>Lockpicking with TOOOL</li>
-            <li>Counting the screws on the 7000-series Metro train</li>
-            <li>Doodle and watercolour on everything</li>
-            <li>Break everything</li>
-        </ul>
+        <h3>DevOps</h3>
+        <section class="stack-skills">
+            <p class="skills-text">Git, Mercurial, GitHub, TravisCI, Heroku, Mocha, Chai, Enzyme</p>
+        </section>
     </section>
 </section>
-<section class="project-1" id="project-1">
-    <h2>Projects+Things</h2>
+<section class="page stuffs" id="things">
+    <section class="blue-box">
+            <header class="header-2">
+                <h2>Things I've done</h2>
+            </header>
+    </section>
+    <section class="stuff playdate">
+        <h3><a href="https://avizc.github.io/files/PlayDateAtTheAirlines.pdf" target="_blank">Play Date at the Airlines</a></h3>
+        <p class="hide-when-small">A paper I wrote with an introduction to airlines and airline linguistics, airline and employee culture, why problems exist and persist, suggested steps moving forward.</p>
+    </section>
+    <section class="stuff queercon14">
+        <h3><a href="http://avizajac.com/2017/08/01/queercon-14-contest.html" target="_blank">Queercon 14 Contest Writeup</a></h3>
+        <p class="hide-when-small">I won Subterfuge's crypto contest for Queercon 14 at DEF CON this past year by hand, avoiding technology as much as possible outside of Google-ing things, learning how to scan and read BLE scans, scanning a QR code.</p>
+    </section>
+    <section class="stuff dc-short">
+        <h3><a href="https://media.defcon.org/DEF%20CON%2024/DEF%20CON%2024%20short%20story%20contest/DEFCON-24-Avi-Zajac-Alice.txt" target="_blank">Alice - DEF CON 24 Short Story Contest</a></h3>
+        <p class="hide-when-small">My short story won <a href="https://www.defcon.org/html/defcon-24/dc-24-contest-results.html" target="_blank">second place</a> for DEF CON 24's Short Story Contest.</p>
+    </section>
+</section>
+<section class="project-page project-1" id="project-1">
+    <section class="blue-box">
+        <h2>Projects+Things</h2>
+    </section>
     <h3>DevCupid</h4>
     <img src="images/devcupid-1.png">  
     <p>Find and match with developers to assemble teams for projects.</p>
@@ -154,7 +128,7 @@
         </ul>
     </nav>
 </section>
-<section class="project-2" id="project-2">
+<section class="project-page project-2" id="project-2">
     <h3>Cohort of Thrones with Rabbits in Wonderland</h4>
     <img src="images/cotriw.png"> 
     <p>An app of dashboards for managing students and pairs.</p>
@@ -174,7 +148,7 @@
         </ul>
     </nav>
 </section>
-<section class="project-3" id="project-3">
+<section class="project-page project-3" id="project-3">
     <h3>Graph It</h3>
     <img src="images/graphit.png"> 
     <p>Create bar and line graphs simply with easy sharing.</p>
@@ -196,27 +170,8 @@
         </ul>
     </nav>
 </section>
-<section class="project-4" id="project-4">
-    <h3>Learn Danish</h3>
-    <img src="images/learndanish.png"> 
-    <p>Quiz yourself on Danish words.</p>
-    <ul class="project-stack">
-        <li>MongoDB</li>
-        <li>Mongoose</li>
-        <li>Express</li>
-        <li>Node.js</li>
-        <li>React</li>
-        <li>Google OAuth</li>
-    </ul>
-    <nav class="project-links">
-        <ul>
-            <li><a href="https://language-avi-saule.herokuapp.com/" target="_blank">Demo</a></li>
-            <li><a href="https://github.com/Avizc/learn-danish" target="_blank">Source</a></li>
-        </ul>
-    </nav>
-</section>
-<section class="project-5" id="project-5">
-    <h3>Metro Quiz App</h3>
+<!-- <section class="project-page project-4" id="project-5">
+    <h3>Metro Quiz</h3>
     <img src="images/metroquiz.png"> 
     <p>Test your knowledge on the 7000-series Metro trains!</p>
     <ul class="project-stack">
@@ -224,43 +179,56 @@
     </ul>
     <nav class="project-links">
         <ul>
-            <li><a href="https://avizc.github.io/thinkful-day6/quizapp/index.html" target="_blank">Demo</a></li>
-            <li><a href="https://github.com/Avizc/metro-quiz" target="_blank">Source</a></li>
+            <li><a href="http://avizajac.com/metro-quiz/" target="_blank">Demo</a></li>
+            <li><a href="https://github.com/llzes/metro-quiz" target="_blank">Source</a></li>
         </ul>
     </nav>
+</section> -->
+<section class="page stuffs" id="things">
+    <section class="blue-box">
+            <header class="header-2">
+                <h2>Working on things</h2>
+            </header>
+    </section>
+    <section class="stuff tiramisu">
+            <h3><a href="https://github.com/llzes/tiramisu" target="_blank">Tiramisu</a></h3>
+            <p class="hide-when-small"></p>
+        </section>
+    <section class="stuff malware-analysis">
+        <h3><a href="https://github.com/RPISEC/Malware" target="_blank">Malware Analysis - CSCI 4976</a></h3>
+        <p class="hide-when-small"></p>
+    </section>
+    <section class="stuff cryptopals">
+        <h3><a href="https://github.com/llzes/cryptopals" target="_blank">Cryptopals</a></h3>
+        <p class="hide-when-small"></p>
+    </section>
+    <section class="stuff sky">
+        <h3><a href="https://github.com/llzes/sky" target="_blank">Sky</a></h3>
+        <p class="hide-when-small"></p>
+    </section>
 </section>
-<section class="stuffs" id="things">
-    <section class="stuff playdate">
-        <h3><a href="https://avizc.github.io/files/PlayDateAtTheAirlines.pdf" target="_blank">Play Date at the Airlines</a></h3>
-        <p class="hide-when-small">A paper I wrote with an introduction to airlines and airline linguistics, airline and employee culture, why problems exist and persist, suggested steps moving forward.</p>
+<section class="page about" id="about">
+    <section class="blue-box">
+        <h2>About me!</h2>
     </section>
-    <section class="stuff queercon14">
-        <h3><a href="https://avizc.github.io/2017/08/01/queercon-14-contest.html" target="_blank">Queercon 14 Contest Writeup</a></h3>
-        <p class="hide-when-small">I won Subterfuge's crypto contest for Queercon 14 at DEF CON this past year by hand, avoiding technology as much as possible outside of Google-ing things, learning how to scan and read BLE scans, scanning a QR code.</p>
-    </section>
-    <section class="stuff dc-short">
-        <h3><a href="https://media.defcon.org/DEF%20CON%2024/DEF%20CON%2024%20short%20story%20contest/DEFCON-24-Avi-Zajac-Alice.txt" target="_blank">Alice - DEF CON 24 Short Story Contest</a></h3>
-        <p class="hide-when-small">My short story won <a href="https://www.defcon.org/html/defcon-24/dc-24-contest-results.html" target="_blank">second place</a> for DEF CON 24's Short Story Contest.</p>
-    </section>
-</section>
-<section class="about" id="about">
-    <h2>About me!</h2>
     <section class="about-image">
         <img src="images/lockpicking.png">
     </section>
-    <h3 class="hide-when-small">developer, crypto nerd, breaking everything</h3>
-    <p class="hide-when-large">Developer, crypto nerd, breaking everything—I love rabbits, cheesecake, and cute things! My life is prime numbers, triangles, half diamond lockpicks, crypto.</p>
-    <p class="hide-when-small">When I'm not making or breaking stuff I love to drink hot apple cider and cry a lot because of how cute rabbits and corgis are.</p>
+    <h3>developer, crypto nerd, breaking everything</h3>
+    <p>I love rabbits, cheesecake, and cute things! My life is prime numbers, triangles, half diamond lockpicks, crypto, eating chocolate. Some of my most favourite things to do is chase after telephone wires and ride the 7000-series trains in DC.</p>
+    <p class="p2">When I'm not making or breaking stuff I love to drink hot apple cider and cry a lot because of how cute rabbits and corgis are.</p>
 </section>
-<section class="contact" id="contact">
-    <h2>Contact+Social Media</h2>
+<section class="page contact hide-when-large" id="contact">
+    <section class="blue-box">
+        <h2>Contact+Social Media</h2>
+    </section>
     <p>Here are the following ways you can contact me!</p>
     <section class="contact-links">
         <ul>
             <li><span class="contact-links"><a href="mailto:hello@avizajac.com" target="_blank">Mail Forwarding</span></li> <!-- <i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a> -->
             <li><span class="contact-links"><a href="https://keybase.io/av1" target="_blank">Keybase</a></span></li>
             <li><span class="contact-links"><a href="https://www.linkedin.com/in/avizajac" target="_blank">LinkedIn</a></span></li> <!--<i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i> -->
-            <li><span class="contact-links"><a href="https://avizc.github.io/blog/" target="_blank">Blog</a></span></li>
+            <li><span class="contact-links"><a href="http://avizajac.com/blog/" target="_blank">Blog</a></span></li>
             <li><span class="contact-links"><a href="https://twitter.com/_llzes" target="_blank">Twitter</a></span></li> <!-- <i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i> -->
         </ul>
     </section>
