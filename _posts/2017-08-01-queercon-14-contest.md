@@ -30,7 +30,7 @@ In hindsight I should have converted it to numbers 1,2,3...26 as it ended up con
 
 I didn't touch it again until my flight Wednesday evening 26 July. This is where I began attempting to find the frequency and look for patterns. You can see that in the squares/circles/etc in bright blue pen. One key thing to note is that I immediately wrote 'SEE' to replace JTT. I didn't know for sure at the time it'd be the answer but I felt pretty steadfast on it as a placeholder until later for guesses. What I didn't realise was that the theme would be superencipherment.
 
-<img src="/images/qc1.jpg">
+<img src="/images/qc1.png">
 
 On the plane I got a bit distracted by a few conversations, didn't double check that my inital attempt at substituting the puzzle with the alphabet was incorrect. I felt instinctively ABCD and ABC had to at least be ABC=THE but when I applied it everywhere things didn't work. On an aside I should have converted everything into numbers as it threw me off on the final part to solve it.
 
@@ -223,7 +223,7 @@ To further reduce it down all I cared about was 'DOWVKGIHV'. With it being 9 cha
 
 I did a reverse of the alphabet which finally ended with a message: LASTEIGHT.
 
-<img src="/images/qc10.jpg">
+<img src="/images/qc10.png">
 
 ## And also back to the BLE scans
 
@@ -295,4 +295,4 @@ THEENRIC | TMENTCEN | PLAINTEXT
 
  And that was the entire contest. Oh golly.
 
- <img src="/images/qc12.jpg">
+ <img src="/images/qc12.png">
