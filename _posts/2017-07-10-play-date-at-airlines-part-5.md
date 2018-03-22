@@ -4,7 +4,7 @@ title: "Play Date at the Airlines - Part 5: Fun Things Observed"
 date: 2017-7-10
 ---
 
-### Update: Version 1.1.0 can be found via PDF [here](https://avizc.github.io/files/PlayDateAtTheAirlines.pdf). This is Version 1.0.0 on this page currently.
+### Update: Version 1.1.0 can be found via PDF [here](https://avizajac.com/files/PlayDateAtTheAirlines.pdf). This is Version 1.0.0 on this page currently. Parts 1-4 are now in ~/Archive.
 
 Oh golly this is what I’ve been wanting to write in the last few posts, I can’t wait to share now! As with the last one I’ll provide things the airlines can/should do to alleviate/fix the issues. And remember to not do anything that’ll get you in trouble, everything I’m saying here are things I’ve observed or researched into that I found interesting.
 
@@ -12,10 +12,10 @@ Disclaimer: Everything here was done in research, observance, Google-ing, no SSI
 
 ## Contents
 
-* [Introduction](https://avizc.github.io/files/archive/2017-07-10-play-date-at-airlines-part-1.html)
-* [Things to know about airlines](https://avizc.github.io/files/archive/2017-07-10-play-date-at-airlines-part-2.html)
-* [Airline Culture and Common Issues](https://avizc.github.io/files/archive/2017-07-10-play-date-at-airlines-part-3.html)
-* [Inner Airline Employee Views and Issues](https://avizc.github.io/files/archive/2017-07-10-play-date-at-airlines-part-4.html)
+* [Introduction](https://avizajac.com/files/archive/2017-07-10-play-date-at-airlines-part-1.html)
+* [Things to know about airlines](https://avizajac.com/files/archive/2017-07-10-play-date-at-airlines-part-2.html)
+* [Airline Culture and Common Issues](https://avizajac.com/files/archive/2017-07-10-play-date-at-airlines-part-3.html)
+* [Inner Airline Employee Views and Issues](https://avizajac.com/files/archive/2017-07-10-play-date-at-airlines-part-4.html)
 * Fun Things Observed
     * Legacy system errors
     * New system errors
