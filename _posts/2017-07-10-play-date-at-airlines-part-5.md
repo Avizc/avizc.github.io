@@ -12,10 +12,10 @@ Disclaimer: Everything here was done in research, observance, Google-ing, no SSI
 
 ## Contents
 
-* [Introduction](https://avizc.github.io/2017/07/08/play-date-at-airlines-part-1.html)
-* [Things to know about airlines](https://avizc.github.io/2017/07/08/play-date-at-airlines-part-2.html)
-* [Airline Culture and Common Issues](https://avizc.github.io/2017/07/08/play-date-at-airlines-part-3.html)
-* [Inner Airline Employee Views and Issues](https://avizc.github.io/2017/07/10/play-date-at-airlines-part-4.html)
+* [Introduction](https://avizc.github.io/files/archive/2017-07-10-play-date-at-airlines-part-1.html)
+* [Things to know about airlines](https://avizc.github.io/files/archive/2017-07-10-play-date-at-airlines-part-2.html)
+* [Airline Culture and Common Issues](https://avizc.github.io/files/archive/2017-07-10-play-date-at-airlines-part-3.html)
+* [Inner Airline Employee Views and Issues](https://avizc.github.io/files/archive/2017-07-10-play-date-at-airlines-part-4.html)
 * Fun Things Observed
     * Legacy system errors
     * New system errors

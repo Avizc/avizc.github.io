@@ -4,7 +4,7 @@ title: "Play Date at the Airlines - Part 4: Inner Airline Employee Views and Iss
 date: 2017-7-10
 ---
 
-### Update: Version 1.1.0 can be found via PDF [here](https://avizc.github.io/files/PlayDateAtTheAirlines.pdf). This is Version 1.0.0 on this page currently.
+### Update: Version 1.1.0 can be found via PDF [here](https://llzes.github.io/files/PlayDateAtTheAirlines.pdf). This is Version 1.0.0 on this page currently.
 
 Now that we’ve cleared through all of that (thank you if you’re still here) we’re beginning to get at the fun stuff. I’d like to remind folks to be safe, don’t do anything stupid, and everything I’m writing is for informative purposes.  Also if you blame me for doing something stupid I will throw the ugliest stuffed animals at you for the rest of eternity.
 
@@ -14,9 +14,9 @@ Disclaimer: Everything here was done either in research, observance, Google-ing,
 
 ## Contents
 
-* [Introduction](https://avizc.github.io/2017/07/08/play-date-at-airlines-part-1.html)
-* [Things to know about airlines](https://avizc.github.io/2017/07/08/play-date-at-airlines-part-2.html)
-* [Airline Culture and Common Issues](https://avizc.github.io/2017/07/08/play-date-at-airlines-part-3.html)
+* [Introduction](https://llzes.github.io/files/archive/2017-07-10-play-date-at-airlines-part-1.html)
+* [Things to know about airlines](https://llzes.github.io/files/archive/2017-07-10-play-date-at-airlines-part-2.html)
+* [Airline Culture and Common Issues](https://llzes.github.io/files/archive/2017-07-10-play-date-at-airlines-part-3.html)
 * Inner Airline Employee Views and Issues
     * Airportitus
     * Airline Employees Views
@@ -27,7 +27,7 @@ Disclaimer: Everything here was done either in research, observance, Google-ing,
         * Passive
         * Malicious
     * Why are we still using legacy systems?
-* [Fun things observed](https://avizc.github.io/2017/07/10/play-date-at-airlines-part-5.html)
+* [Fun things observed](https://llzes.github.io/2017/07/10/play-date-at-airlines-part-5.html)
 * Passenger walk through
 * Conclusion
 
