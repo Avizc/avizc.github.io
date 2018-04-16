@@ -8,7 +8,7 @@ _This post contains random sad comments scattered throughout it, I'm listening t
 
 I was introduced to [Mars Argo's music](https://marsargo.bandcamp.com/) recently. Since then I've been like an addict searching for ~~meaning~~ all of her music (much of it having been taken down). That led me to <a href="https://bandcamp.com/">Bandcamp</a> which delightfully had some of her music in a decent collection. I accidentally went down a rabbit hole from there when I had to make an account to listen to her music.
 
-At the very top of the page when I signed in was a little "We’re hiring in design and engineering!" and so I figured I'd check it out. Disclosure I did not apply because I don't qualify for their requirements as a junior developer ~~plus who knows when I'll even be good enough for a job at this point~~.
+At the very top of the page when I signed in was a little <a href="https://bandcamp.com/jobs#developer">"We’re hiring in design and engineering!"</a> and so I figured I'd check it out. Disclosure I did not apply because I don't qualify for their requirements as a junior developer ~~plus who knows when I'll even be good enough for a job at this point~~.
 
 Anyways.
 
