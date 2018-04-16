@@ -87,4 +87,5 @@ blockquote {
 }
 code{
   font-size: 1.5em;
+  max-width: 100%;
 }
