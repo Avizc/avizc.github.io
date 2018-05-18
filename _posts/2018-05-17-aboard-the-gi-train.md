@@ -9,9 +9,9 @@ date: 2018-5-17
 
 In Washington, D.C., aka the District, the primary mode of public transport is WMATA's Metro (Metrorail) system. The heart of it being in DC with Metro Center, L'Enfant Plaza, and Gallery Place/Chinatown as the three major transfer stations with stations from there expanding into parts of Maryland and Virginia.
 
-If you're also ~~obsessed and in love with~~ a fan of the Metro like I am (or just like long escalators) you likely know that Wheaton station on the Red Line in Silver Spring, Maryland has the longest single-span escalators in the Western Hemisphere! At a length of 230ft/70m with a vertical rise of 115ft/35m due to a 30 degree inclination, travelling at a speed of about 90ft/27m per minute, it is an approximate 2 minute and 45 second trip if you stand on a single step the entire duration (which I can personally vouch for).
+If you're also ~~obsessed and in love with~~ a fan of the Metro like I am (or just like long escalators) you likely know that [Wheaton station](https://www.wmata.com/rider-guide/stations/wheaton.cfm?y=33) on the Red Line in Silver Spring, Maryland has the longest single-span escalators in the Western Hemisphere! At a length of 230ft/70m with a vertical rise of 115ft/35m due to a 30 degree inclination, travelling at a speed of about 90ft/27m per minute, it is an approximate 2 minute and 45 second trip if you stand on a single step the entire duration (which I can personally vouch for).
 
-Most likely if we are going to check out the escalators we'll begin at Metro Center, the central hub station, hopping onto the Red Line.
+Most likely if we are going to check out the escalators we'll begin at [Metro Center](https://www.wmata.com/rider-guide/stations/metro-center.cfm?y=33), the central hub station, hopping onto the Red Line.
 
 You hop onto a train car, hopefully a darling 7000-series car (the newest train car series on the system).
 
@@ -23,21 +23,21 @@ So I promise this isn't actually a post on ~~my love of~~ the Metro: it's a (bit
 
 At Metro Center we begin with all of our GObject-based C libraries.
 
-A GObject is a language-indendent expression of Object Oriented Programming (OOP) concepts. OOP concepts aren't built into C but you can implement them, so it becomes an API of sorts. From there we can write in C using GObject that will translate into whatever language you'd like to work in, which from there it'll use whatever is supported (e.g. classes in Java).
+A GObject is a language-indendent expression of Object Oriented Programming (OOP) concepts. OOP concepts aren't built into C but you can implement them so it becomes an API of sorts. From there we can write in C using GObject that will translate into whatever language you'd like to work in, which from there it'll use whatever is supported (e.g. classes in Java).
 
 This example from Philip (with some editing from the chat) helped me personally understand GObjects:
 
-*If you're building a GNOME app using GTK then the first thing you need is a GTK window. "GtkWindow" is a GObject class. So if you're building your app in C, you call `gtk_window_new()` to create one; in JavaScript you call `new Gtk.Window()`; in Python it's `Gtk.Window()`, etc.*
+*"If you're building a GNOME app using GTK then the first thing you need is a GTK window. "GtkWindow" is a GObject class. So if you're building your app in C, you call `gtk_window_new()` to create one; in JavaScript you call `new Gtk.Window()`; in Python it's `Gtk.Window()`, etc."*
 
-Think of yourself as one of the many GObject-based C libraries: the Wheaton escalators all the way out in Silver Spring, Maryland can't directly access and import us (e.g. libraries, classes) nor any of our unique things (e.g. properties, methods) about us, without some middleware!
+Think of yourself as one of the many GObject-based C libraries: the Wheaton escalators all the way out in Silver Spring, Maryland can't directly access and import us (e.g. libraries, classes) nor any of our unique things about us (e.g. properties, methods), without some middleware!
 
 In my case I'd have *avi.h* and *avi.c* in my Avi library/class based from [GObject boiler plate code](https://developer.gnome.org/gobject/unstable/howto-gobject.html) with all of the library sources, [GType's](https://developer.gnome.org/gobject/stable/gobject-Type-Information.html), [GTK-Doc](https://developer.gnome.org/gtk-doc-manual/) comments on each of the unique things whether functions, properties, and so on outside of the boilerplate.
 
-Inside of *avi.c* and *avi.h* my *Avi* class has a property *fav_train_series*, aka whatever my favourite train car series is (the 7000-series!) and in a method somewhere such as *say_fav_series* it would return *fav_train_series*.
+Inside of *avi.c* and *avi.h* my *Avi* class would have a property *fav_train_series*, aka whatever my favourite train car series is (the 7000-series!) and in a *say_fav_series* method somewhere around there it would return *fav_train_series*.
 
 *Note: This and the following for the rest should all be assumed to be pseudocode for all I know unless stated otherwise. I have not tested these samples. Personal comments from me will be after a 🐰 emoji.*
 
-To initialise my Avi class (original code from the [g_object_class_install_properties() function](https://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#g-object-class-install-properties) and [g_type_class_add_private()](https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#g-type-class-add-private) documentation and following [Reimer's](http://helgo.net/simon/introspection-tutorial/stepone.xhtml) guide):
+To initialise my Avi class it would look something like this (original code from the [g_object_class_install_properties() function](https://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#g-object-class-install-properties) and [g_type_class_add_private()](https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#g-type-class-add-private) documentation and following [Reimer's](http://helgo.net/simon/introspection-tutorial/stepone.xhtml) guide):
 
 ```
 static void
@@ -95,7 +95,7 @@ Cool! So we know from Metro Center (GObject-based C library) and all the folks (
 
 That's where the Metro trains, aka GObject Introspection, comes in!
 
-GObject Introspection is middleware that connects the GNOME Desktop platform libraries written in C using GObject to any language binding like GJS (JavaScript). What's really awesome about this is that regardless of your favourite managed runtime, (e.g. JavaScript with GJS, Python with PyGObject), you can import and use the original class that's written in C without having to re-do it or duplicate work that someone else already did to access it in their preferred runtime. It builds all the metadata required inside the GObject library (using the annotations from the GTK-Doc comments) so any language binding can share and use it natively via importing the GObject Introspection framework into their specific language, so users can write applications in something they're comfortable with compared to writing complex applications in only C.
+[GObject Introspection](https://gitlab.gnome.org/GNOME/gobject-introspection/tree/master) is middleware that connects the [GNOME Desktop](https://www.gnome.org/) platform libraries written in C using GObject to any language binding like [GJS](https://gitlab.gnome.org/GNOME/gjs/tree/master/gjs) (JavaScript). What's really awesome about this is that regardless of your favourite managed runtime (e.g. JavaScript with GJS, Python with PyGObject) you can import and use the original class that's written in C without having to re-do it or duplicate work that someone else already did to access it in their preferred mutual runtime. It builds all the metadata required inside the GObject library (using the annotations from the GTK-Doc comments) so any language binding can share and use it natively via importing the GObject Introspection framework into their specific language. Users can write applications in something they're comfortable with compared to writing complex applications in only C.
 
 There's a [few tools that GObject Introspection has](https://gitlab.gnome.org/GNOME/gobject-introspection/tree/master) that makes this possible. From the README:
 
@@ -112,7 +112,7 @@ There's a [few tools that GObject Introspection has](https://gitlab.gnome.org/GN
 
 Kind of like riding on the Metrorail system there's more than just standing around at a station and being a passenger that happens! Lets hop onto a train car now.
 
-While we go inside the train car excited to see the escalators at Wheaton soon our train operator (GObject Introspection) needs to introspect us, the passengers, to get us to Wheaton. When they're getting ready to drive the train they include some instructions ([`#include <girepository.h>`](https://gitlab.gnome.org/GNOME/gobject-introspection/blob/master/girepository/girepository.h)) in the main driver cab (e.g. the *main* function). This requires having the GObject Introspection package and development files to compile. If it's their first time driving they'll have to recompile before the next step.
+While we go inside the train car excited to see the escalators at Wheaton our train operator (GObject Introspection) needs to introspect us, the passengers, to get us to Wheaton. When they're getting ready to drive the train they include some instructions ([`#include <girepository.h>`](https://gitlab.gnome.org/GNOME/gobject-introspection/blob/master/girepository/girepository.h)) in the main driver cab (e.g. the *main* function). This requires having the GObject Introspection package and development files to compile. If it's their first time driving they'll have to recompile before the next step.
 
 Cool! We're all inside the train. Now the train operator can run *g-ir-scanner* on us. As *g-ir-scanner* is running it parses the original C (using GObject) code with the GTK-Doc comments.
 
@@ -148,21 +148,21 @@ GLIB::Object::Introspection | Perl | Typelib | Runtime
 GirFFI | Ruby | Typelib | Runtime
 hbgi | Harbour | Typelib | Runtime
 
-It'd be wasteful of resources if we wrote applications using the introspected classes reading from the GIR XML. GObject Introspection lets us *g-ir-compiler* to compile then generate a binary formatted file, Typelib, from the GIR XML.
+It'd be wasteful of resources if we wrote applications using the introspected classes reading directly from the GIR XML. GObject Introspection lets us use *g-ir-compiler* to compile then generate a binary formatted file, Typelib, from the GIR XML.
 
 GIR XML is lovely that it's human readable, but Typelib is machine readable as it's in a binary format that has been optimised for fast disk access and low memory usage. Aka our train operator can finally get going!
 
 ## Our train is arriving at Wheaton
 
-The train is pulling up to Wheaton, aka our language binding that takes in Typelib. At some point in time as the train series underwent acceptance testing, Wheaton and the train series had to be hooked up together during runtime using the metadata (Typelib or GIR). Likely they went from testing with one specific train (a class), got it working at the station, and then applied it to all the trains after (creating a shared library).
+The train is pulling up to Wheaton, aka our language binding that takes in Typelib. At some point in time as the train series underwent acceptance testing, Wheaton and the train series had to be hooked up together during runtime using the metadata (Typelib or GIR). Likely they went from testing with one specific train (a class), got it working at the station, and then applied it to all the trains after (by creating a shared library).
 
-If you follow [Reimer's guide](http://helgo.net/simon/introspection-tutorial/stepfour.xhtml) on how to "Make it a library", the *libtool* utility is used to turn the class into its own shared and dynamic library. From there it's the same process of running *g-ir-scanner* (using the `--library` flag for `--program`) then *g-ir-compiler*!
+If you follow [Reimer's guide](http://helgo.net/simon/introspection-tutorial/stepfour.xhtml) on how to "Make it a library", the *libtool* utility is used to turn the class into its own shared and dynamic library. From there it's the same process of running *g-ir-scanner* (using the `--library` flag instad of `--program`) then *g-ir-compiler* away!
 
 ## Wheaton accepting the train
 
-On the flip side, we're now looking at the station, aka the language binding, using introspection in the runtime to receive the train, aka the C (using GObject), GIR, and/or Typelib. [Here's awesome ASCII art overview](https://wiki.gnome.org/Projects/GObjectIntrospection/Architecture) showing the architecture of GObject Introspection!
+From the station's perspective, aka the language binding, it's using introspection during runtime to receive the train, aka the C (using GObject), GIR, and/or Typelib. [Here's awesome ASCII art overview](https://wiki.gnome.org/Projects/GObjectIntrospection/Architecture) showing the architecture of GObject Introspection!
 
-Wheaton is receiving Typelib from the train, thus *mmap()* is shared between the processes (the station and train with people in case). [From the GNU Operating System on mmap()](https://www.gnu.org/software/libc/manual/html_node/Memory_002dmapped-I_002fO.html):
+Wheaton is receiving Typelib from the train, thus the *mmap()* is shared between the processes (the station and train with people in case). [From the GNU Operating System on mmap()](https://www.gnu.org/software/libc/manual/html_node/Memory_002dmapped-I_002fO.html):
 
 *"On modern operating systems, it is possible to mmap (pronounced "em-map") a file to a region of memory. When this is done, the file can be accessed just like an array in the program.*
 
@@ -170,11 +170,12 @@ Wheaton is receiving Typelib from the train, thus *mmap()* is shared between the
 
 *Since mmapped pages can be stored back to their file when physical memory is low, it is possible to mmap files orders of magnitude larger than both the physical memory and swap space."*
 
-From here it goes two ways (but also can go back either way between the two): for the C (using GObject) itself one can use *gcc* then at deployment it now becomes a [dynamically linked shared object library](http://www.yolinux.com/TUTORIALS/LibraryArchives-StaticAndDynamic.html), **.so*, (that links to your code during run time so if there's changes in the **.so* file you won't have to recompile the main program), such as libtrain.so, which is bridged to with *libffi*; for our process of going from *g-ir-scanner* to GIR XML to *g-ir-compiler* to Typelib with *libgirepository*.
+From here it goes two ways (that can also exchange between the two):
 
-[*libffi*](https://en.wikipedia.org/wiki/Libffi) is a dynamically linked shared object library (**.so*) and interface for C that calls natively compiled functions at run time instead of at the compile time.
-
-*libgirepository* is a dynamically linked shared object library (**.so*) that "can read Typelibs and present them in libffi-based ways" per the ASCII art architecture overview.
+* For the C (using GObject) itself one can use *gcc* then at deployment it now becomes a [dynamically linked shared object library](http://www.yolinux.com/TUTORIALS/LibraryArchives-StaticAndDynamic.html), **.so*, (that links to your code during run time so if there's changes in the **.so* file you won't have to recompile the main program), an example being libtrain.so, which is bridged to with *libffi*
+  * [*libffi*](https://en.wikipedia.org/wiki/Libffi) is a dynamically linked shared object library (**.so*) and interface for C that calls natively compiled functions at run time instead of at the compile time.
+* For our process of going from the C (using GObject) to *g-ir-scanner* to GIR XML to *g-ir-compiler* to Typelib we go with *libgirepository*.
+  * *libgirepository* is a dynamically linked shared object library (**.so*) that "can read Typelibs and present them in libffi-based ways" per the ASCII art architecture overview.
 
 ## Finally at the escalators!
 
