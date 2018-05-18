@@ -19,17 +19,21 @@ Regardless of if it is a 7000, 6000, 5000, 3000, or 2000-series car (the 1000 an
 
 So I promise this isn't actually a post on ~~my love of~~ the Metro: it's a (bit imperfect) way to remember and understand how we go from the GObject-based C libraries to the language bindings such as GJS with GObject Introspection. Lets go back and start from the beginning again.
 
-## Metro Center, aka GObject-based C libraries
+## Beginning at Metro Center
 
-At Metro Center we begin with all of our GObject-based C libraries. Think of yourself as a GObject-based C library: you want to get some excitement based runtime at Wheaton since it's easy for us to be excited by the escalators if we're actually on them.
+At Metro Center we begin with all of our GObject-based C libraries.
 
-In my case I'd have *avi.h* and *avi.c* based from [GObject boiler plate code](https://developer.gnome.org/gobject/unstable/howto-gobject.html) with all of the library sources, [GType's](https://developer.gnome.org/gobject/stable/gobject-Type-Information.html), [GTK-Doc](https://developer.gnome.org/gtk-doc-manual/) comments on all the unique things about me (classes) outside of the boilerplate.
+A GObject is a language-indendent expression of Object Oriented Programming (OOP) concepts. OOP concepts aren't built into C but you can implement them, so it becomes an API of sorts. From there we can write in C using GObject that will translate into whatever language you'd like to work in, which from there it'll use whatever is supported (e.g. classes in Java).
 
-Inside of *avi.c* and *avi.h* I'd have an *Avi* class that has a property *fav_train_series*, aka my favourite train car series (the 7000-series!) and in a method such as *say_fav_series* have it return *fav_train_series*.
+Think of yourself as one of the many GObject-based C libraries: the Wheaton escalators all the way out in Silver Spring, Maryland can't directly access and import us (library/classes) nor any of our unique things (classes) about us, without some middleware!
 
-*Note: This and the following for the rest should all be assumed to be pseudocode for all I know unless stated otherwise. I have not tested these samples. Personal comments from me will be after a 🐰 emoji. Might make an actual repo for fun at some point huzzah.*
+To step back for a second in my case I'd have *avi.h* and *avi.c* in my Avi library based from [GObject boiler plate code](https://developer.gnome.org/gobject/unstable/howto-gobject.html) with all of the library sources, [GType's](https://developer.gnome.org/gobject/stable/gobject-Type-Information.html), [GTK-Doc](https://developer.gnome.org/gtk-doc-manual/) comments on each of the unique things whether functions, properties, and so on outside of the boilerplate.
 
-To initialise the class (original code from the [g_object_class_install_properties() function](https://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#g-object-class-install-properties) and [g_type_class_add_private()](https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#g-type-class-add-private) documentation and following [Reimer's](http://helgo.net/simon/introspection-tutorial/stepone.xhtml) guide):
+Inside of *avi.c* and *avi.h* my *Avi* class has a property *fav_train_series*, aka whatever my favourite train car series is (the 7000-series!) and in a method somewhere such as *say_fav_series* it would return *fav_train_series*.
+
+*Note: This and the following for the rest should all be assumed to be pseudocode for all I know unless stated otherwise. I have not tested these samples. Personal comments from me will be after a 🐰 emoji.*
+
+To initialise my Avi class (original code from the [g_object_class_install_properties() function](https://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#g-object-class-install-properties) and [g_type_class_add_private()](https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#g-type-class-add-private) documentation and following [Reimer's](http://helgo.net/simon/introspection-tutorial/stepone.xhtml) guide):
 
 ```
 static void
@@ -81,22 +85,120 @@ avi_class_init (AviClass *klass)
 }
 ```
 
+## Hopping onto a train car
 
+Cool! So we know from Metro Center (GObject-based C library) and all the folks (classes) waiting to transfer there that we're not able to be directly accessed by Wheaton (a language interpreter/binding) or any other station since they're different stations (language bindings).
+
+That's where the Metro trains, aka GObject Introspection, comes in!
+
+GObject Introspection is middleware that connects the GNOME Desktop platform libraries written in C using GObject to any language binding like GJS (JavaScript). What's really awesome about this is that regardless of your favourite managed runtime, (e.g. JavaScript with GJS, Python with PyGObject), you can import and use the original class that's written in C without having to re-do it or duplicate work that someone else already did to access it in their preferred runtime. It builds all the metadata required inside the GObject library (using the annotations from the GTK-Doc comments) so any language binding can share and use it natively via importing the GObject Introspection framework into their specific language, so users can write applications in something they're comfortable with compared to writing complex applications in only C.
+
+There's a [few tools that GObject Introspection has](https://gitlab.gnome.org/GNOME/gobject-introspection/tree/master) that makes this possible. From the README:
+
+* g-ir-scanner
+  * A tool which generates GIR XML files by parsing headers, GTK-Doc comment blocks including annotations and introspecting GObject based libraries.  
+* g-ir-compiler
+  * A typelib compiler. It converts one or more GIR files into one or more typelib blobs.   
+* g-ir-generate
+  * A GIR generator, using the repository API. It generates GIR files from binary typelib which can be in a shared object, or a raw typelib blob.  
+* g-ir-annotation-tool
+  * Extracts annotations from source code files.
+* g-ir-doc-tool
+  * Generates API reference documentation from a GIR XML file.
+
+Kind of like riding on the Metrorail system there's more than just standing around at a station and being a passenger that happens! Lets hop onto a train car now.
+
+While we go inside the train car excited to see the escalators at Wheaton soon our train operator (GObject Introspection) needs to introspect us, the passengers, to get us to Wheaton. When they're getting ready to drive the train they include some instructions [(*#include <girepository.h>*)](https://gitlab.gnome.org/GNOME/gobject-introspection/blob/master/girepository/girepository.h) in the main driver cab (e.g. the *main* function). This requires having the GObject Introspection package and development files to compile. If it's their first time driving they'll have to recompile before the next step.
+
+Cool! We're all inside the train. Now the train operator can run *g-ir-scanner* on us. As *g-ir-scanner* is running it parses the original C (using GObject) code with the GTK-Doc comments.
+
+After they do that they'll generate and get a new output file. I'm now *Avi-0.1.gir* or something like that to the driver.
+
+A *.gir file is really just an XML file but written in the [GIR XML format](https://developer.gnome.org/gi/stable/gi-gir-reference.html). A simple and short example of one is the [gir/fontconfig-2.0.gir](https://gitlab.gnome.org/GNOME/gobject-introspection/blob/master/gir/fontconfig-2.0.gir). The directory it's in has a few others to check out!
+
+Here's an example GIR depicting our current scenario:
+
+```
+<?xml version="1.0"?>
+<repository version="7.0">
+    <namespace name="Metro">
+        <class name="Avi">
+            <property name="fav_train_series"/>
+            <method name="say_fav_series"/>
+        </class>
+    </namespace>
+</repository>
+```
+
+That's cool and all but unless we're planning on using just the Vala binding we need to take this a step further. Wait, you're asking, why am I specifying Vala here? Vala is the only language binding that takes GIR as its input. [From the page describing features that different bindings use of GObject Introspection](https://wiki.gnome.org/Projects/GObjectIntrospection/BindingsFeatures) (check it out for further specific feature details):
+
+Binding | Language | Input | Kind
+:---: | :---: | :---: | ---
+gjs | JavaScript | Typelib | Runtime
+JGIR | Java | Typelib | Compiled to Java bytecode
+pygobject | Python | Typelib | Runtime
+seed | JavaScript | Typelib | Runtime
+vala | Vala | GIR | Compiled to C
+lgi | Lua | Typelib | Runtime
+GLIB::Object::Introspection | Perl | Typelib | Runtime
+GirFFI | Ruby | Typelib | Runtime
+hbgi | Harbour | Typelib | Runtime
+
+It'd be wasteful of resources if we wrote applications using the introspected classes reading from the GIR XML. GObject Introspection lets us *g-ir-compiler* to compile then generate a binary formatted file, Typelib, from the GIR XML.
+
+GIR XML is lovely that it's human readable, but Typelib is machine readable as it's in a binary format that has been optimised for fast disk access and low memory usage. Aka our train operator can finally get going!
+
+## Our train is arriving at Wheaton
+
+The train is pulling up to Wheaton, aka our language binding that takes in Typelib. At some point in time as the train series underwent acceptance testing, Wheaton and the train series had to be hooked up together during runtime using the metadata (Typelib or GIR). Likely they went from testing with one specific train (a class), got it working at the station, and then applied it to all the trains after (creating a shared library).
+
+If you follow [Reimer's guide](http://helgo.net/simon/introspection-tutorial/stepfour.xhtml) on how to "Make it a library", the *libtool* utility is used to turn the class into its own shared and dynamic library. From there it's the same process of running *g-ir-scanner* (using the *--library* flag for *--program*) then *g-ir-compiler*!
+
+## Wheaton accepting the train
+
+On the flip side, we're now looking at the station, aka the language binding, using introspection in the runtime to receive the train, aka the C (using GObject), GIR, and/or Typelib. [Here's awesome ASCII art overview](https://wiki.gnome.org/Projects/GObjectIntrospection/Architecture) showing the architecture of GObject Introspection!
+
+Wheaton is receiving Typelib from the train, thus *mmap()* is shared between the processes (the station and train with people in case). [From the GNU Operating System on mmap()](https://www.gnu.org/software/libc/manual/html_node/Memory_002dmapped-I_002fO.html):
+
+*"On modern operating systems, it is possible to mmap (pronounced "em-map") a file to a region of memory. When this is done, the file can be accessed just like an array in the program.*
+
+*This is more efficient than read or write, as only the regions of the file that a program actually accesses are loaded. Accesses to not-yet-loaded parts of the mmapped region are handled in the same way as swapped out pages.*
+
+*Since mmapped pages can be stored back to their file when physical memory is low, it is possible to mmap files orders of magnitude larger than both the physical memory and swap space."*
+
+From here it goes two ways (but also can go back either way between the two): for the C (using GObject) itself one can use *gcc* then at deployment it now becomes a [dynamically linked shared object library [*.so]](http://www.yolinux.com/TUTORIALS/LibraryArchives-StaticAndDynamic.html) (that links to your code during run time so if there's changes in the **.so* file you won't have to recompile the main program), such as libtrain.so, which is bridged to with *libffi*; for our process of going from *g-ir-scanner* to GIR XML to *g-ir-compiler* to Typelib with *libgirepository*.
+
+[*libffi*](https://en.wikipedia.org/wiki/Libffi) is a dynamically linked shared object library (**.so*) and interface for C that calls natively compiled functions at run time instead of at the compile time.
+
+*libgirepository* is a dynamically linked shared object library (**.so*) that "can read Typelibs and present them in libffi-based ways" per the ASCII art architecture overview.
+
+## Finally at the escalators!
+
+Wheaton, after this entire process, accepted us from Metro Center so we can finally go on and see the escalators ourselves!
+
+If you've made it to the end thank you so much for reading it all! This is the first post in a series of several for my internship this summer.
+
+[This is my Outreachy for GNOME introduction post](https://avizajac.com/gnome/2018/05/10/gnome-intro.html) that describes what I'll be working on and lists various ways to contact me (Planet GNOME didn't populate my introductory post from last week). If you have any questions, comments, or feedback please feel free to contact me! 🐰
 
 ## Resources
 
 * Philip Chimento, my Outreachy GNOME internship mentor!
 * [ASCII art overview of the GI infrastructure](https://wiki.gnome.org/Projects/GObjectIntrospection/Architecture)
-  Lovely visual that helped inspire my Metro analogy!  
+  * Lovely visual that helped inspire my Metro analogy!  
 * [GObject Introspection - Information Page](https://wiki.gnome.org/action/show/Projects/GObjectIntrospection)
 * [GObject Introspection - Reference Manual (v1.56.1)](https://developer.gnome.org/gi/1.56/)
+* [GObject Introspection - Language Bindings Features](https://wiki.gnome.org/Projects/GObjectIntrospection/BindingsFeatures)
 * [GObject Introspection - Tutorial by Simon Kågedal Reimer](http://helgo.net/simon/introspection-tutorial/index.xhtml)
 * [GObject - Tutorial](https://developer.gnome.org/gobject/unstable/pt02.html)
 * [GObject - Boiler Plate Code Tutorial](https://developer.gnome.org/gobject/unstable/howto-gobject.html)
 * [GObject - Base Object Type Reference](https://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html)
 * [GObject - GType API Reference](https://developer.gnome.org/gobject/stable/gobject-Type-Information.html)
 * [GTK-Doc](https://developer.gnome.org/gtk-doc-manual/)
-* [Cairo GIR example](https://gitlab.gnome.org/GNOME/gobject-introspection/blob/master/gir/cairo-1.0.gir.in)
+* [GIR XML Format - Reference](https://developer.gnome.org/gi/stable/gi-gir-reference.html)
+* [Fontconfig-2.0 GIR - Example](https://gitlab.gnome.org/GNOME/gobject-introspection/blob/master/gir/fontconfig-2.0.gir)
+* [mmap()](https://www.gnu.org/software/libc/manual/html_node/Memory_002dmapped-I_002fO.html)
+* [Libffi](https://en.wikipedia.org/wiki/Libffi)
+* [Dynamically Linked Shared Object Library - Tutorial](http://www.yolinux.com/TUTORIALS/LibraryArchives-StaticAndDynamic.html)
 * [WMATA - Home Page](https://www.wmata.com/)
 * [WMATA - Metro Center Station Information](https://www.wmata.com/rider-guide/stations/metro-center.cfm?y=33)
 * [Metro Center Station - Wikipedia](https://en.wikipedia.org/wiki/Metro_Center_station)
