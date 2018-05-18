@@ -25,9 +25,13 @@ At Metro Center we begin with all of our GObject-based C libraries.
 
 A GObject is a language-indendent expression of Object Oriented Programming (OOP) concepts. OOP concepts aren't built into C but you can implement them, so it becomes an API of sorts. From there we can write in C using GObject that will translate into whatever language you'd like to work in, which from there it'll use whatever is supported (e.g. classes in Java).
 
+This example from Philip (with some editing from the chat) helped me personally understand GObjects:
+
+*If you're building a GNOME app using GTK then the first thing you need is a GTK window. "GtkWindow" is a GObject class. So if you're building your app in C, you call `gtk_window_new()` to create one; in JavaScript you call `new Gtk.Window()`; in Python it's `Gtk.Window()`, etc.*
+
 Think of yourself as one of the many GObject-based C libraries: the Wheaton escalators all the way out in Silver Spring, Maryland can't directly access and import us (e.g. libraries, classes) nor any of our unique things (e.g. properties, methods) about us, without some middleware!
 
-To step back for a second in my case I'd have *avi.h* and *avi.c* in my Avi library based from [GObject boiler plate code](https://developer.gnome.org/gobject/unstable/howto-gobject.html) with all of the library sources, [GType's](https://developer.gnome.org/gobject/stable/gobject-Type-Information.html), [GTK-Doc](https://developer.gnome.org/gtk-doc-manual/) comments on each of the unique things whether functions, properties, and so on outside of the boilerplate.
+In my case I'd have *avi.h* and *avi.c* in my Avi library/class based from [GObject boiler plate code](https://developer.gnome.org/gobject/unstable/howto-gobject.html) with all of the library sources, [GType's](https://developer.gnome.org/gobject/stable/gobject-Type-Information.html), [GTK-Doc](https://developer.gnome.org/gtk-doc-manual/) comments on each of the unique things whether functions, properties, and so on outside of the boilerplate.
 
 Inside of *avi.c* and *avi.h* my *Avi* class has a property *fav_train_series*, aka whatever my favourite train car series is (the 7000-series!) and in a method somewhere such as *say_fav_series* it would return *fav_train_series*.
 
@@ -182,7 +186,7 @@ If you've made it to the end thank you so much for reading it all! This is the f
 
 ## Resources
 
-* Philip Chimento, my Outreachy GNOME internship mentor!
+* [Philip Chimento](http://ptomato.name/), my Outreachy GNOME internship mentor!
 * [ASCII art overview of the GI infrastructure](https://wiki.gnome.org/Projects/GObjectIntrospection/Architecture)
   * Lovely visual that helped inspire my Metro analogy!  
 * [GObject Introspection - Information Page](https://wiki.gnome.org/action/show/Projects/GObjectIntrospection)
