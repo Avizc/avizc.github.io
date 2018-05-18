@@ -92,3 +92,17 @@ code{
 pre{
     overflow-x: auto;
 }
+table{
+    border-collapse: collapse;
+    width: 100%;
+    font-family: 'Source Sans Pro', 'Helvetica', sans-serif;
+}
+table, th, td{
+    border: 3px solid #000000;
+}
+th{
+    text-transform: uppercase;
+}
+th,td{
+    padding: .5em;
+}

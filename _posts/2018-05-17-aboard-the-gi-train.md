@@ -25,7 +25,7 @@ At Metro Center we begin with all of our GObject-based C libraries.
 
 A GObject is a language-indendent expression of Object Oriented Programming (OOP) concepts. OOP concepts aren't built into C but you can implement them, so it becomes an API of sorts. From there we can write in C using GObject that will translate into whatever language you'd like to work in, which from there it'll use whatever is supported (e.g. classes in Java).
 
-Think of yourself as one of the many GObject-based C libraries: the Wheaton escalators all the way out in Silver Spring, Maryland can't directly access and import us (library/classes) nor any of our unique things (classes) about us, without some middleware!
+Think of yourself as one of the many GObject-based C libraries: the Wheaton escalators all the way out in Silver Spring, Maryland can't directly access and import us (e.g. libraries, classes) nor any of our unique things (e.g. properties, methods) about us, without some middleware!
 
 To step back for a second in my case I'd have *avi.h* and *avi.c* in my Avi library based from [GObject boiler plate code](https://developer.gnome.org/gobject/unstable/howto-gobject.html) with all of the library sources, [GType's](https://developer.gnome.org/gobject/stable/gobject-Type-Information.html), [GTK-Doc](https://developer.gnome.org/gtk-doc-manual/) comments on each of the unique things whether functions, properties, and so on outside of the boilerplate.
 
@@ -108,13 +108,13 @@ There's a [few tools that GObject Introspection has](https://gitlab.gnome.org/GN
 
 Kind of like riding on the Metrorail system there's more than just standing around at a station and being a passenger that happens! Lets hop onto a train car now.
 
-While we go inside the train car excited to see the escalators at Wheaton soon our train operator (GObject Introspection) needs to introspect us, the passengers, to get us to Wheaton. When they're getting ready to drive the train they include some instructions [(*#include <girepository.h>*)](https://gitlab.gnome.org/GNOME/gobject-introspection/blob/master/girepository/girepository.h) in the main driver cab (e.g. the *main* function). This requires having the GObject Introspection package and development files to compile. If it's their first time driving they'll have to recompile before the next step.
+While we go inside the train car excited to see the escalators at Wheaton soon our train operator (GObject Introspection) needs to introspect us, the passengers, to get us to Wheaton. When they're getting ready to drive the train they include some instructions ([`#include <girepository.h>`](https://gitlab.gnome.org/GNOME/gobject-introspection/blob/master/girepository/girepository.h)) in the main driver cab (e.g. the *main* function). This requires having the GObject Introspection package and development files to compile. If it's their first time driving they'll have to recompile before the next step.
 
 Cool! We're all inside the train. Now the train operator can run *g-ir-scanner* on us. As *g-ir-scanner* is running it parses the original C (using GObject) code with the GTK-Doc comments.
 
 After they do that they'll generate and get a new output file. I'm now *Avi-0.1.gir* or something like that to the driver.
 
-A *.gir file is really just an XML file but written in the [GIR XML format](https://developer.gnome.org/gi/stable/gi-gir-reference.html). A simple and short example of one is the [gir/fontconfig-2.0.gir](https://gitlab.gnome.org/GNOME/gobject-introspection/blob/master/gir/fontconfig-2.0.gir). The directory it's in has a few others to check out!
+A **.gir* file is really just an XML file but written in the [GIR XML format](https://developer.gnome.org/gi/stable/gi-gir-reference.html). A simple and short example of one is the [gir/fontconfig-2.0.gir](https://gitlab.gnome.org/GNOME/gobject-introspection/blob/master/gir/fontconfig-2.0.gir). The directory it's in has a few others to check out!
 
 Here's an example GIR depicting our current scenario:
 
@@ -133,7 +133,7 @@ Here's an example GIR depicting our current scenario:
 That's cool and all but unless we're planning on using just the Vala binding we need to take this a step further. Wait, you're asking, why am I specifying Vala here? Vala is the only language binding that takes GIR as its input. [From the page describing features that different bindings use of GObject Introspection](https://wiki.gnome.org/Projects/GObjectIntrospection/BindingsFeatures) (check it out for further specific feature details):
 
 Binding | Language | Input | Kind
-:---: | :---: | :---: | ---
+:---: | :---: | :---: | :---:
 gjs | JavaScript | Typelib | Runtime
 JGIR | Java | Typelib | Compiled to Java bytecode
 pygobject | Python | Typelib | Runtime
@@ -152,7 +152,7 @@ GIR XML is lovely that it's human readable, but Typelib is machine readable as i
 
 The train is pulling up to Wheaton, aka our language binding that takes in Typelib. At some point in time as the train series underwent acceptance testing, Wheaton and the train series had to be hooked up together during runtime using the metadata (Typelib or GIR). Likely they went from testing with one specific train (a class), got it working at the station, and then applied it to all the trains after (creating a shared library).
 
-If you follow [Reimer's guide](http://helgo.net/simon/introspection-tutorial/stepfour.xhtml) on how to "Make it a library", the *libtool* utility is used to turn the class into its own shared and dynamic library. From there it's the same process of running *g-ir-scanner* (using the *--library* flag for *--program*) then *g-ir-compiler*!
+If you follow [Reimer's guide](http://helgo.net/simon/introspection-tutorial/stepfour.xhtml) on how to "Make it a library", the *libtool* utility is used to turn the class into its own shared and dynamic library. From there it's the same process of running *g-ir-scanner* (using the `--library` flag for `--program`) then *g-ir-compiler*!
 
 ## Wheaton accepting the train
 
@@ -166,7 +166,7 @@ Wheaton is receiving Typelib from the train, thus *mmap()* is shared between the
 
 *Since mmapped pages can be stored back to their file when physical memory is low, it is possible to mmap files orders of magnitude larger than both the physical memory and swap space."*
 
-From here it goes two ways (but also can go back either way between the two): for the C (using GObject) itself one can use *gcc* then at deployment it now becomes a [dynamically linked shared object library [*.so]](http://www.yolinux.com/TUTORIALS/LibraryArchives-StaticAndDynamic.html) (that links to your code during run time so if there's changes in the **.so* file you won't have to recompile the main program), such as libtrain.so, which is bridged to with *libffi*; for our process of going from *g-ir-scanner* to GIR XML to *g-ir-compiler* to Typelib with *libgirepository*.
+From here it goes two ways (but also can go back either way between the two): for the C (using GObject) itself one can use *gcc* then at deployment it now becomes a [dynamically linked shared object library](http://www.yolinux.com/TUTORIALS/LibraryArchives-StaticAndDynamic.html), **.so*, (that links to your code during run time so if there's changes in the **.so* file you won't have to recompile the main program), such as libtrain.so, which is bridged to with *libffi*; for our process of going from *g-ir-scanner* to GIR XML to *g-ir-compiler* to Typelib with *libgirepository*.
 
 [*libffi*](https://en.wikipedia.org/wiki/Libffi) is a dynamically linked shared object library (**.so*) and interface for C that calls natively compiled functions at run time instead of at the compile time.
 
