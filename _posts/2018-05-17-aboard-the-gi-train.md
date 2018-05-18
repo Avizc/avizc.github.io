@@ -23,9 +23,9 @@ So I promise this isn't actually a post on ~~my love of~~ the Metro: it's a (bit
 
 At Metro Center we begin with all of our GObject-based C libraries. Think of yourself as a GObject-based C library: you want to get some excitement based runtime at Wheaton since it's easy for us to be excited by the escalators if we're actually on them.
 
-In my case I'd have `avi.h` and `avi.c` based from [GObject boiler plate code](https://developer.gnome.org/gobject/unstable/howto-gobject.html) with all of the library sources, [GType's](https://developer.gnome.org/gobject/stable/gobject-Type-Information.html), [GTK-Doc](https://developer.gnome.org/gtk-doc-manual/) comments on all the unique things about me (classes) outside of the boilerplate.
+In my case I'd have *avi.h* and *avi.c* based from [GObject boiler plate code](https://developer.gnome.org/gobject/unstable/howto-gobject.html) with all of the library sources, [GType's](https://developer.gnome.org/gobject/stable/gobject-Type-Information.html), [GTK-Doc](https://developer.gnome.org/gtk-doc-manual/) comments on all the unique things about me (classes) outside of the boilerplate.
 
-Inside of ```avi.c``` and ```avi.h``` I'd have an ```Avi``` class that has a property ```fav_train_series```, aka my favourite train car series (the 7000-series!) and in a method such as ```say_fav_series``` have it return ```fav_train_series```.
+Inside of *avi.c* and *avi.h* I'd have an *Avi* class that has a property *fav_train_series*, aka my favourite train car series (the 7000-series!) and in a method such as *say_fav_series* have it return *fav_train_series*.
 
 *Note: This and the following for the rest should all be assumed to be pseudocode for all I know unless stated otherwise. I have not tested these samples. Personal comments from me will be after a 🐰 emoji. Might make an actual repo for fun at some point huzzah.*
 
