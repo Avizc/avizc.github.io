@@ -23,7 +23,7 @@ So I promise this isn't actually a post on ~~my love of~~ the Metro: it's a (bit
 
 At Metro Center we begin with all of our GObject-based C libraries.
 
-A GObject is a language-indendent expression of Object Oriented Programming (OOP) concepts. OOP concepts aren't built into C but you can implement them so it becomes an API of sorts. From there we can write in C using GObject that will translate into whatever language you'd like to work in, which from there it'll use whatever is supported (e.g. classes in Java).
+A GObject is a language-independent expression of Object Oriented Programming (OOP) concepts. OOP concepts aren't built into C but you can implement them so it becomes an API of sorts. From there we can write in C using GObject that will translate into whatever language you'd like to work in, which from there it'll use whatever is supported (e.g. classes in Java).
 
 This example from Philip (with some editing from the chat) helped me personally understand GObjects:
 
@@ -33,7 +33,12 @@ Think of yourself as one of the many GObject-based C libraries: the Wheaton esca
 
 In my case I'd have *avi.h* and *avi.c* in my Avi library/class based from [GObject boiler plate code](https://developer.gnome.org/gobject/unstable/howto-gobject.html) with all of the library sources, [GType's](https://developer.gnome.org/gobject/stable/gobject-Type-Information.html), [GTK-Doc](https://developer.gnome.org/gtk-doc-manual/) comments on each of the unique things whether functions, properties, and so on outside of the boilerplate.
 
-Inside of *avi.c* and *avi.h* my *Avi* class would have a property *fav_train_series*, aka whatever my favourite train car series is (the 7000-series!) and in a *say_fav_series* method somewhere around there it would return *fav_train_series*.
+Inside of *avi.c* and *avi.h* my *Avi* class would have a property *fav-train-series*, aka whatever my favourite train car series is (the 7000-series!) and in an *avi_say_fav_series()* method somewhere around there it would return *fav-train-series*.
+
+A few things I learned from Philip and want to note here:
+
+* Property names in GObject are usually styled with dashes (-) instead of underscores (_) so it'd be *fav-train-series* instead of *fav_train_series*. Some language bindings (e.g. GJS) translate them to underscores (_) to match with their language syntax and style guide.
+* Method names in GObject are usually prefixed with the name of the class so it'd *avi_say_fav_series()* instead of *say_fav_series()*.
 
 *Note: This and the following for the rest should all be assumed to be pseudocode for all I know unless stated otherwise. I have not tested these samples. Personal comments from me will be after a 🐰 emoji.*
 
@@ -120,7 +125,7 @@ After they do that they'll generate and get a new output file. I'm now *Avi-0.1.
 
 A **.gir* file is really just an XML file but written in the [GIR XML format](https://developer.gnome.org/gi/stable/gi-gir-reference.html). A simple and short example of one is the [gir/fontconfig-2.0.gir](https://gitlab.gnome.org/GNOME/gobject-introspection/blob/master/gir/fontconfig-2.0.gir). The directory it's in has a few others to check out!
 
-Here's an example GIR depicting our current scenario:
+Here's a high-level skeleton GIR example depicting our current scenario:
 
 ```
 <?xml version="1.0"?>
@@ -134,7 +139,9 @@ Here's an example GIR depicting our current scenario:
 </repository>
 ```
 
-That's cool and all but unless we're planning on using just the Vala binding we need to take this a step further. Wait, you're asking, why am I specifying Vala here? Vala is the only language binding that takes GIR as its input. [From the page describing features that different bindings use of GObject Introspection](https://wiki.gnome.org/Projects/GObjectIntrospection/BindingsFeatures) (check it out for further specific feature details):
+The above example will not work as it is missing several key things that would require for it to work including the repository xmlns attribute, C type annotations, attributes, identifiers, and more specifying which C symbols to load.
+
+Moving on that's cool and all but unless we're planning on using just the Vala binding we need to take this a step further. Wait, you're asking, why am I specifying Vala here? Vala is the only language binding that takes GIR as its input. [From the page describing features that different bindings use of GObject Introspection](https://wiki.gnome.org/Projects/GObjectIntrospection/BindingsFeatures) (check it out for further specific feature details):
 
 Binding | Language | Input | Kind
 :---: | :---: | :---: | :---:
@@ -158,6 +165,8 @@ The train is pulling up to Wheaton, aka our language binding that takes in Typel
 
 If you follow [Reimer's guide](http://helgo.net/simon/introspection-tutorial/stepfour.xhtml) on how to "Make it a library", the *libtool* utility is used to turn the class into its own shared and dynamic library. From there it's the same process of running *g-ir-scanner* (using the `--library` flag instad of `--program`) then *g-ir-compiler* away!
 
+Avi Note: There is currently an on-going debate on the popularity and usage difficulty/confusion of the Autotools suite, which includes the libtool utility, versus the Meson build system. [Emmanuele Bassi](https://www.bassi.io/), a GNOME contributor and a former director of the [GNOME Foundation Board](https://wiki.gnome.org/FoundationBoard/History), wrote a post on [moving libepoxy to Meson from Autotools](https://www.bassi.io/articles/2017/02/11/epoxy/) sharing details of what he found benchmark wise of as he reported: *"-building Epoxy with Meson on my Kaby Lake four Core i7 and NMVe SSD takes about 45% less time than building it with autotools."
+
 ## Wheaton accepting the train
 
 From the station's perspective, aka the language binding, it's using introspection during runtime to receive the train, aka the C (using GObject), GIR, and/or Typelib. [Here's awesome ASCII art overview](https://wiki.gnome.org/Projects/GObjectIntrospection/Architecture) showing the architecture of GObject Introspection!
@@ -170,12 +179,24 @@ Wheaton is receiving Typelib from the train, thus the *mmap()* is shared between
 
 *Since mmapped pages can be stored back to their file when physical memory is low, it is possible to mmap files orders of magnitude larger than both the physical memory and swap space."*
 
-From here it goes two ways (that can also exchange between the two):
+Another thing to be aware of are **.so* (referred to as a shared object/shared library/dynamic library). **.so* links to your code during run time so if there's any changes in the **.so* file you won't have to recompile the main program. I wasn't entirely sure of the full difference and distinction between a shared and dynamic library. Especially online I kept seeing it being used interchangeably. I found [this answer that was nice](http://lua-users.org/lists/lua-l/2010-12/msg01152.html):
 
-* For the C (using GObject) itself one can use *gcc* then at deployment it now becomes a [dynamically linked shared object library](http://www.yolinux.com/TUTORIALS/LibraryArchives-StaticAndDynamic.html), **.so*, (that links to your code during run time so if there's changes in the **.so* file you won't have to recompile the main program), an example being libtrain.so, which is bridged to with *libffi*
-  * [*libffi*](https://en.wikipedia.org/wiki/Libffi) is a dynamically linked shared object library (**.so*) and interface for C that calls natively compiled functions at run time instead of at the compile time.
-* For our process of going from the C (using GObject) to *g-ir-scanner* to GIR XML to *g-ir-compiler* to Typelib we go with *libgirepository*.
-  * *libgirepository* is a dynamically linked shared object library (**.so*) that "can read Typelibs and present them in libffi-based ways" per the ASCII art architecture overview.
+*"'Dynamic libraries' are libraries that can be loaded at run-time. 'Shared libraries', or 'shared objects', are dynamic libraries designed so that only one copy can be shared between running processes."*
+
+Using that definition I'll refer to **.so* files as *dynamic libraries* for the remainder of this post (or at least until I find a solid confirmation on the distinction somewhere).
+
+As an example we'll say that GCC/compiler, a Metrorail operator, has compiled me (Avi class) into a dynamic library that we'll call *libtrain.so* here. It'll only be linked to the main program if the main program is written in C, C++, Vala, or a different compiled language. Since everything has already been compiled our Metrorail operator already knows where everything and everyone is on the train in case they need to call it (e.g. a function for the doors closing). If anything is missing (e.g. the function for the doors closing isn't responding with a response) it'll fail to allow the Metrorail operator to drive.
+
+On the other hand Wheaton is a language binding so it looks more like this:
+
+* Wheaton is going to work on accessing us by linking to *libgirepository*.
+  * *libgirepository* is a dynamic library that "can read Typelibs and present them in libffi-based ways" per the ASCII art architecture overview.
+* *libgirepository* links to *libffi*.
+  * [*libffi*](https://en.wikipedia.org/wiki/Libffi) is a dynamic library and interface for C that calls natively compiled functions at run time instead of at the compile time.
+* *libgirepository* will be loading Typelib at runtime that'll get the information for *libfii*
+* *libffi* from there will find, load, and call things (e.g. the function to close the doors) at runtime
+
+Code wise we're going from C (using GObject) to *g-ir-scanner* to GIR XML to *g-ir-compiler* to Typelib and from there we'll be picked up by *libgirepository* and *libffi* to take us to Wheaton.
 
 ## Finally at the escalators!
 
