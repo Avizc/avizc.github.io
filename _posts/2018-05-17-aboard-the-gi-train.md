@@ -139,9 +139,9 @@ Here's a high-level skeleton GIR example depicting our current scenario:
 </repository>
 ```
 
-The above example will not work as it is missing several key things that would require for it to work including the repository xmlns attribute, C type annotations, attributes, identifiers, and more specifying which C symbols to load.
+The above example will not work as it is missing several key things that would require for it to work including the repository xmlns attribute(s), C type annotations, attributes, identifiers, and more specifying which C symbols to load.
 
-Moving on that's cool and all but unless we're planning on using just the Vala binding we need to take this a step further. Wait, you're asking, why am I specifying Vala here? Vala is the only language binding that takes GIR as its input. [From the page describing features that different bindings use of GObject Introspection](https://wiki.gnome.org/Projects/GObjectIntrospection/BindingsFeatures) (check it out for further specific feature details):
+Moving on, that's cool and all but unless we're planning on using just the Vala binding we need to take this a step further. Wait, you're asking, why am I specifying Vala here? Vala is the only language binding that takes GIR as its input. [From the page describing features that different bindings use of GObject Introspection](https://wiki.gnome.org/Projects/GObjectIntrospection/BindingsFeatures) (check it out for further specific feature details):
 
 Binding | Language | Input | Kind
 :---: | :---: | :---: | :---:
@@ -165,7 +165,7 @@ The train is pulling up to Wheaton, aka our language binding that takes in Typel
 
 If you follow [Reimer's guide](http://helgo.net/simon/introspection-tutorial/stepfour.xhtml) on how to "Make it a library", the *libtool* utility is used to turn the class into its own shared and dynamic library. From there it's the same process of running *g-ir-scanner* (using the `--library` flag instad of `--program`) then *g-ir-compiler* away!
 
-*Avi Note: There is currently an on-going debate on the popularity and usage difficulty/confusion of the Autotools suite, which includes the libtool utility, versus the Meson build system. [Emmanuele Bassi](https://www.bassi.io/), a GNOME contributor and a former director of the [GNOME Foundation Board](https://wiki.gnome.org/FoundationBoard/History), wrote a post on [moving libepoxy to Meson from Autotools](https://www.bassi.io/articles/2017/02/11/epoxy/) sharing details of what he found benchmark wise of as he reported: *"-building Epoxy with Meson on my Kaby Lake four Core i7 and NMVe SSD takes about 45% less time than building it with autotools."*
+*Avi Note: There is currently an on-going debate on the popularity and usage difficulty/confusion of the [Autotools suite](https://www.gnu.org/software/automake/manual/automake.html), which includes the libtool utility, versus the [Meson build system](https://mesonbuild.com/). [Emmanuele Bassi](https://www.bassi.io/), a GNOME contributor and a former director of the [GNOME Foundation Board](https://wiki.gnome.org/FoundationBoard/History), wrote a post on [moving libepoxy to Meson from Autotools](https://www.bassi.io/articles/2017/02/11/epoxy/) sharing details of what he found benchmark wise. As he reported: "-building Epoxy with Meson on my Kaby Lake four Core i7 and NMVe SSD takes about 45% less time than building it with autotools."*
 
 ## Wheaton accepting the train
 
@@ -179,13 +179,13 @@ Wheaton is receiving Typelib from the train, thus the *mmap()* is shared between
 
 *Since mmapped pages can be stored back to their file when physical memory is low, it is possible to mmap files orders of magnitude larger than both the physical memory and swap space."*
 
-Another thing to be aware of are **.so* (referred to as a shared object/shared library/dynamic library). **.so* links to your code during run time so if there's any changes in the **.so* file you won't have to recompile the main program. I wasn't entirely sure of the full difference and distinction between a shared and dynamic library. Especially online I kept seeing it being used interchangeably. I found [this answer that was nice](http://lua-users.org/lists/lua-l/2010-12/msg01152.html):
+Another thing to be aware of are **.so* (referred to as a shared object/shared library/dynamic library). **.so* links to your code during run time so if there's any changes in the **.so* file you won't have to recompile the main program. I wasn't entirely sure of the full difference and distinction between a shared and dynamic library. Especially online I kept seeing the terms being used interchangeably. I found [this answer that was nice](http://lua-users.org/lists/lua-l/2010-12/msg01152.html):
 
 *"'Dynamic libraries' are libraries that can be loaded at run-time. 'Shared libraries', or 'shared objects', are dynamic libraries designed so that only one copy can be shared between running processes."*
 
 Using that definition I'll refer to **.so* files as *dynamic libraries* for the remainder of this post (or at least until I find a solid confirmation on the distinction somewhere).
 
-As an example we'll say that GCC/compiler, a Metrorail operator, has compiled me (Avi class) into a dynamic library that we'll call *libtrain.so* here. It'll only be linked to the main program if the main program is written in C, C++, Vala, or a different compiled language. Since everything has already been compiled our Metrorail operator already knows where everything and everyone is on the train in case they need to call it (e.g. a function for the doors closing). If anything is missing (e.g. the function for the doors closing isn't responding with a response) it'll fail to allow the Metrorail operator to drive.
+As an example we'll say that GCC/compiler, a Metrorail operator, has compiled me (Avi class) into a dynamic library that we'll call *libtrain.so* here. It'll only be linked to the main program if the main program is written in C, C++, Vala, or a different compiled language. If this is the case then everything has already been compiled and our Metrorail operator already knows where everything is on the train in case they need to call it (e.g. a function for the doors closing). If anything is missing (e.g. the function for the doors closing isn't responding with a response) it'll fail to allow the Metrorail operator to drive.
 
 On the other hand Wheaton is a language binding so it looks more like this:
 
