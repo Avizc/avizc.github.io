@@ -179,7 +179,7 @@ Wheaton is receiving Typelib from the train, thus the *mmap()* is shared between
 
 *Since mmapped pages can be stored back to their file when physical memory is low, it is possible to mmap files orders of magnitude larger than both the physical memory and swap space."*
 
-Another thing to be aware of are **.so* (referred to as a shared object/shared library/dynamic library). **.so* links to your code during run time so if there's any changes in the **.so* file you won't have to recompile the main program. I wasn't entirely sure of the full difference and distinction between a shared and dynamic library. Especially online I kept seeing the terms being used interchangeably. I found [this answer that was nice](http://lua-users.org/lists/lua-l/2010-12/msg01152.html):
+Another thing to be aware of are **.so* (referred to as a shared object/shared library/dynamic library). **.so* links to your code during runtime so if there's any changes in the **.so* file you won't have to recompile the main program. I wasn't entirely sure of the full difference and distinction between a shared and dynamic library. Especially online I kept seeing the terms being used interchangeably. I found [this answer that was nice](http://lua-users.org/lists/lua-l/2010-12/msg01152.html):
 
 *"'Dynamic libraries' are libraries that can be loaded at run-time. 'Shared libraries', or 'shared objects', are dynamic libraries designed so that only one copy can be shared between running processes."*
 
@@ -192,7 +192,7 @@ On the other hand Wheaton is a language binding so it looks more like this:
 * Wheaton is going to work on accessing us by linking to *libgirepository*.
   * *libgirepository* is a dynamic library that "can read Typelibs and present them in libffi-based ways" per the ASCII art architecture overview.
 * *libgirepository* links to *libffi*.
-  * [*libffi*](https://en.wikipedia.org/wiki/Libffi) is a dynamic library and interface for C that calls natively compiled functions at run time instead of at the compile time.
+  * [*libffi*](https://en.wikipedia.org/wiki/Libffi) is a dynamic library and interface for C that calls natively compiled functions at runtime instead of at the compile time.
 * *libgirepository* will be loading Typelib at runtime that'll get the information for *libfii*
 * *libffi* from there will find, load, and call things (e.g. the function to close the doors) at runtime
 
