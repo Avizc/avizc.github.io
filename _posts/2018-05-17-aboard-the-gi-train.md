@@ -222,7 +222,6 @@ If you've made it to the end thank you so much for reading it all! This is the f
 * [GTK-Doc](https://developer.gnome.org/gtk-doc-manual/)
 * [GIR XML Format - Reference](https://developer.gnome.org/gi/stable/gi-gir-reference.html)
 * [Fontconfig-2.0 GIR - Example](https://gitlab.gnome.org/GNOME/gobject-introspection/blob/master/gir/fontconfig-2.0.gir)
-
 * [automake - Autotools Reference](https://www.gnu.org/software/automake/manual/automake.html)
 * [Meson Build System](https://mesonbuild.com/) 
 * [Emmanuele Bassi](https://www.bassi.io/)
