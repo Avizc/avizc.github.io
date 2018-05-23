@@ -222,6 +222,13 @@ If you've made it to the end thank you so much for reading it all! This is the f
 * [GTK-Doc](https://developer.gnome.org/gtk-doc-manual/)
 * [GIR XML Format - Reference](https://developer.gnome.org/gi/stable/gi-gir-reference.html)
 * [Fontconfig-2.0 GIR - Example](https://gitlab.gnome.org/GNOME/gobject-introspection/blob/master/gir/fontconfig-2.0.gir)
+
+* [automake - Autotools Reference](https://www.gnu.org/software/automake/manual/automake.html)
+* [Meson Build System](https://mesonbuild.com/) 
+* [Emmanuele Bassi](https://www.bassi.io/)
+* [GNOME Foundation Board - History of Board Members](https://wiki.gnome.org/FoundationBoard/History)
+* [libepoxy - Bassi's Post Moving to Meson Build from Autotools](https://www.bassi.io/articles/2017/02/11/epoxy/)
+* [Dynamic vs Shared Libraries - Brief Description](http://lua-users.org/lists/lua-l/2010-12/msg01152.html)
 * [mmap()](https://www.gnu.org/software/libc/manual/html_node/Memory_002dmapped-I_002fO.html)
 * [Libffi](https://en.wikipedia.org/wiki/Libffi)
 * [Dynamically Linked Shared Object Library - Tutorial](http://www.yolinux.com/TUTORIALS/LibraryArchives-StaticAndDynamic.html)
