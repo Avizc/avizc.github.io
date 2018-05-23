@@ -193,7 +193,7 @@ On the other hand Wheaton is a language binding so it looks more like this:
   * *libgirepository* is a dynamic library that "can read Typelibs and present them in libffi-based ways" per the ASCII art architecture overview.
 * *libgirepository* links to *libffi*.
   * [*libffi*](https://en.wikipedia.org/wiki/Libffi) is a dynamic library and interface for C that calls natively compiled functions at runtime instead of at the compile time.
-* *libgirepository* will be loading Typelib at runtime that'll get the information for *libfii*
+* *libgirepository* will be loading Typelib at runtime that'll get the information for *libffi*
 * *libffi* from there will find, load, and call things (e.g. the function to close the doors) at runtime
 
 Code wise we're going from C (using GObject) to *g-ir-scanner* to GIR XML to *g-ir-compiler* to Typelib and from there we'll be picked up by *libgirepository* and *libffi* to take us to Wheaton.
