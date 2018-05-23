@@ -35,11 +35,6 @@ In my case I'd have *avi.h* and *avi.c* in my Avi library/class based from [GObj
 
 Inside of *avi.c* and *avi.h* my *Avi* class would have a property *fav-train-series*, aka whatever my favourite train car series is (the 7000-series!) and in an *avi_say_fav_series()* method somewhere around there it would return *fav-train-series*.
 
-A few things I learned from Philip and want to note here:
-
-* Property names in GObject are usually styled with dashes (-) instead of underscores (_) so it'd be *fav-train-series* instead of *fav_train_series*. Some language bindings (e.g. GJS) translate them to underscores (_) to match with their language syntax and style guide.
-* Method names in GObject are usually prefixed with the name of the class so it'd *avi_say_fav_series()* instead of *say_fav_series()*.
-
 *Note: This and the following for the rest should all be assumed to be pseudocode for all I know unless stated otherwise. I have not tested these samples. Personal comments from me will be after a 🐰 emoji.*
 
 To initialise my Avi class it would look something like this (original code from the [g_object_class_install_properties() function](https://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#g-object-class-install-properties) and [g_type_class_add_private()](https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#g-type-class-add-private) documentation and following [Reimer's](http://helgo.net/simon/introspection-tutorial/stepone.xhtml) guide):
@@ -54,7 +49,7 @@ avi_class_init (AviClass *klass)
     🐰 https://developer.gnome.org/gtk-doc-manual/1.26/documenting_sections.html.en
     🐰 https://developer.gnome.org/gtk-doc-manual/
     /**
-     * Avi:fav_train_series:
+     * Avi:fav-train-series:
      *
      * Name of their favourite train series.
      */
@@ -66,9 +61,9 @@ avi_class_init (AviClass *klass)
         🐰 const gchar *blurb
         🐰 const gchar *default_value
         🐰 ParamFlags flags https://developer.gnome.org/gobject/stable/gobject-GParamSpec.html#GParamFlags
-        🐰 Note: I hardcoded the 7000 in for this example so it'd always be 7000 if in a say_fav_series method it called the fav_train_series property.
-        g_param_spec_string ("fav_train_series", 🐰 name, canonical name of the property specified
-                             "Fav_Train_Series", 🐰 nick, nick name for the property specified
+        🐰 Note: I hardcoded the 7000 in for this example so it'd always be 7000 if in a avi_say_fav_series() method it called the fav-train-series property.
+        g_param_spec_string ("fav-train-series", 🐰 name, canonical name of the property specified
+                             "Fav-Train-Series", 🐰 nick, nick name for the property specified
                              "Name of their favourite train series.", 🐰 blurb, description of the property specified
                              "7000", 🐰 default_value, default value for the property specified.
                              G_PARAM_READWRITE | G_PARAM_CONSTRUCT); 🐰 flags, flags for the property specified
@@ -132,8 +127,8 @@ Here's a high-level skeleton GIR example depicting our current scenario:
 <repository version="7.0">
     <namespace name="Metro">
         <class name="Avi">
-            <property name="fav_train_series"/>
-            <method name="say_fav_series"/>
+            <property name="fav-train-series"/>
+            <method name="avi_say_fav_series"/>
         </class>
     </namespace>
 </repository>
@@ -165,7 +160,7 @@ The train is pulling up to Wheaton, aka our language binding that takes in Typel
 
 If you follow [Reimer's guide](http://helgo.net/simon/introspection-tutorial/stepfour.xhtml) on how to "Make it a library", the *libtool* utility is used to turn the class into its own shared and dynamic library. From there it's the same process of running *g-ir-scanner* (using the `--library` flag instad of `--program`) then *g-ir-compiler* away!
 
-*Avi Note: There is currently an on-going debate on the popularity and usage difficulty/confusion of the [Autotools suite](https://www.gnu.org/software/automake/manual/automake.html), which includes the libtool utility, versus the [Meson build system](https://mesonbuild.com/). [Emmanuele Bassi](https://www.bassi.io/), a GNOME contributor and a former director of the [GNOME Foundation Board](https://wiki.gnome.org/FoundationBoard/History), wrote a post on [moving libepoxy to Meson from Autotools](https://www.bassi.io/articles/2017/02/11/epoxy/) sharing details of what he found benchmark wise. As he reported: "-building Epoxy with Meson on my Kaby Lake four Core i7 and NMVe SSD takes about 45% less time than building it with autotools."*
+*Avi Note: There is currently an on-going debate on the popularity and usage difficulty/confusion of the [Autotools suite](https://www.gnu.org/software/automake/manual/automake.html), which includes the libtool utility, versus the [Meson build system](https://mesonbuild.com/). [Emmanuele Bassi](https://www.bassi.io/), a GNOME contributor, wrote a post on [moving libepoxy to Meson from Autotools](https://www.bassi.io/articles/2017/02/11/epoxy/) sharing details of what he found benchmark wise. As he reported: "-building Epoxy with Meson on my Kaby Lake four Core i7 and NMVe SSD takes about 45% less time than building it with autotools."*
 
 ## Wheaton accepting the train
 
