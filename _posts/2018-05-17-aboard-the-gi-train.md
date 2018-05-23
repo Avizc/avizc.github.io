@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Aboard the GObject Introspection Train!
-date: 2018-5-17
+date: 2018-5-22
+categories: GNOME
 ---
-# Hi! If you accidentally saw this you're looking at a draft in-progress.
 
 *Topics covered in this post include: GObject Introspection, GObject, GIR, Typelib, language bindings like GJS, ~~my love of the Metro~~ some Metro facts. Links to all resources, documentation, inspiration, and anything else used are at the bottom of this post.*
 
@@ -200,6 +200,11 @@ Wheaton, after this entire process, accepted us from Metro Center so we can fina
 If you've made it to the end thank you so much for reading it all! This is the first post in a series of several for my internship this summer.
 
 [This is my Outreachy for GNOME introduction post](https://avizajac.com/gnome/2018/05/10/gnome-intro.html) that describes what I'll be working on and lists various ways to contact me (Planet GNOME didn't populate my introductory post from last week). If you have any questions, comments, or feedback please feel free to contact me! 🐰
+
+* Matrix/IRC: @llzes:matrix.org
+* GitLab: [@llzes](https://gitlab.gnome.org/llzes)
+* Twitter: [@_llzes](https://twitter.com/_llzes)
+* Keybase: [@av1](https://keybase.io/av1)
 
 ## Resources
 
