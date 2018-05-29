@@ -5,7 +5,7 @@ date: 2018-5-26
 ---
 *Topics in this post include: Chromebooks, Crouton, future of Linux on Chromebooks, Xiwi, Jhbuild, mozjs52, GJS. Links to all resources and documentation used can be found at the bottom of this post.*
 
-These walkthroughs assume you already have [Developer Mode](https://developer.android.com/topic/arc/sideload#enter-dev) enabled on your Chromebook with [Crouton](https://github.com/dnschneid/crouton) and the [Crouton Extension](https://chrome.google.com/webstore/detail/crouton-integration/gcpneefbbnfalgjniomfjknbcgkbijom) installed. If you get really stuck or don't know what to do you can always ping me!
+These walkthroughs assume you already have [Developer Mode](https://developer.android.com/topic/arc/sideload#enter-dev) enabled on your Chromebook with [Crouton](https://github.com/dnschneid/crouton) and the [Crouton Extension](https://chrome.google.com/webstore/detail/crouton-integration/gcpneefbbnfalgjniomfjknbcgkbijom) installed.
 
 ## The TL;DR Walkthrough
 
@@ -135,10 +135,10 @@ But otherwise huzzah you're ready to go build some things now, have fun!
 
 ## Resources
 
-[Developer Mode](https://developer.android.com/topic/arc/sideload#enter-dev)
-[Crouton](https://github.com/dnschneid/crouton)
-[Crouton Extension](https://chrome.google.com/webstore/detail/crouton-integration/gcpneefbbnfalgjniomfjknbcgkbijom)
-[Chromebooks+Linux - Running Custom Containers Under Chrome OS](https://chromium.googlesource.com/chromiumos/docs/+/master/containers_and_vms.md)
-[Jhbuild - Setting Up Instructions](https://wiki.gnome.org/HowDoI/Jhbuild)
-[Jhbuild - Fixing PATH](https://developer.gnome.org/jhbuild/stable/getting-started.html.en)
-[GJS - Setting Up Instructions](https://gitlab.gnome.org/GNOME/gjs/blob/master/doc/Hacking.md)
+* [Developer Mode](https://developer.android.com/topic/arc/sideload#enter-dev)
+* [Crouton](https://github.com/dnschneid/crouton)
+* [Crouton Extension](https://chrome.google.com/webstore/detail/crouton-integration/gcpneefbbnfalgjniomfjknbcgkbijom)
+* [Chromebooks+Linux - Running Custom Containers Under Chrome OS](https://chromium.googlesource.com/chromiumos/docs/+/master/containers_and_vms.md)
+* [Jhbuild - Setting Up Instructions](https://wiki.gnome.org/HowDoI/Jhbuild)
+* [Jhbuild - Fixing PATH](https://developer.gnome.org/jhbuild/stable/getting-started.html.en)
+* [GJS - Setting Up Instructions](https://gitlab.gnome.org/GNOME/gjs/blob/master/doc/Hacking.md)
