@@ -393,7 +393,7 @@ Now that we excitedly have this thing working, lets clean it up! Philip wrote me
 
 Going in order, the first thing I wanted to do was completely avoid the entire **file.load_contents_promise()** I was doing and just go for **file.load_contents_async()** to keep the **head** program clean. At this point **gio-head-5.js** should and will work with any of the following codeblocks! To do this I had to get rid of the **newFuncName** parameter I had created and only have three possible parameters in my new Promisify: **GioType**, **asyncStuff**, **finishStuff**.
 
-This way I was saving the original **file.load_contents_async()** under the name **file.original_load_contents_async()** in case I'd need it, and monkey patching from there. The process to get to this, one more, was a little eventful from fun errors like:
+This way I was saving the original **file.load_contents_async()** under the name **file.original_load_contents_async()** in case I'd need it, and monkey patching from there. The process to get to this, once more, was a little eventful from fun errors like:
 
 ```
 (llzes)avi@localhost:~/jhbuild/checkout/gjs/examples$ gjs-console gio-head.js gio-cat.js
@@ -409,7 +409,7 @@ promisify/GioType[asyncStuff]@/home/avi/jhbuild/checkout/gjs/examples/promisify.
 promisify/GioType[asyncStuff]@/home/avi/jhbuild/checkout/gjs/examples/promisify.js:22:9
 ```
 
-Oops! I also ended up black boxing a non-relevant to GNOME coding exercise of monkey patching the **get_path()** method, where I learned I couldn't use ES6 arrow functions and had to actually use **function () {}**. I was still stumped so Philip sent me this lovely shorthand guide which saved my life from confusion:
+Oops! I also ended up black boxing a non-relevant to GNOME coding exercise of monkey patching the **get_path()** method, where I learned I couldn't use ES6 arrow functions and had to actually use **function () {}**. I was still stumped after on how to fix my Promisify so Philip sent me this lovely shorthand guide which saved my life from confusion:
 
 ```
 function wrapper() {
@@ -420,7 +420,7 @@ _real_get_path = get_path;
 get_path = wrapper;
 ```
 
-I was also confusing myself with **this** at one point but ultimately got myself [to this]((https://gitlab.gnome.org/llzes/gjs/blob/65d54771b2a1e7aab6b5b01f0827d0aab2aea51c/examples/promisify.js) (tehe):
+I was also confusing myself with **this** at one point but ultimately got myself [to this](https://gitlab.gnome.org/llzes/gjs/blob/65d54771b2a1e7aab6b5b01f0827d0aab2aea51c/examples/promisify.js) (tehe):
 
 ```
 var promisify = (
