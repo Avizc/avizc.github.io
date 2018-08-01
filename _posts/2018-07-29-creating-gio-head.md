@@ -7,7 +7,7 @@ categories: GNOME
 
 ## If you came across this by accident sorry! It's currently a work-in-progress.
 
-*This is the first in a three post series! I recommend reading [Creating Promisify for GJS](https://avizajac.com/gnome/2018/07/25/creating-promisify.html) after this one!*
+*This is the first in a three post series! I recommend reading [Creating Promisify for GJS](https://avizajac.com/gnome/2018/07/29/creating-promisify.html) after this one!*
 
 To start off I want to give some context as to why my code and mindset in these three posts may be a bit strange sounding/looking.
 
