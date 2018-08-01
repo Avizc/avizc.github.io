@@ -391,3 +391,120 @@ Now that we excitedly have this thing working, lets clean it up! Philip wrote me
 * Allow *both* the callback version and the new Promise-style API with the same function **[Completed]**
 * Discard useless boolean return value **[To Do]**
 
+Going in order, the first thing I wanted to do was completely avoid the entire **file.load_contents_promise()** I was doing and just go for **file.load_contents_async()** to keep the **head** program clean. At this point **gio-head-5.js** should and will work with any of the following codeblocks! To do this I had to get rid of the **newFuncName** parameter I had created and only have three possible parameters in my new Promisify: **GioType**, **asyncStuff**, **finishStuff**.
+
+This way I was saving the original **file.load_contents_async()** under the name **file.original_load_contents_async()** in case I'd need it, and monkey patching from there. The process to get to this, one more, was a little eventful from fun errors like:
+
+```
+(llzes)avi@localhost:~/jhbuild/checkout/gjs/examples$ gjs-console gio-head.js gio-cat.js
+
+(gjs-console:21947): Gjs-WARNING **: 17:11:27.757: JS ERROR: InternalError: too much recursion
+promisify/GioType[asyncStuff]@/home/avi/jhbuild/checkout/gjs/examples/promisify.js:22:9
+promisify/GioType[asyncStuff]@/home/avi/jhbuild/checkout/gjs/examples/promisify.js:22:9
+promisify/GioType[asyncStuff]@/home/avi/jhbuild/checkout/gjs/examples/promisify.js:22:9
+promisify/GioType[asyncStuff]@/home/avi/jhbuild/checkout/gjs/examples/promisify.js:22:9
+promisify/GioType[asyncStuff]@/home/avi/jhbuild/checkout/gjs/examples/promisify.js:22:9
+promisify/GioType[asyncStuff]@/home/avi/jhbuild/checkout/gjs/examples/promisify.js:22:9
+promisify/GioType[asyncStuff]@/home/avi/jhbuild/checkout/gjs/examples/promisify.js:22:9
+promisify/GioType[asyncStuff]@/home/avi/jhbuild/checkout/gjs/examples/promisify.js:22:9
+```
+
+Oops! I also ended up black boxing a non-relevant to GNOME coding exercise of monkey patching the **get_path()** method, where I learned I couldn't use ES6 arrow functions and had to actually use **function () {}**. I was still stumped so Philip sent me this lovely shorthand guide which saved my life from confusion:
+
+```
+function wrapper() {
+    some_other_function();
+    _real_get_path();
+}
+_real_get_path = get_path;
+get_path = wrapper;
+```
+
+I was also confusing myself with **this** at one point but ultimately got myself [to this]((https://gitlab.gnome.org/llzes/gjs/blob/65d54771b2a1e7aab6b5b01f0827d0aab2aea51c/examples/promisify.js) (tehe):
+
+```
+var promisify = (
+    GioType,
+    asyncStuff,
+    finishStuff
+) => {
+    GioType[`original_${asyncStuff}`] = GioType[asyncStuff];
+    GioType[asyncStuff] = function(...args) {
+        return new Promise((resolve, reject)=>{
+            this[`original_${asyncStuff}`](...args, function(source, res) {
+                try {
+                    let result = source[finishStuff](res);
+                    resolve(result);
+                } catch (error) {
+                    reject(error);
+                }
+            });
+            
+        });
+    };
+};
+```
+
+Huzzah whoo! But now, uh, what happens to all of the folks who want to use callbacks or virtually any code that already exists with an **_async** function? Once again it'd be very unreasonable to expect everyone to convert over willingly to the new Promise-styled API I've created, as it wouldn't be backwards compatible right now, not to mention all of the documentation that would to be fixed. Lots of yikes now.
+
+So lets fix this by making it backwards compatible by checking to see if people want to use callbacks or not! The way I went about this one was expanding the rest parameter (**..args**) and checking if any of the arguments was a function or not. [After I got it working](https://gitlab.gnome.org/llzes/gjs/commit/7ab0b066e0ab5790260c75dbd38e216e652a80b9) I began cleaning it up like usual. Something I did when I first got it working was using a for-loop:
+
+```
+for(let i=0; i<args.length; i++){
+    if (typeof args[i]==="function") {
+        return this[asyncStuff];
+    } else { 
+        return new Promise((resolve, reject)=>{
+            [...] 
+        }
+    }
+``` 
+
+This is hard to read and also helped hide a logic issue I had. So the first step after [was replacing the for-loop with every()](https://gitlab.gnome.org/llzes/gjs/blob/d243b11d2191d0a8a6ad4a85838ddf5346bd372e/examples/promisify.js):
+
+```
+if (args.every(arg=>typeof arg === 'function')) return;
+else return new Promise((resolve, reject)=>{
+    [...]
+});
+```
+
+That made things much cleaner for us to read! But right now there's a weird logic issue to fix. [This is the commit showing the git diff of the two files for a more pleasant experience](https://gitlab.gnome.org/llzes/gjs/commit/609aadada4f3e24e20d48e3d70492935ce1b1fce) otherwise here is the new if/else logic:
+
+```
+if (args.every(arg=>typeof arg !== 'function')) return new Promise((resolve, reject)=>{
+    [...]
+});
+else return this[`original_${asyncStuff}`](...args);
+```
+
+For this to work properly we need to know for sure that we've checked every argument and that every argument is *not* a function. So the key differences between the two is:
+
+* In the first, if *any* of the arguments are a function then do the callback version, else return the new Promise-styled API. This is an issue as it'll stop the moment it sees an argument that is a function and not run through all of the arguments before continuing.
+* In the second, if *all* of the arguments are not a function then do the Promise-styled API, else return the original **_async()** callback.
+
+Holy flying macarons that's a world of a difference. But huzzah aww golly this is fanastic since we're now at the current version of Promisify until the next stage is completed! Here is how Promisify looks now (and you should be able to now fully run **gio-head-5.js** with this saved in **promisify.js**):
+
+```
+const promisify = (
+    GioType,
+    asyncStuff,
+    finishStuff
+) => {
+    GioType[`original_${asyncStuff}`] = GioType[asyncStuff];
+    GioType[asyncStuff] = function(...args) {
+        if (args.every(arg=>typeof arg !== 'function')) return new Promise((resolve, reject)=>{
+            this[`original_${asyncStuff}`](...args, function(source, res) {
+                try {
+                    let result = source[finishStuff](res);
+                    resolve(result);
+                } catch (error) {
+                    reject(error);
+                }
+            });
+            
+        });
+        else return this[`original_${asyncStuff}`](...args);
+    };
+};
+```
