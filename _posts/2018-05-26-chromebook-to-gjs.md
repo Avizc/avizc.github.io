@@ -5,6 +5,8 @@ date: 2018-5-26
 ---
 *Topics in this post include: Chromebooks, Crouton, future of Linux on Chromebooks, Xiwi, Jhbuild, mozjs52, GJS. Links to all resources and documentation used can be found at the bottom of this post.*
 
+*Update 6 August 2018: The JS engine has now been upgraded to mozjs60 from mozjs52!*
+
 These walkthroughs assume you already have [Developer Mode](https://developer.android.com/topic/arc/sideload#enter-dev) enabled on your Chromebook with [Crouton](https://github.com/dnschneid/crouton) and the [Crouton Extension](https://chrome.google.com/webstore/detail/crouton-integration/gcpneefbbnfalgjniomfjknbcgkbijom) installed.
 
 ## The TL;DR Walkthrough
@@ -23,7 +25,7 @@ Once you finish the process you can enter your new chroot using Xiwi with the fo
 sudo startgnome -n NAME_YOUR_CHROOT -X xiwi
 ```
 
-Open up XTerm (you can always install something else later). This is only accurate as of late May 2018, packages are likely to be updated/added/removed later on.
+Open up XTerm (you can always install something else later). This is only accurate as of early August 2018, packages are likely to be updated/added/removed later on.
 
 ```
 sudo apt-get update
@@ -49,7 +51,7 @@ ln -sf ~/.local/bin/jhbuild ~/bin/jhbuild
 For GJS you'll want to add this into your configuration file. Open up ```~/.config/jhbuildrc``` then add in:
 
 ```
-module_autogenargs[‘mozjs52’] = ‘--enable-debug’
+module_autogenargs[‘mozjs60’] = ‘--enable-debug’
 ```
 
 I ended up having to do the following to get it to execute jhbuild:

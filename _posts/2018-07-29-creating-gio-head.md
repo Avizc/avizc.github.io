@@ -5,8 +5,6 @@ date: 2018-7-29
 categories: GNOME
 ---
 
-## If you came across this by accident sorry! It's currently a work-in-progress.
-
 *This is the first in a three post series! I recommend reading [Creating Promisify for GJS](https://avizajac.com/gnome/2018/07/29/creating-promisify.html) after this one!*
 
 To start off I want to give some context as to why my code and mindset in these three posts may be a bit strange sounding/looking.
@@ -19,7 +17,7 @@ In a separate post I'll expand on my struggle with these issues. For now if you'
 
 ## The Concept
 
-Philip suggested I re-implement the **head** utility in JavaScript (GJS) with asynchronous callbacks, later converted to [Async/Await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function), new language features in ES7 to understand what I'd be working on this summer. This post will be covering the traditional callbacks version of the re-implemented **head** utility, with the next post moving us to the new modernised version using Async/Await thanks to the Promisify feature. For anyone who's unfamiliar with **head**, it's a utility that by default prints the first ten lines of a file (e.g. **head FILENAME**).
+Philip suggested I re-implement the **head** utility in JavaScript (GJS) with asynchronous callbacks, later converted to [Async/Await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function), new language features in ES7, to understand what I'd be working on this summer. This post will be covering the traditional callbacks version of the re-implemented **head** utility, with the next post moving us to the new modernised version using Async/Await thanks to the Promisify feature. For anyone who's unfamiliar with **head**, it's a utility that by default prints the first ten lines of a file (e.g. **head FILENAME**).
 
 My **head** project grew to be way more than the simple program I had imagined it'd be with finding random bugs that need to be fixed, learning how GNOME is set up, and more. Every time I thought I could breathe in peace that I was done I'd get another [awesome!] feedback change leading me to learning new super cute ES6 shortcuts, de/re-sugaring things, monkey patching, and so on!
 
@@ -101,7 +99,7 @@ const {promisify} = imports.promisify;
 
 Cool! So now we're past importing. But how do we get our program actually running? We create a loop to keep it nicely together! In GNOME there's **GMainLoop** which *"is a convenient, thread-safe way of running a GMainContext to process events until a desired exit condition is met, at which point g_main_loop_quit() should be called. Typically, in a UI program, this will be the user clicking ‘exit’. In a socket handling program, this might be the final socket closing." [What is GMainLoop](https://developer.gnome.org/programming-guidelines/stable/main-contexts.html.en)*
 
-A crucial thing to be aware of is that no main loop means no asynchronous operations as it'd exit immediately. As Philip noted to me, *"Sync operations hold up everything until they complete; you don't need a main loop because everything executes from top to bottom. Async operations don't hold up anything, so something else needs to keep the program alive until the operations complete. That something is the main loop."*
+A crucial thing to be aware of is that no main loop means no asynchronous operations as it'd exit immediately. A way to remember this is that asynchronous operations don't hold things up for you: it's like when you're packing a bag (main loop) and throwing things (asynchronous operations) into it, holding your belongings (program) together; synchronous operations hold things up for you until you're done so you don't need the main loop: it's like your friends who make sure you actually pack in order (execute the program) your stuff (synchronous operations) from a list top-to-bottom.
 
 The way we can import and use it in this example is via [g_main_loop_new ()](https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#g-main-loop-new) like:
 
@@ -135,10 +133,8 @@ You'll notice that **loop.run();** occurs outside of the **load_contents_async()
 
 This is actually totally normal it turns out and occurs because the loop isn't asynchronous! From my notes or at least my understanding of how this works:
 
-*  Code runs from top-to-bottom, so the loop has to first quit with **loop.quit()** before **loop.run()** recognises there's an end to this (otherwise it'll be stuck forever, at least until you cancel it)
-* While it's going from top-to-bottom, while it hasn't quite hit **loop.run()** yet it's still reading and prepping my **load_contents_async()** and **load_contents_finish()** callbacks waiting for it to be called to run
+* While it's going from top-to-bottom, while it hasn't quite hit **loop.run()** yet, it's still reading and prepping my **load_contents_async()** and **load_contents_finish()** callbacks waiting for it to be called to run
 * **loop.run()** needs the termination clause, or **loop.quit()**, to understand when to terminate because as it reads through the file it's preparing to launch the callbacks after it has read them with the instruction of when to terminate, otherwise it'll be stuck
-* If you do any type of networking it's kind of like when we used to have to wait to send our networking packets! Even if our packets were ready to go if someone else was sending their own packets on the network ours would have to wait to avoid collision. It's ready to engage once it's able to go!
 
 With that knowledge in mind, we're actually able to move our **loop.run()** from the program itself to however we launch it. [This is how it's set up now with all the new changes that I'll be covering in the next two posts](https://gitlab.gnome.org/llzes/gjs/blob/d243b11d2191d0a8a6ad4a85838ddf5346bd372e/examples/gio-head.js) so don't worry if it looks really weird now but once again I'm sticking [...] in places to truncate things that you all don't need to care about yet:
 
@@ -154,16 +150,15 @@ if (ARGV.length !== 1) {
     printerr('Usage: gio-head.js filename');
 } else {
     head(ARGV[0]);
-    cancel.cancel();
     loop.run();
 }
 ```
 
-You can see that **loop.run()** is now after our **head(ARGV[0])**! (Ignore that **cancel.cancell()** for now). This makes things more efficient for us by first checking if the conditions we're requesting aren't met (and if so return an error message), else we now first run through the program we've wrote, **head()**, then proceed to run it with **loop.run()** as everything is ready to go for us at this point. Huzzah!
+You can see that **loop.run()** is now after our **head(ARGV[0])**! This makes things more efficient for us by first checking if the conditions we're requesting aren't met (and if so return an error message), else we now first run through the program we've wrote, **head()**, then proceed to run it with **loop.run()** as everything is ready to go for us at this point. Huzzah!
 
 ## load_contents_async() and load_contents_finish() callbacks
 
-This part makes me really excited as it's really about language capabilities and features! Callback functions have typically been how we've run asynchronous operations. JavaScript is a single-threaded language so this has been a workaround for how we do things. It works, but later on it gets hard to read as it tends to self obfuscate itself into callback hell. That's where things like Promises kick in, with it being much easier to read, your Promise can only either pass or fail once, **try/catch** work much better with handling errors, and so on. Even better are **Async/Await** functions in ES7 whoo!
+This part makes me really excited as it's really about language capabilities and features! Callback functions have typically been how we've run asynchronous operations. It works, but later on it gets hard to read as it tends to self obfuscate itself into callback hell. That's where things like Promises kick in, with it being much easier to read, your Promise can only either pass or fail once, **try/catch** work much better with handling errors, and so on. Even better are **Async/Await** functions in ES7 whoo!
 
 Buuuuut the original GNOME libraries were built with callback functions to handle asynchronous operations, that [usually] end in **_async()** and **_finish()**. A skeleton example would be [**g_file_load_contents_async()**](https://developer.gnome.org/gio/stable/GFile.html#g-file-load-contents-async) and [**g_file_load_contents_finish()**](https://developer.gnome.org/gio/stable/GFile.html#g-file-load-contents-finish) nested, as it's the **_async()** and **_finish()** functions I used for my project:
 
@@ -218,7 +213,7 @@ The **null** comes from the optional **cancellable** parameter of **g_file_load_
     // user_data     gpointer              the data to pass to the callback function
 ```
 
-There are times where you'd want to use **cancellable**, aka a [GCancellable](https://developer.gnome.org/gio/stable/GCancellable.html) object, to cancel synchronous and asynchronous operations. For now if you're curious and wanting to play around you can import it like this:
+There are times where you'd want to use **cancellable**, aka a [GCancellable](https://developer.gnome.org/gio/stable/GCancellable.html) object, to cancel synchronous and asynchronous operations. For now if you're curious and wanting to play around you can create it like this:
 
 ```
 const cancel = new Gio.Cancellable();
@@ -254,6 +249,6 @@ if (ARGV.length !== 1) {
 }
 ```
 
-I think it's always good to compare the difference between versions of your code to see how far you've come, and get a further understanding of how things work. Earlier we learned that it was okay to place **loop.run()** after calling the **head()** program, but now in version 2 I also call **cancellable** by **cancel.cancel()**. Even if I'm not actually using it right now at some point if/when I do want it it'll be right there ready for me again.
+I think it's always good to compare the difference between versions of your code to see how far you've come, and get a further understanding of how things work. Earlier we learned that it was okay to place **loop.run()** after calling the **head()** program, but additionally in Version 2 I am also triggering the **cancellable** object to cancel the operation by calling **cancel.cancel()**. In the real **head** utility I wouldn't actually want to cancel the operation but I added this functionality in so I could test **cancellable**, making sure it still worked with my **Promisify** function.
 
 See you all in the next post on Promisify!

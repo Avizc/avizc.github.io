@@ -77,7 +77,7 @@ I want to make this even more 3cute5world by hiding all of the weird Promisify s
 promisify(Gio_File_prototype, 'load_contents_async', 'load_contents_finish');
 ```
 
-Sure, people could manually hardcode it themselves too but that isn't nice and means extra code for them to deal with in their applications. People should be able to just develop new things without worrying about any of this. So a possible option of where the **Promisify** feature could reside and live in is the **overrides** section of GJS. To find the GJS overrides available you can find it in your own build by going here and checking out the files inside:
+Sure, people could manually hardcode it themselves too but that isn't nice and means extra code for them to deal with in their applications. People should be able to just develop new things without worrying about any of this. So a possible option of where the **Promisify** feature could reside and live in is the **overrides** section of GJS. To find the GJS overrides in your own build, check out these files by going here:
 
 ```
 (llzes)avi@localhost:~$ cd ~/jhbuild/checkout/gjs/modules/overrides
@@ -130,3 +130,5 @@ Language bindings like GJS will parse the GIR like they normally do but now with
 So that's where my project has currently left me, lost somewhere inside of several files in GObject Introspection. Also sorry to Federico for accidentally helping break his build at 5AM (still surprised I made the GUADEC morning bus!) while trying to help me find something related to the attributes oops. Hurray for several hours of lockpicking at the same time though huzzah whoo! 🐰🔓✨
 
 I'm super excited to finish this so we can finally have modern JavaScript in GJS with how we handle asynchronous operations (at the very least it's keeping it super pretty on the surface!), help implement and support hooking up to other similiar things in the other language bindings like Vala and Rust, and overall make things 3cute5me for everyone. See you all next time where I'll hopefully have something actually running by then!
+
+*3cute5me = 2cute4me (too cute for me), by adding +1 to each they're now {3,5}, the first two twin prime numbers!*

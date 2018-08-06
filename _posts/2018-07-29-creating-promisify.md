@@ -5,8 +5,6 @@ date: 2018-7-29
 categories: GNOME
 ---
 
-## Coming soon huzzah!
-
 *This is the second in a three post series! I recommend reading [Writing a GIO App - The First Evolution of gio-head.js](https://avizajac.com/gnome/2018/07/29/creating-gio-head.html) before this one if you haven't yet, and if you've finished this one head over to [The Evolution of gio-head.js and Future Direction of Promisify](https://avizajac.com/gnome/2018/07/29/update-gio-head-promisify.html) after!*
 
 In the first post we covered how I first got to writing **gio-head**, learning and understanding how GIO and GLib work, then using that theoretical knowledge into writing an actual program (also having to finally use ESlint on my code oh golly). From there I did a ton of constant cleaning up from code review (thanks Philip!) for various reasons like learning new modern JavaScript syntax. If you want to directly check out where I'm at with this part of the project [here is my branch](https://gitlab.gnome.org/llzes/gjs/commits/wip/prototype-callbacks-to-promises) you can check out!
@@ -139,7 +137,7 @@ That still doesn't cover what **Promisify** is though, so what is it? If you're 
 
 ## The (rough) beginnings of load_contents_promise()
 
-[Thanks to this issue](https://gitlab.gnome.org/GNOME/gobject-introspection/issues/28#note_75381) I knew from the start I would have to expand my Promisify prototype out so it could apply to any function that ends in **_async** and **_function**. So the first thing I did was try to make a single function called **load_contents_promise()** (my terrible naming convention has carried over from locksport oops) and have it return a Promise that hid **load_contents_async()** and **load_contents_finish()** away from my **head** program. This took me quite a lot longer than I thought it would as it didn't feel intuitive to me as to how I'd actually do this and wrap it as a Promise. Before this project I *thought* I knew how to write and use Promises. This really forced me to dive more in to understand it.
+[Thanks to this issue](https://gitlab.gnome.org/GNOME/gobject-introspection/issues/28#note_75381) I knew from the start I would have to expand my Promisify prototype out so it could apply to any function that ends in **_async** and **_function**. So the first thing I did was try to make a single function called **load_contents_promise()** and have it return a Promise that hid **load_contents_async()** and **load_contents_finish()** away from my **head** program. This took me quite a lot longer than I thought it would as it didn't feel intuitive to me as to how I'd actually do this and wrap it as a Promise. Before this project I *thought* I knew how to write and use Promises. This really forced me to dive more in to understand it.
 
 Eventually I finally made progress and started getting there! The following [is a cleaned up version of the original](https://gitlab.gnome.org/llzes/gjs/blob/c43919a4c5cf276a7c4d49012f3c646b0f275aff/examples/gio-head.js) I successfully made.
 
@@ -207,13 +205,13 @@ Bun bun bun! So in exaxmple 3 above I left emojis instead of the new code. Why? 
 
 What *is* monkey patching if you're unfamiliar with it like I was? It's when you add/modify/remove code at runtime without actually changing the source code, wherever it came from. You save the original source code and afterwords modify it. This way you can still call the original source code later on in your code but at the same time you can also override the default behaviour it usually returns at runtime.
 
-Before I tried monke ypatching [in the commit before, I had some weird code](https://gitlab.gnome.org/llzes/gjs/blob/b69df09ad5ae733389c9e5997f8cc54c9b6485eb/examples/gio-head.js) that looked like this:
+Before I tried monkey patching [in the commit before, I had some weird code](https://gitlab.gnome.org/llzes/gjs/blob/b69df09ad5ae733389c9e5997f8cc54c9b6485eb/examples/gio-head.js) that looked like this:
 
 <img src="/images/2018/July/load_contents_promise-2.png">
 
 Not only would people have to write extra lines of code into their programs but this wouldn't be feasible on getting every **_async** and **_finish** function onboard with the future of Promisify, wherever this goes. This is also where I thought I finally understood monkey patching with **prototype** and when it failed, I was very confused as to ~~how it all went wrong~~ why it wasn't working.
 
-Turns out that oops, it wasn't just me, there's an actual bug here! In an ideal world (that doesn't exist quite yet) my code would look something like:
+Turns out that oops, it wasn't just me, there's an actual bug here ([here is the issue for the bug huzzah](https://gitlab.gnome.org/GNOME/gjs/issues/189))! In an ideal world (that doesn't exist quite yet) my code would look something like:
 
 ```
 Gio.File.prototype.load_contents_STUFF = function(){
@@ -230,7 +228,7 @@ Gio_File_prototype.load_contents_STUFF = function(){
 }
 ```
 
-At this moment in time not only do we need an extra line of code, it's also being called like **Gio_File.prototype** instead of **Gio.File.prototype**.
+At this moment in time not only do we need an extra line of code, it's also being named **Gio_File_prototype** instead of **Gio.File.prototype**.
 
 I was suggested to completely try re-naming my stuff to make sure I wasn't confusing myself in the process, hence why there's a function named **cheesecake**, replacing the former name of **load_contents_promise** to make sure I wasn't just lost in naming. On the other hand I finally got this monkey patched version working!
 
@@ -279,7 +277,7 @@ This is getting us so much closer to an ideal Promisify feature! There's still w
 
 ## Hello, Promisify, a function that returns functions!
 
-I created a new file called **promisify.js**! But then I got stuck again, how *do* you create a function that creates a function? In hindsight I should have thought more OOP here. This summer has tested my blackbox implementing a ton as a lot of my summer was working on things I had never seen or done before. I also learned a ton by getting into the habit of desugaring everything I touched once I knew what sugaring was!
+I created a new file called **promisify.js**! But then I got stuck again, how *do* you create a function that creates a function? In hindsight I should have thought more OOP here. This summer has tested my blackbox implementing a ton as a lot of my summer was working on things I had never seen or done before. I also learned a ton by getting into the habit of desugaring everything I touched once I knew what sugaring, or [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar), was.
 
 The first thing I did was remove all of the monkey patching to the new file, commented it out, then created a generic function that looked like:
 
@@ -298,7 +296,7 @@ Another thing I had to think about now was that I couldn't expect people to star
 We want people to use something they're already familiar with and nothing beats an easy to read change like **load_contents_async(null/\*cancel*/\)**, and sticking an **await** right in front of it! (We'll talk about backwards compatibility a little later). So with that my new Promisify [started off roughly like this](https://gitlab.gnome.org/llzes/gjs/commit/fdcc9b4a3484b6321ddfc979ef7294b90dbd262d), getting rid of the **Gio_File.prototype.load_contents_promise** in exchange for **Gio_File.prototype.load_contents_async**. *This did not work yet.*
 
 ```
-var promisify = ( /* Apparently const isn't supported thus using var */
+var promisify = (
     GioType, /* Gio_File_prototype */
     asyncStuff, /* load_contents_async */
     finishStuff /* load_contents_finish */
@@ -349,35 +347,11 @@ const head = async(filename)=>{
 
 Oops, **load_contents_promise** is back! But it still wouldn't work *and* it got stuck indefinitely after trying to run, why?
 
-It turns out that when I did **GioType[asyncStuff** in Promisify, while I had based it off of **Gio_File_prototype.load_contents_promise**, I got lost in my own code as that base confused me from what I was trying to do. I was now creating two new methods at runtime: **file.load_contents_promise()** and **file.load_contents_async()**.
+It turns out that when I did **GioType[asyncStuff]** in Promisify, while I had based it off of **Gio_File_prototype.load_contents_promise**, I got lost in my own code as that base confused me from what I was trying to do. I was now creating two new methods at runtime: **file.load_contents_promise()** and **file.load_contents_async()**.
 
 From there I was accidentally overwriting **file.load_contents_async()**, the original **load_contents_async()**, with my new version of it. So when **file.load_contents_async()** was called it essentially called itself, hence the infinite loop.
 
-I was a bit desperate to have my long awaited (tehe!) code to finally work and in a moment of desperation [I wrote the following commit](https://gitlab.gnome.org/llzes/gjs/blob/a29b725fcbd1c1501543766a27fc8c7677da14c2/examples/promisify.js):
-
-```
-var promisify = ( /* Apparently const isn't supported thus using var */
-    GioType, /* Gio_File_prototype */
-    newFuncName,
-    asyncStuff, /* load_contents_async */
-    finishStuff /* load_contents_finish */
-) => {
-    return GioType[newFuncName] = function(...args){
-        return new Promise((resolve, reject)=>{
-            this[asyncStuff](...args, function(source,res) {
-                try {
-                    let result = source[finishStuff](res);
-                    resolve(result);
-                } catch (error) {
-                    reject(error);
-                }
-            });
-        });
-    }
-}
-```
-
-Once I called it properly in **head** with **Gio_File_prototype.load_contents_promise = promisify(Gio_File_prototype, 'load_contents_new', 'load_contents_async','load_contents_finish');** holy flying macarons it worked! My immediate reaction in the moments after was rather surprisingly negative instead of positive, as all I could think was that *it so simple and I had missed it the entire time an-*
+I was a bit desperate to have my long awaited (tehe!) code to finally work and in a moment of desperation [I wrote this](https://gitlab.gnome.org/llzes/gjs/blob/a29b725fcbd1c1501543766a27fc8c7677da14c2/examples/promisify.js). Once I called it properly in **head** with **Gio_File_prototype.load_contents_promise = promisify(Gio_File_prototype, 'load_contents_new', 'load_contents_async','load_contents_finish');** holy flying macarons it worked! My immediate reaction in the moments after was rather surprisingly negative instead of positive, as all I could think was that *it so simple and I had missed it the entire time an-*
 
 Have I mentioned that Philip is an amazing mentor? Huzzah! While I felt really bad as I had missed it for a few days, I got reassured by Philip that it wasn't as simple as I was making it out to be in my head. Plus making a function that returns functions? (Still ecstatic this actually worked tehe). I learned a ton of new things as I went through the process via black box implementing it, learning new things, learning and reinforcing all of the things I thought I had known but didn't quite know yet entirely.
 
@@ -393,23 +367,7 @@ After I finally got Promisify working, Philip wrote me a list of three possible 
 
 The first thing I wanted to do was completely avoid the entire **file.load_contents_promise()** thing I was doing again and just go for **file.load_contents_async()** to keep the **head** program clean. To do this I had to get rid of the **newFuncName** parameter I had created and only have three possible parameters in my new Promisify: **GioType**, **asyncStuff**, **finishStuff**.
 
-The process to get to this, once more, was a little eventful from fun errors like:
-
-```
-(llzes)avi@localhost:~/jhbuild/checkout/gjs/examples$ gjs-console gio-head.js gio-cat.js
-
-(gjs-console:21947): Gjs-WARNING **: 17:11:27.757: JS ERROR: InternalError: too much recursion
-promisify/GioType[asyncStuff]@/home/avi/jhbuild/checkout/gjs/examples/promisify.js:22:9
-promisify/GioType[asyncStuff]@/home/avi/jhbuild/checkout/gjs/examples/promisify.js:22:9
-promisify/GioType[asyncStuff]@/home/avi/jhbuild/checkout/gjs/examples/promisify.js:22:9
-promisify/GioType[asyncStuff]@/home/avi/jhbuild/checkout/gjs/examples/promisify.js:22:9
-promisify/GioType[asyncStuff]@/home/avi/jhbuild/checkout/gjs/examples/promisify.js:22:9
-promisify/GioType[asyncStuff]@/home/avi/jhbuild/checkout/gjs/examples/promisify.js:22:9
-promisify/GioType[asyncStuff]@/home/avi/jhbuild/checkout/gjs/examples/promisify.js:22:9
-promisify/GioType[asyncStuff]@/home/avi/jhbuild/checkout/gjs/examples/promisify.js:22:9
-```
-
-Oops! To make sure I understood monkey patching I did a coding exercise by monkey patching the **get_path()** method where I learned I couldn't use ES6 arrow functions and had to actually use **function () {}**. I was still stumped after on how to fix my Promisify so Philip sent me this lovely shorthand guide which saved my life from confusion:
+To make sure I understood monkey patching I did a coding exercise by monkey patching the **get_path()** method where I learned I couldn't use ES6 arrow functions and had to actually use **function () {}**. I was still stumped after on how to fix my Promisify so Philip sent me this lovely shorthand guide which saved my life from confusion:
 
 ```
 function wrapper() {
@@ -420,65 +378,11 @@ _real_get_path = get_path;
 get_path = wrapper;
 ```
 
-I was also confusing myself with **this** at one point but ultimately got myself [to this](https://gitlab.gnome.org/llzes/gjs/blob/65d54771b2a1e7aab6b5b01f0827d0aab2aea51c/examples/promisify.js) (tehe):
-
-```
-var promisify = (
-    GioType,
-    asyncStuff,
-    finishStuff
-) => {
-    GioType[`original_${asyncStuff}`] = GioType[asyncStuff];
-    GioType[asyncStuff] = function(...args) {
-        return new Promise((resolve, reject)=>{
-            this[`original_${asyncStuff}`](...args, function(source, res) {
-                try {
-                    let result = source[finishStuff](res);
-                    resolve(result);
-                } catch (error) {
-                    reject(error);
-                }
-            });
-            
-        });
-    };
-};
-```
-
-Huzzah whoo! I saved the original **file.load_contents_async()** under the name **file.original_load_contents_async()** in case I'd need it, and monkey patched from there.
+I was also confusing myself with **this** at one point but ultimately got myself [to this](https://gitlab.gnome.org/llzes/gjs/blob/65d54771b2a1e7aab6b5b01f0827d0aab2aea51c/examples/promisify.js). Huzzah whoo! From there I saved the original **file.load_contents_async()** under the name **file.original_load_contents_async()** in case I'd need it, and monkey patched from there.
 
 But then came the question of what happens to all of the folks who want to use callbacks or virtually any code that already exists with an **_async** function? This is running behind the scenes so it'd be very unreasonable to expect everyone to convert over to the new Promise-styled API I've created, it wouldn't be backwards compatible, plus imagine all of the documentation that would to be fixed.
 
-To fix this and make it backwards compatible I checked to see if people were using callbacks or not! The way I went about this one was expanding the paramters and checking if any of the arguments was a function or not. [After I got it working](https://gitlab.gnome.org/llzes/gjs/commit/7ab0b066e0ab5790260c75dbd38e216e652a80b9) I began cleaning it up like usual. Something I did when I first got it working was using a for-loop:
-
-```
-for(let i=0; i<args.length; i++){
-    if (typeof args[i]==="function") {
-        return this[asyncStuff];
-    } else { 
-        return new Promise((resolve, reject)=>{
-            [...] 
-        }
-    }
-``` 
-
-This is hard to read and also helped hide a logic issue I had. So the first step I took [was replacing the for-loop with every()](https://gitlab.gnome.org/llzes/gjs/blob/d243b11d2191d0a8a6ad4a85838ddf5346bd372e/examples/promisify.js):
-
-```
-if (args.every(arg=>typeof arg === 'function')) return;
-else return new Promise((resolve, reject)=>{
-    [...]
-});
-```
-
-That made things much cleaner for us to read! But right now there's a weird logic issue to fix. [Here is the commit showing the git diff of the two files for a more pleasant experience](https://gitlab.gnome.org/llzes/gjs/commit/609aadada4f3e24e20d48e3d70492935ce1b1fce) otherwise here is the new if/else logic:
-
-```
-if (args.every(arg=>typeof arg !== 'function')) return new Promise((resolve, reject)=>{
-    [...]
-});
-else return this[`original_${asyncStuff}`](...args);
-```
+To fix this and make it backwards compatible I checked to see if people were using callbacks or not! The way I went about this one was expanding the paramters and checking if any of the arguments was a function or not. [After I got it working](https://gitlab.gnome.org/llzes/gjs/commit/7ab0b066e0ab5790260c75dbd38e216e652a80b9) I began cleaning it up like usual. That is a bit hard to read and also helped hide a logic issue I had. So the first step I took [was replacing the for-loop with every()](https://gitlab.gnome.org/llzes/gjs/blob/d243b11d2191d0a8a6ad4a85838ddf5346bd372e/examples/promisify.js), which made things much cleaner for us to read! But right now there's a weird logic issue to fix. [Here is the commit showing the git diff of the two files for a more pleasant experience](https://gitlab.gnome.org/llzes/gjs/commit/609aadada4f3e24e20d48e3d70492935ce1b1fce).
 
 For this to work properly I needed to know for sure that I've checked every argument and that every argument is *not* a function. So the key differences between the two is:
 
