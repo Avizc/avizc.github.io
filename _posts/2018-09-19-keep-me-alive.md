@@ -4,7 +4,7 @@ title: "Please keep me alive"
 date: 2018-9-19
 ---
 
-_Note: The crucial part should take ~15-17 minutes to read, everything else was written for me and I don't recommend it unless something severe to my life happens to me._
+_Note: The crucial part should take ~15-17 minutes to read, everything else is optional and I don't recommend it unless something severe to my life happens to me._
 
 As I write this post I am angry, furious, and terrified: terrified as this has severely derailed my life for nearly three years now leading to several bouts of homelessness, joblessness, and a severe reduction of quality of life mentally and physically; furious as people feel entitled to my life because of biological connections that I had no opportunity to reject at birth; angry that while my quality of life has completely evaporated since my brother’s death, that the lives of those using his death for their own advantage as a sob story while simultaneously erasing his and my valid experiences and histories are facing no consequences for their actions across the span of nearly two decades, instead reaping awards, positions on councils like the HRC's [Parents for Transgender Equality National Council](https://www.hrc.org/resources/parents-for-transgender-equality-national-council) and PFlag, as they drown out our voices and overwrite them for narcissistic purposes.
 
